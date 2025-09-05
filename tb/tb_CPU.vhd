@@ -8,8 +8,8 @@ end entity tb_CPU;
 architecture behavior of tb_CPU is
 
     signal clk   : std_logic := '0';
-    signal rst   : std_logic := '0';
-    signal Buttons : std_logic_vector(7 downto 0) := "00000000";
+    signal unsyncRst   : std_logic := '0';
+    signal Buttons : std_logic_vector(3 downto 0) := "0000";
     signal Leds    : std_logic_vector(7 downto 0);
 
     constant clk_period : time := 10 ns;
@@ -20,7 +20,7 @@ begin
     uut: entity work.CPU
         port map(
             clk     => clk,
-            rst     => rst,
+            unsyncRst     => unsyncRst,
             Buttons => Buttons,
             Leds    => Leds
         );
@@ -39,14 +39,18 @@ begin
     -- Testovací proces s opakováním
     stim_proc: process
     begin
-        for i in 1 to 3 loop
+		unsyncRst <= '1';
+		wait for 500 ns;
+		unsyncRst <= '0';
+		wait for 500 ns;
+        while true loop
             -- Aktivuj enable
-            Buttons <= "00000001";
-            wait for 500 ns;
+            Buttons <= "0001";
+            wait for 1 ms;
 
             -- Deaktivuj enable
-            Buttons <= "00000000";
-            wait for 500 ns;
+            Buttons <= "0000";
+            wait for 1 ms;
         end loop;
 
         -- Konec simulace

@@ -6,6 +6,7 @@ use UNISIM.vcomponents.all;
 
 entity CPU is
     port(
+        
         clk : in std_logic;
         unsyncRst : in std_logic;
         Buttons : in std_logic_vector(3 downto 0);
