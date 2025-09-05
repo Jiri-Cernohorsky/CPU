@@ -21,6 +21,7 @@ begin
             when "110" => ALU_Result <= std_logic_vector(signed(ScrA) - signed(ScrB));
             when "101" => ALU_Result <= ScrA and ScrB;
             when "100" => ALU_Result <= ScrA or ScrB;
+            --!!
             when "011" => if (signed(ScrA) < signed(ScrB)) then
                             ALU_Result <= (31 downto 1 => '0') & '1';
                           else
