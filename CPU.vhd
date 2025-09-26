@@ -102,7 +102,7 @@ architecture behavioral of CPU is
             WE   : in  std_logic;
             clk  : in  std_logic;
             rst  : in  std_logic;
-            DO   : out std_logic_vector(31 downto 0)
+            DO   : out std_logic_vector(31 downto 0) 
         );
     end component RAMB512x32;
 
