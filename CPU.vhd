@@ -104,7 +104,22 @@ architecture behavioral of CPU is
             rst  : in  std_logic;
             DO   : out std_logic_vector(31 downto 0) 
         );
+<<<<<<< Updated upstream
     end component RAMB512x32;
+=======
+    end component RAM1024x1;
+
+    component AddressDecode
+        port(
+            WE    : in  std_logic;
+            A     : in  std_logic_vector(10 downto 0);
+            WELed : out std_logic;
+            WERAM : out std_logic;
+            Sel   : out std_logic
+        );
+    end component AddressDecode;
+
+>>>>>>> Stashed changes
 
 begin
     
