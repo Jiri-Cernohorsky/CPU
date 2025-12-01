@@ -108,13 +108,7 @@ architecture behavioral of CPU is
 
 
 
-
-
-
    
-    
-
-    
 begin
     
     PC_inst : component PC
