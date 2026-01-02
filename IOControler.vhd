@@ -13,7 +13,11 @@ entity IOControler is
 end entity IOControler;
 
 architecture behavioral of IOControler is
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
 begin
     IOcontrol : process (IOAddress, WE) is
     begin
