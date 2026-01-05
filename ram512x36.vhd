@@ -6,7 +6,7 @@ use ieee.numeric_std.all;
 
 entity RAMB512x32 is
     port(
-        ADDR : in std_logic_vector(8downto 0);
+        ADDR : in std_logic_vector(8 downto 0);
         DI : in std_logic_vector(31 downto 0);
         WE : in std_logic;
         clk : in std_logic;

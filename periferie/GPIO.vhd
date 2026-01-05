@@ -67,11 +67,11 @@ begin
                 --zápis dat
                 if WEGPIO = '1' then
                     case Address is
-                        when x"80000000"=> RegDataOut <= Write_Data;
-                        when x"80000004"=> RegDir <= Write_Data;
-                        when x"80000008"=> RegIntEnable <= Write_Data;
+                        when x"80000004"=> RegDataOut <= Write_Data;
+                        when x"80000008"=> RegDir <= Write_Data;
+                        when x"8000000C"=> RegIntEnable <= Write_Data;
                         -- napíšeš 1 pro smazání prej W1C princip říkali internety
-                        when x"8000000C"=> RegIntState <= RegIntState and not Write_Data;
+                        when x"80000010"=> RegIntState <= RegIntState and not Write_Data;
                         when others => null;
                     end case;  
                 end if;
@@ -92,10 +92,10 @@ begin
     process(Address, RegDataOut, RegDir, RegIntEnable, RegIntState)
     begin
         case Address is
-            when x"80000000" => Read_Data <= RegDataOut;
-            when x"80000004" => Read_Data <= RegDir;
-            when x"80000008" => Read_Data <= RegIntEnable;
-            when x"8000000C" => Read_Data <= RegIntState;
+            when x"80000004" => Read_Data <= RegDataOut;
+            when x"80000008" => Read_Data <= RegDir;
+            when x"8000000C" => Read_Data <= RegIntEnable;
+            when x"80000010" => Read_Data <= RegIntState;
             when others => Read_Data <= (others => '0');
         end case;
     end process;

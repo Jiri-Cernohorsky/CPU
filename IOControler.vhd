@@ -10,7 +10,8 @@ entity IOControler is
         Address : in std_logic_vector(31 downto 0);  
         WD : in std_logic_vector(31 downto 0);
         RD : out std_logic_vector(31 downto 0);
-
+        IRR : out std_logic_vector(7 downto 0);
+        WIMR : out std_logic_vector(7 downto 0);
         GPIOPins : inout std_logic_vector(7 downto 0)
         
     );
@@ -41,6 +42,8 @@ architecture behavioral of IOControler is
     end component GPIO;
     signal WEGPIO : std_logic;
     signal GPIO_RD : std_logic_vector(7 downto 0);
+    signal GPIOIrq : std_logic;
+    
     
 
 begin
@@ -63,14 +66,20 @@ begin
             Address    => Address,
             Write_Data => WD(7 downto 0),
             Read_Data  => GPIO_RD,
-            Irq        => Irq
+            Irq        => GPIOIrq
         );
 
     --mux
-    
-    RD <= x"000000" & GPIO_RD  when WEGPIO = '1' else
+    RD <= x"000000" & GPIO_RD  when WEGPIO = '1' else -- GPIO_RD je moc malí proto to x"000000"
           x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
           x"00000000";
-        
     
+    interrupt_handler : process(GPIOIrq) is
+    begin
+        IRR(0) <= GPIOIrq;
+    end process interrupt_handler;
+
+    -- zápis do interrapt maska
+    WIMR <= WIMR and WD(7 downto 0) when Address = x"80000000" else WIMR;     
+
 end architecture behavioral;

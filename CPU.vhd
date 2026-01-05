@@ -17,9 +17,16 @@ architecture behavioral of CPU is
     signal PCPlus4 : std_logic_vector(10 downto 0); -- aktuální PC+4
     signal BranchTarget : std_logic_vector(10 downto 0); -- PC po větvení
     signal PCPlusImm : std_logic_vector(10 downto 0); -- aktuální PC+přímý operand
+    signal shadow : std_logic; -- stav PC
 
     signal inst : std_logic_vector(31 downto 0); -- instrukce
     signal control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
+    signal IRR : std_logic_vector(7 downto 0); --interrupt request
+    signal IntBraTar : std_logic_vector(10 downto 0); --interrupt cíl větvení
+    signal IntBraTarEn : std_logic; --povolení interrapt větvení
+    signal WIMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
+    
+    
 
     signal RegData : std_logic_vector(31 downto 0); -- data zapisující se do REG
     signal RD1 : std_logic_vector(31 downto 0); -- data z REG 1
@@ -46,19 +53,27 @@ architecture behavioral of CPU is
      
 	 
     component PC
-        port(
-            clk   : in  std_logic;
-            rst   : in  std_logic;
-            PCin  : in  std_logic_vector(10 downto 0);
-            PCout : out std_logic_vector(10 downto 0)
-        );
+    	port(
+    		clk   : in  std_logic;
+    		rst   : in  std_logic;
+    		state : in  std_logic;
+    		PCin  : in  std_logic_vector(10 downto 0);
+    		PCout : out std_logic_vector(10 downto 0)
+    	);
     end component PC;
 
     component controlUnit
-        port(
-            inst           : in  STD_LOGIC_VECTOR (31 downto 0);
-            control_signal : out STD_LOGIC_VECTOR (12 downto 0)
-        );
+    	port(
+    		clk            : in  std_logic;
+    		rst            : in  std_logic;
+    		IRR            : in  std_logic_vector(7 downto 0);
+    		WIMR           : in  std_logic_vector(7 downto 0);
+    		shadow         : out std_logic;
+    		IntBraTar      : out std_logic_vector(10 downto 0);
+    		IntBraTarEn    : out std_logic;
+    		inst           : in  std_logic_vector (31 downto 0);
+    		control_signal : out std_logic_vector (12 downto 0)
+    	);
     end component controlUnit;
 
     component registr32x4
@@ -95,7 +110,7 @@ architecture behavioral of CPU is
 
     component RAMB512x32
         port(
-            ADDR : in  std_logic_vector(8downto 0);
+            ADDR : in  std_logic_vector(8 downto 0);
             DI   : in  std_logic_vector(31 downto 0);
             WE   : in  std_logic;
             clk  : in  std_logic;
@@ -105,15 +120,17 @@ architecture behavioral of CPU is
     end component RAMB512x32;
    
     component IOControler
-        port(
-            clk      : in    std_logic;
-            rst      : in    std_logic;
-            WE       : in    std_logic;
-            Address  : in    std_logic_vector(31 downto 0);
-            WD       : in    std_logic_vector(31 downto 0);
-            RD       : out   std_logic_vector(31 downto 0);
-            GPIOPins : inout std_logic_vector(7 downto 0)
-        );
+    	port(
+    		clk      : in    std_logic;
+    		rst      : in    std_logic;
+    		WE       : in    std_logic;
+    		Address  : in    std_logic_vector(31 downto 0);
+    		WD       : in    std_logic_vector(31 downto 0);
+    		RD       : out   std_logic_vector(31 downto 0);
+    		IRR      : out   std_logic_vector(7 downto 0);
+    		WIMR     : out   std_logic_vector(7 downto 0);
+    		GPIOPins : inout std_logic_vector(7 downto 0)
+    	);
     end component IOControler;
 begin
     
@@ -121,14 +138,22 @@ begin
         port map(
             clk   => clk,
             rst   => rst,
+            state => shadow,
             PCin  => PCin,
             PCout => PCout
         );
     
     controlUnit_inst : component controlUnit
         port map(
+            clk            => clk,
+            rst            => rst,
             inst           => inst,
-            control_signal => control_signal
+            control_signal => control_signal,
+            shadow         => shadow,
+            IRR            => IRR,
+            IntBraTar      => IntBraTar,
+            IntBraTarEn    => IntBraTarEn,
+            WIMR           => WIMR
         );
     
     registr32x4_inst : component registr32x4
@@ -172,7 +197,7 @@ begin
 
     InstrMem : component RAMB512x32
         port map(
-            ADDR => PCout,
+            ADDR => PCout, -- !!!!!!!!! pořeba zvětšit paměť na 4násobek pak bude sedět lepší než to přepisovat všude jinde posereš se z toho když vv tom budeš zvětš i DataMem
             DI   => DI,
             WE   => WE,
             clk  => clk,
@@ -188,6 +213,8 @@ begin
             Address  => ALUout(31 downto 0), -- mohl bych tam nedávat MSB ale 1. adresa by nebyla pravda 2. je to takhle jednodušší zapsat
             WD       => RD2,
             RD       => RD_IO,
+            IRR      => IRR,
+            WIMR => WIMR,
             GPIOPins => GPIOPins
         );
 
@@ -215,7 +242,9 @@ begin
 
     BranchTarget <= '0' & ALUout(9 downto 0) when control_signal(2) = '1' else PCPlusImm; -- adresa kam se má skočit
     
-    PCin <= BranchTarget when BranchOutcome = '1' else PCPlus4; -- novej PC
+    BranchTarget <= BranchTarget when BranchOutcome = '1' else PCPlus4; -- novej PC bez interraptu
+
+    PCin <= BranchTarget when IntBraTarEn = '0' else IntBraTar; -- nastal interrapt
 
     --addry
     PCPlusImm <= std_logic_vector(signed(PCout) + signed(immOp(10 downto 0))); -- PC + skok    !!!!!!!!!!!!

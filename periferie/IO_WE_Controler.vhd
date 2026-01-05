@@ -20,7 +20,7 @@ begin
         WEGPIO <= '0';
         if WE = '1' then
             case IOAddress is
-                when  x"8000000C" downto x"80000000"=> WEGPIO <= '1';
+                when  x"80000010" downto x"80000004"=> WEGPIO <= '1';
                 when others => null;
             end case;
         end if;
