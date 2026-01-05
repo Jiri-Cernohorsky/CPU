@@ -6,7 +6,7 @@ entity PC is
     port(
         clk : in std_logic;
         rst : in std_logic;
-        state : in std_logic;
+        shadow : in std_logic;
         PCin : in std_logic_vector(10 downto 0);
         PCout : out std_logic_vector(10 downto 0)
 
@@ -14,7 +14,7 @@ entity PC is
 end entity PC;
 
 architecture behavioral of PC is
-    signal PC : std_logic_vector(10 downto 0);
+    signal PCReg : std_logic_vector(10 downto 0);
     signal ShadowPC : std_logic_vector(10 downto 0);
     
 begin
@@ -23,16 +23,16 @@ begin
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                PC <= (others => '0');
+                PCReg <= (others => '0');
                 ShadowPC <= (others => '0');
             else
-                if state = '0' then 
-                    PC <= PCin;
+                if shadow = '0' then 
+                    PCReg <= PCin;
                 else
                     ShadowPC <= PCin;
                 end if;
             end if;
         end if;
     end process PC;
-    PCout <= PC when state = '0' else ShadowPC;
+    PCout <= PCReg when shadow = '0' else ShadowPC;
 end architecture behavioral;

@@ -54,11 +54,11 @@ architecture behavioral of CPU is
 	 
     component PC
     	port(
-    		clk   : in  std_logic;
-    		rst   : in  std_logic;
-    		state : in  std_logic;
-    		PCin  : in  std_logic_vector(10 downto 0);
-    		PCout : out std_logic_vector(10 downto 0)
+    		clk    : in  std_logic;
+    		rst    : in  std_logic;
+    		shadow : in  std_logic;
+    		PCin   : in  std_logic_vector(10 downto 0);
+    		PCout  : out std_logic_vector(10 downto 0)
     	);
     end component PC;
 
@@ -138,7 +138,7 @@ begin
         port map(
             clk   => clk,
             rst   => rst,
-            state => shadow,
+            shadow => shadow,
             PCin  => PCin,
             PCout => PCout
         );
