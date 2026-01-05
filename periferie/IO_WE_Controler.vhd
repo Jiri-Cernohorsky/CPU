@@ -2,28 +2,26 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity IO_WE_Controler is
+entity IO_WE_controler is
     port(
-        clk : in std_logic;
-        rst : in std_logic;
         WE : in std_logic;
-        IOAddress : in std_logic_vector(31 downto 0);
-        WEGPIO : out std_logic
+        IO_address : in std_logic_vector(31 downto 0);
+        WE_GPIO : out std_logic
     );
-end entity IO_WE_Controler;
+end entity IO_WE_controler;
 
-architecture behavioral of IO_WE_Controler is
+architecture RTL of IO_WE_controler is
 
 begin
-    IO_WE_Controler : process (IOAddress, WE) is
+    IO_WE_controler : process (IO_address, WE) is
     begin
-        WEGPIO <= '0';
+        WE_GPIO <= '0';
         if WE = '1' then
-            case IOAddress is
-                when  x"80000010" downto x"80000004"=> WEGPIO <= '1';
+            case IO_address is
+                when  x"80000010" downto x"80000004"=> WE_GPIO <= '1';
                 when others => null;
             end case;
         end if;
         
-    end process IO_WE_Controler;
-end architecture behavioral;
+    end process IO_WE_controler;
+end architecture RTL;

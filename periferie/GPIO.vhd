@@ -6,51 +6,52 @@ entity GPIO is
     port(
         clk : in std_logic;
         rst : in std_logic;
-        GPIOPins : inout std_logic_vector(7 downto 0);
+        GPIO_pins_io : inout std_logic_vector(7 downto 0);
 
-        WEGPIO : in std_logic;
+        WE_GPIO : in std_logic;
         Address : in std_logic_vector(31 downto 0);
-        Write_Data : in std_logic_vector(7 downto 0);
-        Read_Data : out std_logic_vector(7 downto 0);
+        Bus_data_i : in std_logic_vector(7 downto 0);
+        Bus_data_o : out std_logic_vector(7 downto 0);
         
         Irq : out std_logic
     );
 end entity GPIO;
 
-architecture behavioral of GPIO is
-    signal RegDataOut : std_logic_vector(7 downto 0);
-    signal RegDataIn : std_logic_vector(7 downto 0);
-    signal RegDataInPrev : std_logic_vector(7 downto 0);
-    signal RegDir : std_logic_vector(7 downto 0);
-    signal RegIntEnable : std_logic_vector(7 downto 0);
-    signal RegIntState : std_logic_vector(7 downto 0);
-    signal EdgeDetected : std_logic_vector(7 downto 0);
+architecture RTL of GPIO is
+    signal Data_reg_TX : std_logic_vector(7 downto 0);
+    signal Data_reg_RX : std_logic_vector(7 downto 0);
+    signal Prev_data_reg_i : std_logic_vector(7 downto 0);
+    signal Dir_reg : std_logic_vector(7 downto 0);
+    signal Int_En_reg : std_logic_vector(7 downto 0);
+    signal Int_State_reg : std_logic_vector(7 downto 0);
+    signal Edge_detected : std_logic_vector(7 downto 0);
     
 
-    component synchronizer
-        generic(GDataWidth : integer);
-        port(
-            clk         : in  std_logic;
-            rst         : in  std_logic;
-            unsyncInput : in  std_logic_vector(GDataWidth - 1 downto 0);
-            syncOutput  : out std_logic_vector(GDataWidth - 1 downto 0)
-        );
-    end component synchronizer;
+    component Synchronizer
+    	generic(g_DATA_WIDTH : integer);
+    	port(
+    		clk     : in  std_logic;
+    		rst     : in  std_logic;
+    		Async_i : in  std_logic_vector(g_DATA_WIDTH - 1 downto 0);
+    		Sync_o  : out std_logic_vector(g_DATA_WIDTH - 1 downto 0)
+    	);
+    end component Synchronizer;
+    
 begin
-    synchronizer_inst : component synchronizer
+    synchronizer_inst : component Synchronizer
         generic map(
-            GDataWidth => 8
+            g_DATA_WIDTH => 8
         )
         port map(
             clk         => clk,
             rst         => rst,
-            unsyncInput => GPIOPins,
-            syncOutput  => RegDataIn
+            Async_i => GPIO_pins_io,
+            Sync_o  => Data_reg_RX
         );
     
     --nastavení směru pinů
     tristate_gen: for i in 7 downto 0 generate
-        GPIOPins(i) <= RegDataOut(i) when RegDir(i) = '1' else 'Z';
+        GPIO_pins_io(i) <= Data_reg_TX(i) when Dir_reg(i) = '1' else 'Z';
     end generate;
 
 
@@ -58,49 +59,49 @@ begin
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                RegDataOut <= (others => '0');
-                RegDir <= (others => '0');
-                RegIntEnable <= (others => '0');
-                RegIntState <= (others => '0');
+                Data_reg_TX <= (others => '0');
+                Dir_reg <= (others => '0');
+                Int_En_reg <= (others => '0');
+                Int_State_reg <= (others => '0');
             else
 
                 --zápis dat
-                if WEGPIO = '1' then
+                if WE_GPIO = '1' then
                     case Address is
-                        when x"80000004"=> RegDataOut <= Write_Data;
-                        when x"80000008"=> RegDir <= Write_Data;
-                        when x"8000000C"=> RegIntEnable <= Write_Data;
+                        when x"80000004"=> Data_reg_TX <= Bus_data_i;
+                        when x"80000008"=> Dir_reg <= Bus_data_i;
+                        when x"8000000C"=> Int_En_reg <= Bus_data_i;
                         -- napíšeš 1 pro smazání prej W1C princip říkali internety
-                        when x"80000010"=> RegIntState <= RegIntState and not Write_Data;
+                        when x"80000010"=> Int_State_reg <= Int_State_reg and not Bus_data_i;
                         when others => null;
                     end case;  
                 end if;
 
                 --detekce hrany
                 for i in 7 downto 0 loop
-                    if EdgeDetected(i) = '1' and RegIntEnable(i) = '1' then
-                        RegIntState(i) <= '1';
+                    if Edge_detected(i) = '1' and Int_En_reg(i) = '1' then
+                        Int_State_reg(i) <= '1';
                     end if;
                 end loop;
             end if;
             --uložení předešlé hodnoty
-            RegDataInPrev <= RegDataIn;
+            Prev_data_reg_i <= Data_reg_RX;
         end if;
     end process GPIO;
 
     --čtení
-    process(Address, RegDataOut, RegDir, RegIntEnable, RegIntState)
+    process(Address, Data_reg_TX, Dir_reg, Int_En_reg, Int_State_reg)
     begin
         case Address is
-            when x"80000004" => Read_Data <= RegDataOut;
-            when x"80000008" => Read_Data <= RegDir;
-            when x"8000000C" => Read_Data <= RegIntEnable;
-            when x"80000010" => Read_Data <= RegIntState;
-            when others => Read_Data <= (others => '0');
+            when x"80000004" => Bus_data_o <= Data_reg_TX;
+            when x"80000008" => Bus_data_o <= Dir_reg;
+            when x"8000000C" => Bus_data_o <= Int_En_reg;
+            when x"80000010" => Bus_data_o <= Int_State_reg;
+            when others => Bus_data_o <= (others => '0');
         end case;
     end process;
 
     --řešení interraptu
-    EdgeDetected <= RegDataIn and (not RegDataInPrev);
-    Irq <= '1' when (unsigned(RegIntState) /= 0) else '0';
-end architecture behavioral;
+    Edge_detected <= Data_reg_RX and (not Prev_data_reg_i);
+    Irq <= '1' when (unsigned(Int_State_reg) /= 0) else '0';
+end architecture RTL;

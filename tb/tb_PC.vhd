@@ -17,8 +17,8 @@ begin
     port map(
         clk   => clk,
         rst   => rst,
-        PCin  => PCin,
-        PCout => PCout
+        PC_i  => PCin,
+        PC_o => PCout
     );
     clk_process : process
     begin

@@ -20,7 +20,7 @@ begin
     uut: entity work.CPU
         port map(
             clk     => clk,
-            unsyncRst     => unsyncRst,
+            async_rst     => unsyncRst,
             Buttons => Buttons,
             Leds    => Leds
         );

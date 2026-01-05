@@ -6,16 +6,16 @@ use ieee.numeric_std.all;
 
 entity RAMB512x32 is
     port(
-        ADDR : in std_logic_vector(8 downto 0);
-        DI : in std_logic_vector(31 downto 0);
-        WE : in std_logic;
         clk : in std_logic;
         rst : in std_logic;
-        DO : out std_logic_vector(31 downto 0)
+        Address : in std_logic_vector(8 downto 0);
+        Data_i : in std_logic_vector(31 downto 0);
+        WE : in std_logic;
+        Data_o : out std_logic_vector(31 downto 0)
     );
 end entity RAMB512x32;
 
-architecture behavioral of RAMB512x32 is
+architecture RTL of RAMB512x32 is
    signal Parity_dummy : std_logic_vector(3 downto 0);
 begin
     RAMB16_S36_inst : RAMB16_S36
@@ -106,15 +106,15 @@ begin
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => DO,      -- 32-bit Data Output
+      DO => Data_o,      -- 32-bit Data Output
       DOP => Parity_dummy,    -- 4-bit parity Output
-      ADDR => ADDR,  -- 9-bit Address Input
+      ADDR => Address,  -- 9-bit Address Input
       CLK => clk,    -- Clock
-      DI => DI,      -- 32-bit Data Input
+      DI => Data_i,      -- 32-bit Data Input
       DIP => "0000",    -- 4-bit parity Input
       EN => '1',      -- RAM Enable Input
       SSR => rst,    -- Synchronous Set/Reset Input
       WE => WE       -- Write Enable Input
    );
 
-end architecture behavioral;
+end architecture RTL;

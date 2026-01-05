@@ -4,36 +4,36 @@ use ieee.numeric_std.all;
 
 entity ALU is
     port(
-        ScrA, ScrB : in std_logic_vector(31 downto 0);
-        ALUControl : in std_logic_vector(2 downto 0);
-        Z_Flag : out std_logic;
-        ALUout : out std_logic_vector(31 downto 0)
+        Scr_A, Scr_B : in std_logic_vector(31 downto 0);
+        ALU_control : in std_logic_vector(2 downto 0);
+        Flag_z : out std_logic;
+        ALU_o : out std_logic_vector(31 downto 0)
     );
 end entity ALU;
 
-architecture behavioral of ALU is
-    signal ALU_Result : std_logic_vector(31 downto 0);
+architecture RTL of ALU is
+    signal ALU_result : std_logic_vector(31 downto 0);
 begin
-    ALUProcess : process(ScrA, ScrB, ALUControl, ALU_Result) is
+    ALU_process : process(Scr_A, Scr_B, ALU_control, ALU_result) is
     begin
-        case ALUControl is
-            when "111" => ALU_Result <= std_logic_vector(signed(ScrA) + signed(ScrB));
-            when "110" => ALU_Result <= std_logic_vector(signed(ScrA) - signed(ScrB));
-            when "101" => ALU_Result <= ScrA and ScrB;
-            when "100" => ALU_Result <= ScrA or ScrB;
+        case ALU_control is
+            when "111" => ALU_result <= std_logic_vector(signed(Scr_A) + signed(Scr_B));
+            when "110" => ALU_result <= std_logic_vector(signed(Scr_A) - signed(Scr_B));
+            when "101" => ALU_result <= Scr_A and Scr_B;
+            when "100" => ALU_result <= Scr_A or Scr_B;
             --!!
-            when "011" => if (signed(ScrA) < signed(ScrB)) then
-                            ALU_Result <= (31 downto 1 => '0') & '1';
+            when "011" => if (signed(Scr_A) < signed(Scr_B)) then
+                            ALU_result <= (31 downto 1 => '0') & '1';
                           else
-                            ALU_Result <= (others => '0');
+                            ALU_result <= (others => '0');
                           end if;
            when others => null;
         end case;
-		  if ALU_Result = (31 downto 0 => '0') then
-				Z_Flag <= '1';
+		  if ALU_result = (31 downto 0 => '0') then
+				Flag_z <= '1';
 		  else
-				Z_Flag <= '0';
+				Flag_z <= '0';
 		  end if;
-    end process ALUProcess;
-    ALUout <= ALU_Result;
-end architecture behavioral;
+    end process ALU_process;
+    ALU_o <= ALU_result;
+end architecture RTL;

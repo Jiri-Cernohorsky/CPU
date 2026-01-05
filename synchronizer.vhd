@@ -2,33 +2,33 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity synchronizer is
+entity Synchronizer is
     Generic (
-        GDataWidth : integer
+        g_DATA_WIDTH : integer
     );
     port(
         clk : in std_logic;
         rst : in std_logic;
-        unsyncInput : in std_logic_vector(GDataWidth - 1 downto 0);
-        syncOutput : out std_logic_vector(GDataWidth - 1 downto 0)
+        Async_i : in std_logic_vector(g_DATA_WIDTH - 1 downto 0);
+        Sync_o : out std_logic_vector(g_DATA_WIDTH - 1 downto 0)
     );
-end entity synchronizer;
+end entity Synchronizer;
 
-architecture behavioral of synchronizer is
-    signal semiSync1 : std_logic_vector(GDataWidth - 1 downto 0);
-    signal semiSync2 : std_logic_vector(GDataWidth - 1 downto 0);
+architecture RTL of Synchronizer is
+    signal Semi_sync_1 : std_logic_vector(g_DATA_WIDTH - 1 downto 0);
+    signal Semi_sync_2 : std_logic_vector(g_DATA_WIDTH - 1 downto 0);
 begin
     synchronize : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                semiSync1 <= (others => '0');
-                semiSync2 <= (others => '0');
+                Semi_sync_1 <= (others => '0');
+                Semi_sync_2 <= (others => '0');
             else
-                semiSync1 <= unsyncInput;
-                semiSync2 <= semiSync1;
+                Semi_sync_1 <= Async_i;
+                Semi_sync_2 <= Semi_sync_1;
             end if;
         end if;
     end process synchronize;
-    syncOutput <= semiSync2;
-end architecture behavioral;
+    Sync_o <= Semi_sync_2;
+end architecture RTL;
