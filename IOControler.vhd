@@ -14,7 +14,11 @@ end entity IOControler;
 
 architecture behavioral of IOControler is
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
