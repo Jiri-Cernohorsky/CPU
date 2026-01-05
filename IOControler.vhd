@@ -7,33 +7,70 @@ entity IOControler is
         clk : in std_logic;
         rst : in std_logic;
         WE : in std_logic;
-        IOAddress : in std_logic_vector(30 downto 0);
-        WEGPIO : out std_logic
+        Address : in std_logic_vector(31 downto 0);  
+        WD : in std_logic_vector(31 downto 0);
+        RD : out std_logic_vector(31 downto 0);
+
+        GPIOPins : inout std_logic_vector(7 downto 0)
+        
     );
 end entity IOControler;
 
 architecture behavioral of IOControler is
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+    component IO_WE_Controler
+        port(
+            clk       : in  std_logic;
+            rst       : in  std_logic;
+            WE        : in  std_logic;
+            IOAddress : in  std_logic_vector(31 downto 0);
+            WEGPIO    : out std_logic
+        );
+    end component IO_WE_Controler;
+
+    component GPIO
+        port(
+            clk        : in    std_logic;
+            rst        : in    std_logic;
+            GPIOPins   : inout std_logic_vector(7 downto 0);
+            WEGPIO     : in    std_logic;
+            Address    : in    std_logic_vector(31 downto 0);
+            Write_Data : in    std_logic_vector(7 downto 0);
+            Read_Data  : out   std_logic_vector(7 downto 0);
+            Irq        : out   std_logic
+        );
+    end component GPIO;
+    signal WEGPIO : std_logic;
+    signal GPIO_RD : std_logic_vector(7 downto 0);
     
-=======
 
->>>>>>> Stashed changes
-=======
-
->>>>>>> Stashed changes
 begin
-    IOcontrol : process (IOAddress, WE) is
-    begin
-        WEGPIO <= '0';
-        if WE = '1' then
-            case IOAddress is
-                when ADDRESSDoplnit => WEGPIO <= '1';
-                when others => null;
-            end case;
-        end if;
-        
-    end process IOcontrol;
-    
 
+    IO_WE_Controler_inst : component IO_WE_Controler
+        port map(
+            clk       => clk,
+            rst       => rst,
+            WE        => WE,
+            IOAddress => Address,
+            WEGPIO    => WEGPIO
+        );
+
+    GPIO_inst : GPIO
+        port map(
+            clk        => clk,
+            rst        => rst,
+            GPIOPins   => GPIOPins,
+            WEGPIO     => WEGPIO,
+            Address    => Address,
+            Write_Data => WD(7 downto 0),
+            Read_Data  => GPIO_RD,
+            Irq        => Irq
+        );
+
+    --mux
+    
+    RD <= x"000000" & GPIO_RD  when WEGPIO = '1' else
+          x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
+          x"00000000";
+        
+    
 end architecture behavioral;

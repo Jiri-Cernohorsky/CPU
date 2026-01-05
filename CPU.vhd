@@ -6,7 +6,8 @@ entity CPU is
     port(
         
         clk : in std_logic;
-        unsyncRst : in std_logic
+        unsyncRst : in std_logic;
+        GPIOPins : inout std_logic_vector(7 downto 0)
     );
 end entity CPU;
 
@@ -20,7 +21,7 @@ architecture behavioral of CPU is
     signal inst : std_logic_vector(31 downto 0); -- instrukce
     signal control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
 
-    signal memData : std_logic_vector(31 downto 0); -- data zapisující se do REG
+    signal RegData : std_logic_vector(31 downto 0); -- data zapisující se do REG
     signal RD1 : std_logic_vector(31 downto 0); -- data z REG 1
     signal RD2 : std_logic_vector(31 downto 0); -- data z REG 2
     signal immOp : std_logic_vector(31 downto 0); --přímý operand
@@ -29,6 +30,9 @@ architecture behavioral of CPU is
     signal ALUout : std_logic_vector(31 downto 0); -- výstup z ALU
 
     signal RDMem : std_logic_vector(31 downto 0); -- výstup z RAM
+    signal RD_IO : std_logic_vector(31 downto 0); -- výstup z Periferií
+    signal RDMemIO : std_logic_vector(31 downto 0); -- výstup z RAM/Periferií
+    
     signal dataToREG : std_logic_vector(31 downto 0); -- hodnota z ALU/PC+4
 
     signal Z_Flag : std_logic; -- Z Flag
@@ -37,8 +41,9 @@ architecture behavioral of CPU is
     signal BraEq : std_logic; -- chce se větvit a je EQ?
     
 	 
-	 signal syncRst : std_logic;
-	 signal rst : std_logic;
+	signal syncRst : std_logic;
+	signal rst : std_logic;
+     
 	 
     component PC
         port(
@@ -48,13 +53,6 @@ architecture behavioral of CPU is
             PCout : out std_logic_vector(10 downto 0)
         );
     end component PC;
-
-    component InstrMem
-        port(
-            A  : in  std_logic_vector(10 downto 0);
-            RD : out std_logic_vector(31 downto 0)
-        );
-    end component InstrMem;
 
     component controlUnit
         port(
@@ -105,10 +103,18 @@ architecture behavioral of CPU is
             DO   : out std_logic_vector(31 downto 0) 
         );
     end component RAMB512x32;
-
-
-
    
+    component IOControler
+        port(
+            clk      : in    std_logic;
+            rst      : in    std_logic;
+            WE       : in    std_logic;
+            Address  : in    std_logic_vector(31 downto 0);
+            WD       : in    std_logic_vector(31 downto 0);
+            RD       : out   std_logic_vector(31 downto 0);
+            GPIOPins : inout std_logic_vector(7 downto 0)
+        );
+    end component IOControler;
 begin
     
     PC_inst : component PC
@@ -117,12 +123,6 @@ begin
             rst   => rst,
             PCin  => PCin,
             PCout => PCout
-        );
-
-    InstrMem_inst : component InstrMem
-        port map(
-            A  => PCout,
-            RD => inst
         );
     
     controlUnit_inst : component controlUnit
@@ -136,7 +136,7 @@ begin
             A1  => inst(19 downto 15),
             A2  => inst(24 downto 20),
             A3  => inst(11 downto 7),
-            WD3 => memData,
+            WD3 => RegData,
             WE3 => control_signal(3),
             clk => clk,
             rst => rst,
@@ -160,7 +160,7 @@ begin
             ALUout     => ALUout
         );
         
-    RAMB512x32_inst : component RAMB512x32
+    DataMem : component RAMB512x32
         port map(
             ADDR => ALUout(8 downto 0),
             DI   => RD2,
@@ -168,6 +168,27 @@ begin
             clk  => clk,
             rst  => rst,
             DO   => RDMem
+        );
+
+    InstrMem : component RAMB512x32
+        port map(
+            ADDR => PCout,
+            DI   => DI,
+            WE   => WE,
+            clk  => clk,
+            rst  => rst,
+            DO   => inst
+        );
+    
+    IOControler_inst : IOControler
+        port map(
+            clk      => clk,
+            rst      => rst,
+            WE       => ALUout(31),
+            Address  => ALUout(31 downto 0), -- mohl bych tam nedávat MSB ale 1. adresa by nebyla pravda 2. je to takhle jednodušší zapsat
+            WD       => RD2,
+            RD       => RD_IO,
+            GPIOPins => GPIOPins
         );
 
     main: process (clk) is
@@ -186,9 +207,11 @@ begin
     --muxy
     ScrB <= immOp when control_signal(6) = '1' else RD2;    --!!!!!!!!!!!!
 
-    memData <= RDMem when control_signal(4) = '1' else dataToREG; -- výběr co se čte data do registru nebo inputy/paměti
+    RDMemIO <= RD_IO when ALUout(31) = '1' else RDMem; -- spojeni dat z paměti a periferií
 
-    dataToREG <= (31 downto 10 => '0') & PCPlus4(9 downto 0) when BranchJalx = '1' else ALUout; -- hodnota z ALU/PC+4
+    RegData <= RDMemIO when control_signal(4) = '1' else dataToREG; -- spojeni dat z registru, PC+4, inputy a paměti
+
+    dataToREG <= (31 downto 10 => '0') & PCPlus4(9 downto 0) when BranchJalx = '1' else ALUout; -- spojeni dat z  ALU a PC+4
 
     BranchTarget <= '0' & ALUout(9 downto 0) when control_signal(2) = '1' else PCPlusImm; -- adresa kam se má skočit
     
