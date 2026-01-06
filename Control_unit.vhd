@@ -28,14 +28,14 @@ architecture RTL of Control_unit is
     --IMR(0) = GPIO 
     signal ISR : std_logic; 
     type Rtq_array_t is array (0 to 7) of std_logic_vector(10 downto 0);
-    constant RTQ : Rtq_array_t := ("00000000000",
-                                 "00000000000",
-                                 "00000000000",
-                                 "00000000000",
-                                 "00000000000",
-                                 "00000000000",
-                                 "00000000000",
-                                 "00000000000");
+    constant c_RTQ : Rtq_array_t := ("00000000000",
+                                     "00000000000",
+                                     "00000000000",
+                                     "00000000000",
+                                     "00000000000",
+                                     "00000000000",
+                                     "00000000000",
+                                     "00000000000");
 begin
     IMR <= W_IMR;
 
@@ -82,7 +82,7 @@ begin
                 for i in 0 to 7 loop
                     if IRR(i) = '1' and IMR(i) = '1' and ISR = '0' then
                     Shadow <= '1';
-                    Int_bra_tar <= RTQ(i);
+                    Int_bra_tar <= c_RTQ(i);
                     Int_bra_tar_en <= '1';
                     ISR <= '1';
                 end if;

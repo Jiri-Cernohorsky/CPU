@@ -198,7 +198,7 @@ begin
     Instr_mem : component RAMB512x32
         port map(
             Address => PC_o, -- !!!!!!!!! pořeba zvětšit paměť na 4násobek pak bude sedět lepší než to přepisovat všude jinde posereš se z toho když vv tom budeš zvětš i DataMem
-            Data_i   => DI,
+            Data_i   => Data_i,
             WE   => WE,
             clk  => clk,
             rst  => rst,
