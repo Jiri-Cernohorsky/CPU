@@ -1,0 +1,52 @@
+sw x1, 0(x0)
+sw x2, 4(zero)
+sw x3, 8(zero)
+sw x4, 12(zero)
+sw x5, 16(zero)
+sw x6, 20(zero)
+sw x7, 24(zero)
+sw x8, 28(zero)
+sw x9, 32(zero)
+sw x10, 36(zero)
+sw x11, 40(zero)
+sw x12, 44(zero)
+sw x13, 48(zero)
+sw x14, 52(zero)
+sw x15, 56(zero)
+sw x16, 60(zero)
+sw x17, 64(zero)
+sw x18, 68(zero)
+sw x19, 72(zero)
+sw x20, 76(zero)
+sw x21, 80(zero)
+sw x22, 84(zero)
+sw x23, 88(zero)
+sw x24, 92(zero)
+sw x25, 96(zero)
+sw x26, 100(zero)
+sw x27, 104(zero)
+sw x28, 108(zero)
+sw x29, 112(zero)
+sw x30, 116(zero)
+sw x31, 120(zero)
+addi s1, zero, 0x80000004
+lw t0, 0(s1)
+lw t1, 4(s1)
+addi x1, zero, 1 # x1 = zero + 1
+addi x2, zero, 2 # x2 = zero + 2
+slt x4, t1, x2
+beq x4, x0, SKIP # if x4 == x2 then ELSE2
+add t1, t1, x2 # t1 = t1 + x2
+sw t1, 4(s1)
+SKIP:
+slt x4, t0, x1     # x4 = 1 pokud t0 < x1, jinak 0
+beq x4, x1, ELSE2 # if x4 == x2 then ELSE2
+sub t0, t0, x2 # t0 = t0 - x2 
+sw t0, 0(s1)
+jal zero, KONEC
+ELSE2:
+add t0, t0, x2 # t0 = t0 + x2
+sw t0, 0(s1)
+KONEC:
+sw x1, 8(s1)
+

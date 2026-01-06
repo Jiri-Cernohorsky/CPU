@@ -16,7 +16,6 @@ entity Control_unit is
         --ALUControl(9:7)  [+(111), -(110), &(101), |(100), <(011)],
         --ALUSrc(6), MemW(5), MemToReg(4), RegW(3), BraJalr(2), BraJal(1), RraBeq(0)
         );
-           
 
 end Control_unit;
 
@@ -28,7 +27,7 @@ architecture RTL of Control_unit is
     --IMR(0) = GPIO 
     signal ISR : std_logic; 
     type Rtq_array_t is array (0 to 7) of std_logic_vector(10 downto 0);
-    constant c_RTQ : Rtq_array_t := ("00000000000",
+    constant c_RTQ : Rtq_array_t := ("00000001100",
                                      "00000000000",
                                      "00000000000",
                                      "00000000000",
@@ -88,7 +87,7 @@ begin
                 end if;
                 end loop;
 
-                if IRR = (others => '0') then
+                if IRR = x"00" then
                     Shadow <= '0';
                     Int_bra_tar <= (others => '0');
                     Int_bra_tar_en <= '0';

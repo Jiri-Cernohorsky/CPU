@@ -8,52 +8,43 @@ end entity tb_CPU;
 architecture behavior of tb_CPU is
 
     signal clk   : std_logic := '0';
-    signal unsyncRst   : std_logic := '0';
-    signal Buttons : std_logic_vector(3 downto 0) := "0000";
-    signal Leds    : std_logic_vector(7 downto 0);
+    signal async_rst   : std_logic := '0';
+    signal GPIO_pins_io : std_logic_vector(7 downto 0) := x"00";
 
-    constant clk_period : time := 10 ns;
+    constant c_CLK_PERIOD : time := 20 ns;
 
 begin
 
-    -- Instance DUT
-    uut: entity work.CPU
+    CPU_inst : entity work.CPU
         port map(
-            clk     => clk,
-            async_rst     => unsyncRst,
-            Buttons => Buttons,
-            Leds    => Leds
+            clk          => clk,
+            async_rst    => async_rst,
+            GPIO_pins_io => GPIO_pins_io
         );
-
-    -- Generování hodinového signálu
+    
     clk_process : process
     begin
         while true loop
             clk <= '0';
-            wait for clk_period / 2;
+            wait for c_CLK_PERIOD / 2;
             clk <= '1';
-            wait for clk_period / 2;
+            wait for c_CLK_PERIOD / 2;
         end loop;
     end process;
 
-    -- Testovací proces s opakováním
     stim_proc: process
     begin
-		unsyncRst <= '1';
+		async_rst <= '1';
 		wait for 500 ns;
-		unsyncRst <= '0';
+		async_rst <= '0';
 		wait for 500 ns;
         while true loop
-            -- Aktivuj enable
-            Buttons <= "0001";
+            GPIO_pins_io(0) <= '0';
             wait for 1 ms;
 
-            -- Deaktivuj enable
-            Buttons <= "0000";
+            GPIO_pins_io(0) <= '1';
             wait for 1 ms;
         end loop;
-
-        -- Konec simulace
         wait;
     end process;
 

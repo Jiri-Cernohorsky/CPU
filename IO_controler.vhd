@@ -43,10 +43,11 @@ architecture RTL of IO_controler is
     signal GPIO_o : std_logic_vector(7 downto 0);
     signal GPIO_irq : std_logic;
     
+    signal W_IMR_internal : std_logic_vector(7 downto 0);
     
 
 begin
-
+    
     IO_WE_controler_inst : component IO_WE_controler
         port map(
             WE         => WE,
@@ -68,7 +69,7 @@ begin
 
     --mux
     Bus_data_o <= x"000000" & GPIO_o  when WE_GPIO = '1' else -- GPIO_o je moc malí proto to x"000000"
-          x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
+          --x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
           x"00000000";
     
     Interrupt_handler : process(GPIO_irq) is
@@ -77,6 +78,7 @@ begin
     end process Interrupt_handler;
 
     -- zápis do interrapt maska
-    W_IMR <= W_IMR and Bus_data_i(7 downto 0) when Bus_address = x"80000000" else W_IMR;     
+    W_IMR_internal <= w_imr_internal and Bus_data_i(7 downto 0) when Bus_address = x"80000000" else W_IMR_internal;
+    W_IMR <= W_IMR_internal; 
 
 end architecture RTL;

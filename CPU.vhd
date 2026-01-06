@@ -26,7 +26,7 @@ architecture RTL of CPU is
     signal Int_bra_tar_en : std_logic; --povolení interrapt větvení
     signal W_IMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
     
-    
+
 
     signal Data_reg_i : std_logic_vector(31 downto 0); -- data zapisující se do REG
     signal Data_reg_o_1 : std_logic_vector(31 downto 0); -- data z REG 1
@@ -49,8 +49,11 @@ architecture RTL of CPU is
     signal Branch_eq : std_logic; -- chce se větvit a je EQ?
     
     signal Semi_sync_rst : std_logic;
-    
 	signal rst : std_logic;
+
+    signal Data_i_dummy : std_logic_vector(31 downto 0);
+    signal WE_dummy : std_logic;
+    
 
     component PC
     	port(
@@ -108,16 +111,16 @@ architecture RTL of CPU is
     end component Imm_decode;
 
 
-    component RAMB512x32
+    component RAM2048x32
     	port(
     		clk     : in  std_logic;
     		rst     : in  std_logic;
-    		Address : in  std_logic_vector(8 downto 0);
+    		Address : in  std_logic_vector(10 downto 0);
     		Data_i  : in  std_logic_vector(31 downto 0);
     		WE      : in  std_logic;
     		Data_o  : out std_logic_vector(31 downto 0)
     	);
-    end component RAMB512x32;
+    end component RAM2048x32;
    
     component IO_controler
     	port(
@@ -125,13 +128,20 @@ architecture RTL of CPU is
     		rst          : in    std_logic;
     		WE           : in    std_logic;
     		Bus_address  : in    std_logic_vector(31 downto 0);
-    		Bus_data_i           : in    std_logic_vector(31 downto 0);
-    		Bus_data_o           : out   std_logic_vector(31 downto 0);
+    		Bus_data_i   : in    std_logic_vector(31 downto 0);
+    		Bus_data_o   : out   std_logic_vector(31 downto 0);
     		IRR          : out   std_logic_vector(7 downto 0);
     		W_IMR        : out   std_logic_vector(7 downto 0);
     		GPIO_pins_io : inout std_logic_vector(7 downto 0)
     	);
     end component IO_controler;
+
+    component InstrMem
+        port(
+            A  : in  std_logic_vector(10 downto 0);
+            RD : out std_logic_vector(31 downto 0)
+        );
+    end component InstrMem;
 begin
     
     PC_inst : component PC
@@ -185,9 +195,9 @@ begin
             ALU_o       => ALU_o
         );
         
-    Data_mem : component RAMB512x32
+    Data_mem : component RAM2048x32
         port map(
-            Address => ALU_o(8 downto 0),
+            Address => ALU_o(10 downto 0),
             Data_i   => Data_reg_o_2,
             WE   => not(ALU_o(31)), --spodní půlka adres paměť, horní půlka adres I/O
             clk  => clk,
@@ -195,26 +205,32 @@ begin
             Data_o   => RD_mem
         );
 
-    Instr_mem : component RAMB512x32
+    --Instr_mem : component RAM2048x32
+    --    port map(
+    --        Address  => PC_o,
+    --        Data_i   => Data_i_dummy,
+    --        WE       => WE_dummy,
+    --        clk      => clk,
+    --        rst      => rst,
+    --        Data_o   => Inst
+    --    );
+    InstrMem_inst : component InstrMem
         port map(
-            Address => PC_o, -- !!!!!!!!! pořeba zvětšit paměť na 4násobek pak bude sedět lepší než to přepisovat všude jinde posereš se z toho když vv tom budeš zvětš i DataMem
-            Data_i   => Data_i,
-            WE   => WE,
-            clk  => clk,
-            rst  => rst,
-            Data_o   => Inst
+            A  => PC_o,
+            RD => Inst
         );
+    
     
     IO_controler_inst : IO_controler
         port map(
-            clk      => clk,
-            rst      => rst,
-            WE       => ALU_o(31),
+            clk          => clk,
+            rst          => rst,
+            WE           => ALU_o(31),
             Bus_address  => ALU_o(31 downto 0), -- mohl bych tam nedávat MSB ale 1. adresa by nebyla pravda 2. je to takhle jednodušší zapsat
-            Bus_data_i       => Data_reg_o_2,
-            Bus_data_o       => RD_IO,
-            IRR      => IRR,
-            W_IMR => W_IMR,
+            Bus_data_i   => Data_reg_o_2,
+            Bus_data_o   => RD_IO,
+            IRR          => IRR,
+            W_IMR        => W_IMR,
             GPIO_pins_io => GPIO_pins_io
         );
 

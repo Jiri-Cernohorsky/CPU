@@ -79,7 +79,7 @@ begin
 
                 --detekce hrany
                 for i in 7 downto 0 loop
-                    if Edge_detected(i) = '1' and Int_En_reg(i) = '1' then
+                    if Edge_detected(i) = '1' and Int_En_reg(i) = '1' then -- nastavit Enabel proto to nic nedela
                         Int_State_reg(i) <= '1';
                     end if;
                 end loop;
@@ -90,10 +90,10 @@ begin
     end process GPIO;
 
     --čtení
-    process(Address, Data_reg_TX, Dir_reg, Int_En_reg, Int_State_reg)
+    process(Address, Data_reg_RX, Dir_reg, Int_En_reg, Int_State_reg)
     begin
         case Address is
-            when x"80000004" => Bus_data_o <= Data_reg_TX;
+            when x"80000004" => Bus_data_o <= Data_reg_RX;
             when x"80000008" => Bus_data_o <= Dir_reg;
             when x"8000000C" => Bus_data_o <= Int_En_reg;
             when x"80000010" => Bus_data_o <= Int_State_reg;
