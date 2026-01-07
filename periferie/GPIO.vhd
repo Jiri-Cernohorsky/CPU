@@ -25,6 +25,7 @@ architecture RTL of GPIO is
     signal Int_En_reg : std_logic_vector(7 downto 0);
     signal Int_State_reg : std_logic_vector(7 downto 0);
     signal Edge_detected : std_logic_vector(7 downto 0);
+    signal Sync_GPIO_pins_io : std_logic_vector(7 downto 0);
     
 
     component Synchronizer
@@ -46,7 +47,7 @@ begin
             clk         => clk,
             rst         => rst,
             Async_i => GPIO_pins_io,
-            Sync_o  => Data_reg_RX
+            Sync_o  => Sync_GPIO_pins_io
         );
     
     --nastavení směru pinů
@@ -54,6 +55,11 @@ begin
         GPIO_pins_io(i) <= Data_reg_TX(i) when Dir_reg(i) = '1' else 'Z';
     end generate;
 
+    Data_reg_RX_for : for i in 7 downto 0 generate
+        Data_reg_RX(i) <= Data_reg_TX(i) when Dir_reg(i) = '1' else
+                          Sync_GPIO_pins_io(i) when Sync_GPIO_pins_io(i) /= 'Z' else '0';
+    end generate Data_reg_RX_for;
+    
 
     GPIO : process (clk) is
     begin
@@ -79,7 +85,7 @@ begin
 
                 --detekce hrany
                 for i in 7 downto 0 loop
-                    if Edge_detected(i) = '1' and Int_En_reg(i) = '1' then -- nastavit Enabel proto to nic nedela
+                    if Edge_detected(i) = '1' and Int_En_reg(i) = '1' and Dir_reg(i) = '0' then 
                         Int_State_reg(i) <= '1';
                     end if;
                 end loop;

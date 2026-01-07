@@ -68,7 +68,7 @@ begin
         );
 
     --mux
-    Bus_data_o <= x"000000" & GPIO_o  when WE_GPIO = '1' else -- GPIO_o je moc malí proto to x"000000"
+    Bus_data_o <= x"000000" & GPIO_o  when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
           --x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
           x"00000000";
     
@@ -78,7 +78,7 @@ begin
     end process Interrupt_handler;
 
     -- zápis do interrapt maska
-    W_IMR_internal <= w_imr_internal and Bus_data_i(7 downto 0) when Bus_address = x"80000000" else W_IMR_internal;
+    W_IMR_internal <= Bus_data_i(7 downto 0) when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
     W_IMR <= W_IMR_internal; 
 
 end architecture RTL;

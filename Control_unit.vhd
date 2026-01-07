@@ -9,7 +9,7 @@ entity Control_unit is
         W_IMR : in std_logic_vector(7 downto 0);
         Shadow : out std_logic;
         Int_bra_tar : out std_logic_vector(10 downto 0);
-        Int_bra_tar_en : out std_logic;
+
         Inst : in std_logic_vector (31 downto 0);
         Control_signal : out std_logic_vector (12 downto 0)
         --immControl(12:10) [R(111), I(110), S(101), B(100), U(011), J(010)],
@@ -27,7 +27,7 @@ architecture RTL of Control_unit is
     --IMR(0) = GPIO 
     signal ISR : std_logic; 
     type Rtq_array_t is array (0 to 7) of std_logic_vector(10 downto 0);
-    constant c_RTQ : Rtq_array_t := ("00000001100",
+    constant c_RTQ : Rtq_array_t := ("00001101000",
                                      "00000000000",
                                      "00000000000",
                                      "00000000000",
@@ -71,26 +71,19 @@ begin
             if rst = '1' then
                 Shadow <= '0';
                 Int_bra_tar <= (others => '0');
-                Int_bra_tar_en <= '0';
                 ISR <= '0';
             else
-                if ISR = '1' then
-                    Int_bra_tar_en <= '0';
-                end if;
-
                 for i in 0 to 7 loop
                     if IRR(i) = '1' and IMR(i) = '1' and ISR = '0' then
                     Shadow <= '1';
                     Int_bra_tar <= c_RTQ(i);
-                    Int_bra_tar_en <= '1';
                     ISR <= '1';
                 end if;
                 end loop;
 
-                if IRR = x"00" then
+                if IRR = x"00" then -- !!!!! problem v realitě tam bude UUUUUUU0 musím kontrolovat změnu ne stav
                     Shadow <= '0';
                     Int_bra_tar <= (others => '0');
-                    Int_bra_tar_en <= '0';
                     ISR <= '0';
                 end if;
             end if;

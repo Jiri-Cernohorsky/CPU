@@ -29,24 +29,45 @@ sw x28, 108(zero)
 sw x29, 112(zero)
 sw x30, 116(zero)
 sw x31, 120(zero)
-addi s1, zero, 0x80000004
-lw t0, 0(s1)
-lw t1, 4(s1)
+addi s1, x0, 0x400
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+lw t1, 8(s1)
 addi x1, zero, 1 # x1 = zero + 1
 addi x2, zero, 2 # x2 = zero + 2
 slt x4, t1, x2
-beq x4, x0, SKIP # if x4 == x2 then ELSE2
+beq x4, x0, SKIP # if x4 == x2 then SKIP
 add t1, t1, x2 # t1 = t1 + x2
-sw t1, 4(s1)
+sw t1, 8(s1)
 SKIP:
+lw t0, 4(s1)
 slt x4, t0, x1     # x4 = 1 pokud t0 < x1, jinak 0
 beq x4, x1, ELSE2 # if x4 == x2 then ELSE2
-sub t0, t0, x2 # t0 = t0 - x2 
-sw t0, 0(s1)
+add t0, t0, x2 # t0 = t0 + x2 
+sw t0, 4(s1)
 jal zero, KONEC
 ELSE2:
-add t0, t0, x2 # t0 = t0 + x2
-sw t0, 0(s1)
+sub t0, t0, x2 # t0 = t0 - x2
+sw t0, 4(s1)
 KONEC:
-sw x1, 8(s1)
+sw x1, 16(s1)
 

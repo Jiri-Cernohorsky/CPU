@@ -17,7 +17,7 @@ begin
     begin
     WE_GPIO <= '0';
     if WE = '1' then
-        if (unsigned(IO_address) >= x"80000004" and unsigned(IO_address) <= x"80000010") then
+        if (IO_address >= x"80000004" and IO_address <= x"80000010") then
             WE_GPIO <= '1';
         end if;
     end if;

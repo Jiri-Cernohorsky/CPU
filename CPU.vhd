@@ -23,7 +23,7 @@ architecture RTL of CPU is
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
     signal IRR : std_logic_vector(7 downto 0); --interrupt request
     signal Int_bra_tar : std_logic_vector(10 downto 0); --interrupt cíl větvení
-    signal Int_bra_tar_en : std_logic; --povolení interrapt větvení
+
     signal W_IMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
     
 
@@ -39,7 +39,6 @@ architecture RTL of CPU is
     signal RD_mem : std_logic_vector(31 downto 0); -- výstup z RAM
     signal RD_IO : std_logic_vector(31 downto 0); -- výstup z Periferií
     signal RD_mem_IO : std_logic_vector(31 downto 0); -- výstup z RAM/Periferií
-    signal Branch_mux_o : std_logic_vector(10 downto 0); 
 
     signal Data_to_reg : std_logic_vector(31 downto 0); -- hodnota z ALU/PC+4
 
@@ -57,26 +56,26 @@ architecture RTL of CPU is
 
     component PC
     	port(
-    		clk    : in  std_logic;
-    		rst    : in  std_logic;
-    		Shadow : in  std_logic;
-    		PC_i   : in  std_logic_vector(10 downto 0);
-    		PC_o  : out std_logic_vector(10 downto 0)
+    		clk         : in  std_logic;
+    		rst         : in  std_logic;
+    		Shadow      : in  std_logic;
+    		Int_bra_tar : in  std_logic_vector(10 downto 0);
+    		PC_i        : in  std_logic_vector(10 downto 0);
+    		PC_o        : out std_logic_vector(10 downto 0)
     	);
     end component PC;
 
     component Control_unit
-        port(
-            clk            : in  std_logic;
-            rst            : in  std_logic;
-            IRR            : in  std_logic_vector(7 downto 0);
-            W_IMR          : in  std_logic_vector(7 downto 0);
-            Shadow         : out std_logic;
-            Int_bra_tar    : out std_logic_vector(10 downto 0);
-            Int_bra_tar_en : out std_logic;
-            Inst           : in  std_logic_vector (31 downto 0);
-            Control_signal : out std_logic_vector (12 downto 0)
-        );
+    	port(
+    		clk            : in  std_logic;
+    		rst            : in  std_logic;
+    		IRR            : in  std_logic_vector(7 downto 0);
+    		W_IMR          : in  std_logic_vector(7 downto 0);
+    		Shadow         : out std_logic;
+    		Int_bra_tar    : out std_logic_vector(10 downto 0);
+    		Inst           : in  std_logic_vector (31 downto 0);
+    		Control_signal : out std_logic_vector (12 downto 0)
+    	);
     end component Control_unit;
 
     component registr32x4
@@ -149,6 +148,7 @@ begin
             clk   => clk,
             rst   => rst,
             Shadow => Shadow,
+            Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
             PC_o => PC_o
         );
@@ -162,7 +162,7 @@ begin
             shadow         => Shadow,
             IRR            => IRR,
             Int_bra_tar    => Int_bra_tar,
-            Int_bra_tar_en => Int_bra_tar_en,
+
             W_IMR          => W_IMR
         );
     
@@ -199,7 +199,7 @@ begin
         port map(
             Address => ALU_o(10 downto 0),
             Data_i   => Data_reg_o_2,
-            WE   => not(ALU_o(31)), --spodní půlka adres paměť, horní půlka adres I/O
+            WE           => not(ALU_o(31)) and Control_signal(5), --spodní půlka adresi paměť, horní půlka adresi I/O
             clk  => clk,
             rst  => rst,
             Data_o   => RD_mem
@@ -225,7 +225,7 @@ begin
         port map(
             clk          => clk,
             rst          => rst,
-            WE           => ALU_o(31),
+            WE           => ALU_o(31) and Control_signal(5),
             Bus_address  => ALU_o(31 downto 0), -- mohl bych tam nedávat MSB ale 1. adresa by nebyla pravda 2. je to takhle jednodušší zapsat
             Bus_data_i   => Data_reg_o_2,
             Bus_data_o   => RD_IO,
@@ -253,9 +253,7 @@ begin
 
     Branch_target <= '0' & ALU_o(9 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    Branch_mux_o <= Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC bez interraptu
-
-    PC_i <= Branch_mux_o when Int_bra_tar_en = '0' else Int_bra_tar; -- nastal interrapt
+    PC_i <= Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry
     PC_plus_imm <= std_logic_vector(signed(PC_o) + signed(Imm_op(10 downto 0))); -- PC + skok    !!!!!!!!!!!!

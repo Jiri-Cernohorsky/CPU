@@ -1,0 +1,16 @@
+GPIO:
+    obrazek GPIO_WE_error 
+    chybějící and Control_signal(5) na  řádcích : 
+        WE           => ALU_o(31) and Control_signal(5),
+        WE           => ALU_o(31) and Control_signal(5),
+    zapoměl jsem andovat memW k WE na MSB AUL_o Protože socha je kokot
+
+Interrapt
+    zapoměl jsme zavednout MASKY na 1 takže se mi interraptu nepropisovaly
+
+ADDI
+    umí jen malá čísla chtěl jsme zapsat velké důvod proč jsme přídal Barrelshifter
+
+IO_controler
+    W_IMR_internal <= Bus_data_i(7 downto 0) when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
+    neměl WE = '1' protože jsem kokot
