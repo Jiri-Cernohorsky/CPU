@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/Project/tb_CPU.xst" -ofn "/home/ise/Project/tb_CPU.syr" 

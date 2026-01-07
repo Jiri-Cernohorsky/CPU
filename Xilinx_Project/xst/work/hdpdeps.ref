@@ -1,0 +1,69 @@
+V3 53
+FL /home/ise/shared_dir/CPU/ALU.vhd 2026/01/05.22:51:22 P.20131013
+EN work/ALU 1767729834 FL /home/ise/shared_dir/CPU/ALU.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/ALU/RTL 1767729835 \
+      FL /home/ise/shared_dir/CPU/ALU.vhd EN work/ALU 1767729834
+FL /home/ise/shared_dir/CPU/Control_unit.vhd 2026/01/06.19:50:20 P.20131013
+EN work/Control_unit 1767729828 FL /home/ise/shared_dir/CPU/Control_unit.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Control_unit/RTL 1767729829 \
+      FL /home/ise/shared_dir/CPU/Control_unit.vhd EN work/Control_unit 1767729828
+EN work/CPU 0 FL /home/ise/shared_dir/CPU/CPU.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/CPU/RTL 0 \
+      FL /home/ise/shared_dir/CPU/CPU.vhd EN work/CPU 0 CP PC CP Control_unit \
+      CP registr32x4 CP Imm_decode CP ALU CP RAM2048x32 CP InstrMem CP IO_controler
+FL /home/ise/shared_dir/CPU/Imm_decode.vhd 2026/01/05.22:56:58 P.20131013
+EN work/Imm_decode 1767729832 FL /home/ise/shared_dir/CPU/Imm_decode.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Imm_decode/RTL 1767729833 \
+      FL /home/ise/shared_dir/CPU/Imm_decode.vhd EN work/Imm_decode 1767729832
+EN work/IO_controler 0 FL /home/ise/shared_dir/CPU/IO_controler.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/IO_controler/RTL 0 \
+      FL /home/ise/shared_dir/CPU/IO_controler.vhd EN work/IO_controler 0 \
+      CP IO_WE_controler CP GPIO
+EN work/InstrMem 0 FL /home/ise/shared_dir/CPU/old/InstrMem.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/InstrMem/behavioral 0 \
+      FL /home/ise/shared_dir/CPU/old/InstrMem.vhd EN work/InstrMem 0
+FL /home/ise/shared_dir/CPU/PC.vhd 2026/01/05.23:06:54 P.20131013
+EN work/PC 1767729826 FL /home/ise/shared_dir/CPU/PC.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/PC/RTL 1767729827 \
+      FL /home/ise/shared_dir/CPU/PC.vhd EN work/PC 1767729826
+FL /home/ise/shared_dir/CPU/periferie/GPIO.vhd 2026/01/05.23:42:08 P.20131013
+EN work/GPIO 1767729824 FL /home/ise/shared_dir/CPU/periferie/GPIO.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/GPIO/RTL 1767729825 \
+      FL /home/ise/shared_dir/CPU/periferie/GPIO.vhd EN work/GPIO 1767729824 \
+      CP Synchronizer
+FL /home/ise/shared_dir/CPU/periferie/IO_WE_Controler.vhd 2026/01/06.19:44:50 P.20131013
+EN work/IO_WE_controler 1767729822 \
+      FL /home/ise/shared_dir/CPU/periferie/IO_WE_Controler.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/IO_WE_controler/RTL 1767729823 \
+      FL /home/ise/shared_dir/CPU/periferie/IO_WE_Controler.vhd \
+      EN work/IO_WE_controler 1767729822
+FL /home/ise/shared_dir/CPU/RAM2048x36.vhd 2026/01/06.18:03:15 P.20131013
+EN work/RAM2048x32 1767729836 FL /home/ise/shared_dir/CPU/RAM2048x36.vhd LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182 PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/RAM2048x32/RTL 1767729837 \
+      FL /home/ise/shared_dir/CPU/RAM2048x36.vhd EN work/RAM2048x32 1767729836 \
+      CP RAMB16_S36
+FL /home/ise/shared_dir/CPU/registr32x4.vhd 2026/01/05.23:28:06 P.20131013
+EN work/registr32x4 1767729830 FL /home/ise/shared_dir/CPU/registr32x4.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/registr32x4/RTL 1767729831 \
+      FL /home/ise/shared_dir/CPU/registr32x4.vhd EN work/registr32x4 1767729830
+FL /home/ise/shared_dir/CPU/synchronizer.vhd 2026/01/05.23:41:43 P.20131013
+EN work/Synchronizer 1767729820 FL /home/ise/shared_dir/CPU/synchronizer.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/Synchronizer/RTL 1767729821 \
+      FL /home/ise/shared_dir/CPU/synchronizer.vhd EN work/Synchronizer 1767729820
+EN work/tb_CPU 0 FL /home/ise/shared_dir/CPU/tb/tb_CPU.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181
+AR work/tb_CPU/behavior 0 \
+      FL /home/ise/shared_dir/CPU/tb/tb_CPU.vhd EN work/tb_CPU 0 CP work/CPU

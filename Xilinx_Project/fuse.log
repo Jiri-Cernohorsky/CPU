@@ -1,0 +1,52 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/ise/Project/tb_CPU_isim_beh.exe" -prj "/home/ise/Project/tb_CPU_beh.prj" "work.tb_CPU" 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/synchronizer.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/periferie/IO_WE_Controler.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/periferie/GPIO.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/registr32x4.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/RAM2048x36.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/PC.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/old/InstrMem.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/IO_controler.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/Imm_decode.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/Control_unit.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/ALU.vhd" into library work
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/CPU.vhd" into library work
+WARNING:HDLCompiler:946 - "/home/ise/Project/../shared_dir/CPU/CPU.vhd" Line 202: Actual for formal port we is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/Project/../shared_dir/CPU/CPU.vhd" Line 228: Actual for formal port we is neither a static name nor a globally static expression
+Parsing VHDL file "/home/ise/Project/../shared_dir/CPU/tb/tb_CPU.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 122580 KB
+Fuse CPU Usage: 1250 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture rtl of entity PC [pc_default]
+Compiling architecture rtl of entity Control_unit [control_unit_default]
+Compiling architecture rtl of entity registr32x4 [registr32x4_default]
+Compiling architecture rtl of entity Imm_decode [imm_decode_default]
+Compiling architecture rtl of entity ALU [alu_default]
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
+Compiling architecture rtl of entity RAM2048x32 [ram2048x32_default]
+Compiling architecture behavioral of entity InstrMem [instrmem_default]
+Compiling architecture rtl of entity IO_WE_controler [io_we_controler_default]
+Compiling architecture rtl of entity Synchronizer [\Synchronizer(8)\]
+Compiling architecture rtl of entity GPIO [gpio_default]
+Compiling architecture rtl of entity IO_controler [io_controler_default]
+Compiling architecture rtl of entity CPU [cpu_default]
+Compiling architecture behavior of entity tb_cpu
+Time Resolution for simulation is 1ps.
+Compiled 35 VHDL Units
+Built simulation executable /home/ise/Project/tb_CPU_isim_beh.exe
+Fuse Memory Usage: 151664 KB
+Fuse CPU Usage: 1470 ms
+GCC CPU Usage: 190 ms

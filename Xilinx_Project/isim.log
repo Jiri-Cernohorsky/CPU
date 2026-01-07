@@ -1,0 +1,2252 @@
+ISim log file
+Running: /home/ise/Project/tb_CPU_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/Project/tb_CPU_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 20ns
+# run 20ns
+# run 20ns
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+at 1002310 ns(5), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 1002310 ns(6), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+at 1002310 ns(5), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 1002310 ns(6), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+at 1002310 ns(5), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 1002310 ns(6), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+at 1002310 ns(5), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 1002310 ns(6), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+at 1002310 ns(5), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 1002310 ns(6), Instance /tb_cpu/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+ISim P.20131013 (signature 0xfbc00daa)
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# exit 0

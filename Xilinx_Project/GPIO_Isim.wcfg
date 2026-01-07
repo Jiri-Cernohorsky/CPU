@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/Project/tb_CPU_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_cpu" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/tb_cpu/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/async_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">async_rst</obj_property>
+      <obj_property name="ObjectShortName">async_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/gpio_pins_io" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpio_pins_io[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_pins_io[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/data_reg_rx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_reg_rx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_reg_rx[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/c_clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_clk_period</obj_property>
+      <obj_property name="ObjectShortName">c_clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/Control_unit_inst/isr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isr</obj_property>
+      <obj_property name="ObjectShortName">isr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/ALU_inst/alu_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_o[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/we_gpio" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we_gpio</obj_property>
+      <obj_property name="ObjectShortName">we_gpio</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/bus_data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bus_data_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_data_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/bus_data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bus_data_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_data_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/int_state_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_state_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">int_state_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/int_en_reg" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">int_en_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">int_en_reg[7:0]</obj_property>
+      <obj_property name="label">int_en_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/edge_detected" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">edge_detected[7:0]</obj_property>
+      <obj_property name="ObjectShortName">edge_detected[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/dir_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dir_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dir_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/registr32x4_inst/reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/Control_unit_inst/imr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">imr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">imr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/PC_inst/last_shadow" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">last_shadow</obj_property>
+      <obj_property name="ObjectShortName">last_shadow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/PC_inst/shadow" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">shadow</obj_property>
+      <obj_property name="ObjectShortName">shadow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/pc_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_o[10:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_o[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/PC_inst/int_bra_tar" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_bra_tar[10:0]</obj_property>
+      <obj_property name="ObjectShortName">int_bra_tar[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/Control_unit_inst/control_signal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_signal[12:0]</obj_property>
+      <obj_property name="ObjectShortName">control_signal[12:0]</obj_property>
+   </wvobject>
+</wave_config>
