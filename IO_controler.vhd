@@ -75,6 +75,7 @@ begin
     Interrupt_handler : process(GPIO_irq) is
     begin
         IRR(0) <= GPIO_irq;
+        IRR(7 downto 1) <= (others => '0');
     end process Interrupt_handler;
 
     -- zápis do interrapt maska

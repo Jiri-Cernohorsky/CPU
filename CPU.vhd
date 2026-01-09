@@ -17,7 +17,7 @@ architecture RTL of CPU is
     signal PC_plus_4 : std_logic_vector(10 downto 0); -- aktuální PC+4
     signal Branch_target : std_logic_vector(10 downto 0); -- PC po větvení
     signal PC_plus_imm : std_logic_vector(10 downto 0); -- aktuální PC+přímý operand
-    signal Shadow : std_logic; -- stav PC
+    signal ISR : std_logic; -- stav PC
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
@@ -58,7 +58,7 @@ architecture RTL of CPU is
     	port(
     		clk         : in  std_logic;
     		rst         : in  std_logic;
-    		Shadow      : in  std_logic;
+    		ISR         : in  std_logic;
     		Int_bra_tar : in  std_logic_vector(10 downto 0);
     		PC_i        : in  std_logic_vector(10 downto 0);
     		PC_o        : out std_logic_vector(10 downto 0)
@@ -71,8 +71,8 @@ architecture RTL of CPU is
     		rst            : in  std_logic;
     		IRR            : in  std_logic_vector(7 downto 0);
     		W_IMR          : in  std_logic_vector(7 downto 0);
-    		Shadow         : out std_logic;
     		Int_bra_tar    : out std_logic_vector(10 downto 0);
+    		ISR            : out std_logic;
     		Inst           : in  std_logic_vector (31 downto 0);
     		Control_signal : out std_logic_vector (12 downto 0)
     	);
@@ -147,7 +147,7 @@ begin
         port map(
             clk   => clk,
             rst   => rst,
-            Shadow => Shadow,
+            ISR => ISR,
             Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
             PC_o => PC_o
@@ -159,10 +159,9 @@ begin
             rst            => rst,
             inst           => Inst,
             control_signal => Control_signal,
-            shadow         => Shadow,
             IRR            => IRR,
             Int_bra_tar    => Int_bra_tar,
-
+            ISR            => ISR,
             W_IMR          => W_IMR
         );
     
@@ -200,7 +199,7 @@ begin
             Address => ALU_o(10 downto 0),
             Data_i   => Data_reg_o_2,
             WE           => not(ALU_o(31)) and Control_signal(5), --spodní půlka adresi paměť, horní půlka adresi I/O
-            clk  => clk,
+            clk  => not clk,
             rst  => rst,
             Data_o   => RD_mem
         );

@@ -14,3 +14,7 @@ ADDI
 IO_controler
     W_IMR_internal <= Bus_data_i(7 downto 0) when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
     neměl WE = '1' protože jsem kokot
+
+interrapt prodleva jeden takt než se projeví změna PC možnost přečtení špatné addresy potřeba vyřešit
+
+BRAM je sinchroní takže vvýsledek dá až na fallinf edge musel jsme posunout její hodiny o půl takru abych četl data včas

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/Project/tb_CPU_isim_beh.exe" -prj "/home/ise/Project/tb_CPU_beh.prj" "work.tb_CPU" 
+-intstyle "ise" -incremental -o "/home/ise/shared_dir/CPU/Xilinx_Project/tb_CPU_isim_beh.exe" -prj "/home/ise/shared_dir/CPU/Xilinx_Project/tb_CPU_beh.prj" "work.tb_CPU" 

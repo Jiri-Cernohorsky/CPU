@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/ise/Project/tb_CPU_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="/home/ise/shared_dir/CPU/Xilinx_Project/tb_CPU_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="numeric_std" />
             <top_module name="std_logic_1164" />
@@ -16,7 +16,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="22" />
+   <WVObjectSize size="23" />
    <wvobject fp_name="/tb_cpu/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -89,14 +89,6 @@
       <obj_property name="ElementShortName">imr[7:0]</obj_property>
       <obj_property name="ObjectShortName">imr[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_cpu/CPU_inst/PC_inst/last_shadow" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">last_shadow</obj_property>
-      <obj_property name="ObjectShortName">last_shadow</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_cpu/CPU_inst/PC_inst/shadow" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">shadow</obj_property>
-      <obj_property name="ObjectShortName">shadow</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_cpu/CPU_inst/pc_o" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">pc_o[10:0]</obj_property>
       <obj_property name="ObjectShortName">pc_o[10:0]</obj_property>
@@ -109,5 +101,17 @@
    <wvobject fp_name="/tb_cpu/CPU_inst/Control_unit_inst/control_signal" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">control_signal[12:0]</obj_property>
       <obj_property name="ObjectShortName">control_signal[12:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/irq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">irq</obj_property>
+      <obj_property name="ObjectShortName">irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/registr32x4_inst/we3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we3</obj_property>
+      <obj_property name="ObjectShortName">we3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_cpu/CPU_inst/registr32x4_inst/reg[2]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">reg[2]</obj_property>
    </wvobject>
 </wave_config>

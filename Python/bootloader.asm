@@ -24,4 +24,5 @@ addi x1, x1, 1
 sw x1, 0(s1)
 sw x1, 0xC(s1)
 loop:
+addi t1, t1, 1
 jal zero, loop

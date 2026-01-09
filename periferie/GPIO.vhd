@@ -108,6 +108,6 @@ begin
     end process;
 
     --řešení interraptu
-    Edge_detected <= Data_reg_RX and (not Prev_data_reg_i);
+    Edge_detected <= Data_reg_RX xor Prev_data_reg_i;
     Irq <= '1' when (unsigned(Int_State_reg) /= 0) else '0';
 end architecture RTL;

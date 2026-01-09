@@ -20,6 +20,11 @@ architecture RTL of RAM2048x32 is
    signal Parity_dummy_2 : std_logic_vector(3 downto 0);
    signal Parity_dummy_3 : std_logic_vector(3 downto 0);
    signal Parity_dummy_4 : std_logic_vector(3 downto 0);
+   signal Data_o_reg_1 : std_logic_vector(31 downto 0);
+   signal Data_o_reg_2 : std_logic_vector(31 downto 0);
+   signal Data_o_reg_3 : std_logic_vector(31 downto 0);
+   signal Data_o_reg_4 : std_logic_vector(31 downto 0);
+   
    signal WE_1 : std_logic;
    signal WE_2 : std_logic;
    signal WE_3 : std_logic;
@@ -30,6 +35,12 @@ begin
    WE_2 <= '1' when (WE = '1' and Address(10 downto 9) = "01") else '0';
    WE_3 <= '1' when (WE = '1' and Address(10 downto 9) = "10") else '0';
    WE_4 <= '1' when (WE = '1' and Address(10 downto 9) = "11") else '0';
+
+   Data_o <= Data_o_reg_1 when Address(10 downto 9) = "00" else
+             Data_o_reg_2 when Address(10 downto 9) = "01" else
+             Data_o_reg_3 when Address(10 downto 9) = "10" else
+             Data_o_reg_4 when Address(10 downto 9) = "11";
+             
     RAMB16_S36_inst_1 : RAMB16_S36
    generic map (
       INIT => X"000000000",  --  Value of output RAM registers at startup
@@ -118,7 +129,7 @@ begin
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => Data_o,      -- 32-bit Data Output
+      DO => Data_o_reg_1,      -- 32-bit Data Output
       DOP => Parity_dummy_1,    -- 4-bit parity Output
       ADDR => Address(8 downto 0),  -- 9-bit Address Input
       CLK => clk,    -- Clock
@@ -216,7 +227,7 @@ begin
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => Data_o,      -- 32-bit Data Output
+      DO => Data_o_reg_2,      -- 32-bit Data Output
       DOP => Parity_dummy_2,    -- 4-bit parity Output
       ADDR => Address(8 downto 0),  -- 9-bit Address Input
       CLK => clk,    -- Clock
@@ -314,7 +325,7 @@ begin
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => Data_o,      -- 32-bit Data Output
+      DO => Data_o_reg_3,      -- 32-bit Data Output
       DOP => Parity_dummy_3,    -- 4-bit parity Output
       ADDR => Address(8 downto 0),  -- 9-bit Address Input
       CLK => clk,    -- Clock
@@ -412,7 +423,7 @@ begin
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000")
    port map (
-      DO => Data_o,      -- 32-bit Data Output
+      DO => Data_o_reg_4,      -- 32-bit Data Output
       DOP => Parity_dummy_4,    -- 4-bit parity Output
       ADDR => Address(8 downto 0),  -- 9-bit Address Input
       CLK => clk,    -- Clock
