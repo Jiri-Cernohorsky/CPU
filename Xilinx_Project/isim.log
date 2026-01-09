@@ -9,269 +9,639 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
+# run 80ns
+# run 80ns
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 1ms
-# run 1ms
-# run 1ms
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(2), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 # run 20ns
 # run 20ns
 # run 20ns
@@ -309,659 +679,80 @@ at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_
 # run 20ns
 # run 20ns
 # run 20ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 # run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 ISim P.20131013 (signature 0xfbc00daa)
 This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
+# run 14930ns
 # run 20ns
 # run 20ns
 ISim P.20131013 (signature 0xfbc00daa)
@@ -970,19 +761,23 @@ This is a Full version of ISim.
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
+# run 14000ns
 # run 20ns
 # run 20ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
+# run 80ns
 # run 20ns
 # run 20ns
 # run 20ns
@@ -992,381 +787,4 @@ at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_
 # run 20ns
 # run 20ns
 # run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-ISim P.20131013 (signature 0xfbc00daa)
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_cpu/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 10 ns(3), Instance /tb_cpu/CPU_inst/InstrMem_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 20ns
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
 # exit 0

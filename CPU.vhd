@@ -262,10 +262,11 @@ begin
                         SPI_Read_en <= '0';
                         WE_inst_mem <= '0';
                         PC_start <= "00000000000";
+                        stall <= '0';
                     else
                         stall <= not(SPI_read_done);
                         WE_inst_mem <= SPI_read_done;
-                    end if; 
+                    end if;
                 end if;
                 Last_SPI_Read_en <= SPI_Read_en;
             end if;

@@ -8,20 +8,20 @@ Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../periferie/IO_WE_Co
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../periferie/GPIO.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../registr32x4.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../RAM2048x36.vhd" into library work
+Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../periferie/SPI_flash.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../PC.vhd" into library work
-Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../old/InstrMem.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../IO_controler.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../Imm_decode.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../Control_unit.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../ALU.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" into library work
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 201: Actual for formal port we is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 202: Actual for formal port clk is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 227: Actual for formal port we is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 222: Actual for formal port we is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 223: Actual for formal port clk is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" Line 281: Actual for formal port we is neither a static name nor a globally static expression
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../tb/tb_CPU.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 122464 KB
+Fuse Memory Usage: 122432 KB
 Fuse CPU Usage: 1310 ms
 Compiling package standard
 Compiling package std_logic_1164
@@ -38,7 +38,7 @@ Compiling package vital_primitives
 Compiling package vpkg
 Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
 Compiling architecture rtl of entity RAM2048x32 [ram2048x32_default]
-Compiling architecture behavioral of entity InstrMem [instrmem_default]
+Compiling architecture rtl of entity SPI_flash [spi_flash_default]
 Compiling architecture rtl of entity IO_WE_controler [io_we_controler_default]
 Compiling architecture rtl of entity Synchronizer [\Synchronizer(8)\]
 Compiling architecture rtl of entity GPIO [gpio_default]
@@ -48,6 +48,6 @@ Compiling architecture behavior of entity tb_cpu
 Time Resolution for simulation is 1ps.
 Compiled 35 VHDL Units
 Built simulation executable /home/ise/shared_dir/CPU/Xilinx_Project/tb_CPU_isim_beh.exe
-Fuse Memory Usage: 151752 KB
-Fuse CPU Usage: 1610 ms
-GCC CPU Usage: 320 ms
+Fuse Memory Usage: 151140 KB
+Fuse CPU Usage: 1670 ms
+GCC CPU Usage: 410 ms

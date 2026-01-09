@@ -9,7 +9,7 @@ entity SPI_flash is
         Adress_i : in std_logic_vector(23 downto 0);
         Read_en : in std_logic;
 
-        Data_o : out std_logic_vector(31 downto 0);
+        Data_o : out std_logic_vector(31 downto 0) := (others => '0');
         Read_done : out std_logic;
 
         SPI_sclk : out std_logic;
@@ -25,9 +25,11 @@ architecture RTL of SPI_flash is
     signal State : STATE_t := IDLE;
 
     type Data_o_array_t is array(2 downto 0) of std_logic_vector(7 downto 0);
-    signal Data_o_array : Data_o_array_t;
+    signal Data_o_array : Data_o_array_t:= ("00000000",
+                                            "00000000",
+                                            "00000000");
 
-    signal Shift_reg : STD_LOGIC_VECTOR(7 downto 0);
+    signal Shift_reg : std_logic_vector(7 downto 0);
     signal Bit_cnt   : integer range 0 to 7 := 0;
     signal Data_o_cnt : integer range 0 to 3 := 0;
     
@@ -137,7 +139,7 @@ begin
                                 if Data_o_cnt = 3 then
                                     Data_o <= shift_reg & Data_o_array(2) & Data_o_array(1) & Data_o_array(0);
                                     Read_done <= '1';
-
+                                    Data_o_cnt <= 0;
                                     if Read_en = '1' then
                                         bit_cnt <= 7;
                                     else
