@@ -7,7 +7,9 @@ entity CPU is
         
         clk : in std_logic;
         async_rst : in std_logic;
-        GPIO_pins_io : inout std_logic_vector(7 downto 0)
+        GPIO_pins_io : inout std_logic_vector(7 downto 0);
+        SPI_o : out std_logic_vector(2 downto 0);
+        SPI_i : in std_logic
     );
 end entity CPU;
 
@@ -18,6 +20,10 @@ architecture RTL of CPU is
     signal Branch_target : std_logic_vector(10 downto 0); -- PC po větvení
     signal PC_plus_imm : std_logic_vector(10 downto 0); -- aktuální PC+přímý operand
     signal ISR : std_logic; -- stav PC
+    signal stall : std_logic;
+    signal PC_start : std_logic_vector(10 downto 0);
+    
+    
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
@@ -50,9 +56,13 @@ architecture RTL of CPU is
     signal Semi_sync_rst : std_logic;
 	signal rst : std_logic;
 
-    signal Data_i_dummy : std_logic_vector(31 downto 0);
-    signal WE_dummy : std_logic;
-    
+    signal Inst_mem_data_o : std_logic_vector(31 downto 0);
+    signal Data_i_inst_mem : std_logic_vector(31 downto 0);
+    signal WE_inst_mem : std_logic;
+    signal SPI_Adress_i : std_logic_vector(23 downto 0);
+    signal SPI_Read_en : std_logic;
+    signal Last_SPI_Read_en : std_logic;
+    signal SPI_read_done : std_logic;
 
     component PC
     	port(
@@ -61,7 +71,8 @@ architecture RTL of CPU is
     		ISR         : in  std_logic;
     		Int_bra_tar : in  std_logic_vector(10 downto 0);
     		PC_i        : in  std_logic_vector(10 downto 0);
-    		PC_o        : out std_logic_vector(10 downto 0)
+    		PC_o        : out std_logic_vector(10 downto 0);
+    		stall       : in  std_logic
     	);
     end component PC;
 
@@ -80,7 +91,7 @@ architecture RTL of CPU is
 
     component registr32x4
     	port(
-    		clk : in  std_logic;
+    		clk : in  std_logic; 
     		rst : in  std_logic;
     		A1  : in  std_logic_vector(4 downto 0);
     		A2  : in  std_logic_vector(4 downto 0);
@@ -120,6 +131,21 @@ architecture RTL of CPU is
     		Data_o  : out std_logic_vector(31 downto 0)
     	);
     end component RAM2048x32;
+
+    component SPI_flash
+        port(
+            clk       : in  std_logic;
+            rst       : in  std_logic;
+            Adress_i  : in  std_logic_vector(23 downto 0);
+            Read_en   : in  std_logic;
+            Data_o    : out std_logic_vector(31 downto 0);
+            Read_done : out std_logic;
+            SPI_sclk  : out std_logic;
+            SPI_mosi  : out std_logic;
+            SPI_miso  : in  std_logic;
+            SPI_cs_n  : out std_logic
+        );
+    end component SPI_flash;
    
     component IO_controler
     	port(
@@ -135,12 +161,6 @@ architecture RTL of CPU is
     	);
     end component IO_controler;
 
-    component InstrMem
-        port(
-            A  : in  std_logic_vector(10 downto 0);
-            RD : out std_logic_vector(31 downto 0)
-        );
-    end component InstrMem;
 begin
     
     PC_inst : component PC
@@ -150,7 +170,8 @@ begin
             ISR => ISR,
             Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
-            PC_o => PC_o
+            PC_o => PC_o,
+            stall => stall
         );
     
     Control_unit_inst : component Control_unit
@@ -204,20 +225,52 @@ begin
             Data_o   => RD_mem
         );
 
-    --Instr_mem : component RAM2048x32
-    --    port map(
-    --        Address  => PC_o,
-    --        Data_i   => Data_i_dummy,
-    --        WE       => WE_dummy,
-    --        clk      => clk,
-    --        rst      => rst,
-    --        Data_o   => Inst
-    --    );
-    InstrMem_inst : component InstrMem
+    Instr_mem : component RAM2048x32
         port map(
-            A  => PC_o,
-            RD => Inst
+            Address  => PC_o,
+            Data_i   => Data_i_inst_mem,
+            WE       => WE_inst_mem,
+            clk      => clk,
+            rst      => rst,
+            Data_o   => Inst_mem_data_o
         );
+        Inst <= Inst_mem_data_o when SPI_Read_en = '0' else x"00000000";
+
+    SPI_flash_inst : component SPI_flash
+        port map(
+            clk       => clk,
+            rst       => rst,
+            Adress_i  => SPI_Adress_i,
+            Read_en   => SPI_Read_en,
+            Data_o    => Data_i_inst_mem,
+            Read_done => SPI_read_done,
+            SPI_sclk  => SPI_o(0),
+            SPI_mosi  => SPI_o(1),
+            SPI_miso  => SPI_i,
+            SPI_cs_n  => SPI_o(2)
+        );
+        SPI_controler : process (clk) is
+        begin
+            if rising_edge(clk) then
+                if rst = '1' then
+                    SPI_Adress_i <= x"000000";
+                    SPI_Read_en <= '1';
+                    stall <= '0';
+                    WE_inst_mem <= '0';
+                else
+                    if Data_i_inst_mem = x"FFFFFFFF" then
+                        SPI_Read_en <= '0';
+                        WE_inst_mem <= '0';
+                        PC_start <= "00000000000";
+                    else
+                        stall <= not(SPI_read_done);
+                        WE_inst_mem <= SPI_read_done;
+                    end if; 
+                end if;
+                Last_SPI_Read_en <= SPI_Read_en;
+            end if;
+        end process SPI_controler;
+        
     
     
     IO_controler_inst : IO_controler
@@ -252,7 +305,8 @@ begin
 
     Branch_target <= '0' & ALU_o(9 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    PC_i <= Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
+    PC_i <= PC_start when Last_SPI_Read_en /= SPI_Read_en  else
+            Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry
     PC_plus_imm <= std_logic_vector(signed(PC_o) + signed(Imm_op(10 downto 0))); -- PC + skok    !!!!!!!!!!!!

@@ -13,7 +13,6 @@ entity IO_controler is
         IRR : out std_logic_vector(7 downto 0);
         W_IMR : out std_logic_vector(7 downto 0);
         GPIO_pins_io : inout std_logic_vector(7 downto 0)
-        
     );
 end entity IO_controler;
 
@@ -25,7 +24,6 @@ architecture RTL of IO_controler is
     		WE_GPIO    : out std_logic
     	);
     end component IO_WE_controler;
-
     
     component GPIO
     	port(
@@ -45,7 +43,7 @@ architecture RTL of IO_controler is
     
     signal W_IMR_internal : std_logic_vector(7 downto 0);
     
-
+    
 begin
     
     IO_WE_controler_inst : component IO_WE_controler
@@ -67,6 +65,7 @@ begin
             Irq            => GPIO_irq
         );
 
+    
     --mux
     Bus_data_o <= x"000000" & GPIO_o  when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
           --x"000000" & JINA_DATA when JINA_PODMINKA = '1' else

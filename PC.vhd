@@ -9,7 +9,8 @@ entity PC is
         ISR : in std_logic;
         Int_bra_tar : in std_logic_vector(10 downto 0);
         PC_i : in std_logic_vector(10 downto 0);
-        PC_o : out std_logic_vector(10 downto 0)
+        PC_o : out std_logic_vector(10 downto 0);
+        stall: in std_logic
 
     );
 end entity PC;
@@ -22,7 +23,7 @@ architecture RTL of PC is
     
 begin
 
-    name : process (clk) is
+    PC : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
@@ -38,10 +39,14 @@ begin
                     PC_reg <= mepc;
                     Int_runnig <= '0';
                 else 
-                    PC_reg <= PC_i;
+                    if stall = '1' then
+                        PC_reg <= PC_reg;
+                    else
+                        PC_reg <= PC_i;
+                    end if;
                 end if;
             end if;
         end if;
-    end process name;
+    end process PC;
     PC_o <= PC_reg;
 end architecture RTL;

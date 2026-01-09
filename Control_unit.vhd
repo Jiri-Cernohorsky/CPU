@@ -57,11 +57,11 @@ begin
             when "000" => case Funct7 is
                 when "0000000" => Control_signal <= "1111110001000"; --add
                 when "0100000" => Control_signal <= "1111100001000"; --sub
-                when others =>  Control_signal <= (others => '-');
+                when others =>  Control_signal <= (others => '0');
             end case;
-            when others =>  Control_signal <= (others => '-');
+            when others =>  Control_signal <= (others => '0');
         end case;
-        when others =>  Control_signal <= (others => '-');
+        when others =>  Control_signal <= (others => '0');
     end case;
     end process Istr_handler;
    
