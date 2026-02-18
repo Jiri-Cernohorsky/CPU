@@ -21,8 +21,8 @@ WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../CPU.vhd" L
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../tb/tb_CPU.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 122432 KB
-Fuse CPU Usage: 1310 ms
+Fuse Memory Usage: 122424 KB
+Fuse CPU Usage: 1320 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -48,6 +48,6 @@ Compiling architecture behavior of entity tb_cpu
 Time Resolution for simulation is 1ps.
 Compiled 35 VHDL Units
 Built simulation executable /home/ise/shared_dir/CPU/Xilinx_Project/tb_CPU_isim_beh.exe
-Fuse Memory Usage: 151140 KB
-Fuse CPU Usage: 1670 ms
-GCC CPU Usage: 410 ms
+Fuse Memory Usage: 151132 KB
+Fuse CPU Usage: 1720 ms
+GCC CPU Usage: 360 ms

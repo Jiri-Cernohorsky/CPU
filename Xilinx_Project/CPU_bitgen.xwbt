@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/shared_dir/CPU/Xilinx_Project/CPU.ncd
+OUTFILE=/home/ise/shared_dir/CPU/Xilinx_Project/CPU.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/ise/shared_dir/CPU/Xilinx_Project
+LICENSE=ISE
+USER_INFO=213321551_0_0_167

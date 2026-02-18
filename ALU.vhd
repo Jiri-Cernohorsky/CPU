@@ -27,6 +27,8 @@ begin
                           else
                             ALU_result <= (others => '0');
                           end if;
+            when "001" => ALU_result <= std_logic_vector(shift_left(unsigned(Scr_A), to_integer(unsigned(Scr_B))));
+            when "000" => ALU_result <= std_logic_vector(shift_right(unsigned(Scr_A), to_integer(unsigned(Scr_B))));
            when others => null;
         end case;
 		  if ALU_result = (31 downto 0 => '0') then

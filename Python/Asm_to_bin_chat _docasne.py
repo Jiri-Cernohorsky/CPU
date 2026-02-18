@@ -186,8 +186,7 @@ def assembler_pass(lines, labels=None, current_address=0):
     return binary_code
 
 def main():
-    print("=== RISC-V ASSEMBLER (s podporou MRET) ===")
-    filename = input("Vstupní soubor (.asm/.s): ").strip()
+    filename = input("Vstupní soubor (.asm): ").strip()
     
     try:
         with open(filename, 'r', encoding='utf-8') as f:

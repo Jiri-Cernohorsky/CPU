@@ -10,9 +10,11 @@ entity IO_controler is
         Bus_address : in std_logic_vector(31 downto 0);  
         Bus_data_i : in std_logic_vector(31 downto 0);
         Bus_data_o : out std_logic_vector(31 downto 0);
-        IRR : out std_logic_vector(7 downto 0);
-        W_IMR : out std_logic_vector(7 downto 0);
-        GPIO_pins_io : inout std_logic_vector(7 downto 0)
+        IRR : out std_logic_vector(7 downto 0);   -- interupt request registr
+        W_IMR : out std_logic_vector(7 downto 0);  --interrupt maska regist pro zápis vytažený z Control unit
+        GPIO_pins_io : inout std_logic_vector(7 downto 0);
+        UART_TX : out std_logic;
+        UART_RX : in std_logic
     );
 end entity IO_controler;
 
@@ -21,7 +23,8 @@ architecture RTL of IO_controler is
     	port(
     		WE         : in  std_logic;
     		IO_address : in  std_logic_vector(31 downto 0);
-    		WE_GPIO    : out std_logic
+    		WE_GPIO    : out std_logic;
+    		WE_UART    : out std_logic
     	);
     end component IO_WE_controler;
     
@@ -41,16 +44,34 @@ architecture RTL of IO_controler is
     signal GPIO_o : std_logic_vector(7 downto 0);
     signal GPIO_irq : std_logic;
     
+    component UART
+        port(
+            clk        : in  std_logic;
+            rst        : in  std_logic;
+            RX         : in  std_logic;
+            TX         : out std_logic;
+            WE_UART    : in  std_logic;
+            Address    : in  std_logic_vector(31 downto 0);
+            Bus_data_i : in  std_logic_vector(7 downto 0);
+            Bus_data_o : out std_logic_vector(7 downto 0);
+            Irq        : out std_logic
+        );
+    end component UART;
+    signal WE_UART : std_logic;
+    signal UART_o : std_logic_vector(7 downto 0);
+    signal UART_irq : std_logic;
+
+
     signal W_IMR_internal : std_logic_vector(7 downto 0);
-    
-    
+
 begin
     
     IO_WE_controler_inst : component IO_WE_controler
         port map(
             WE         => WE,
             IO_address => Bus_address,
-            WE_GPIO    => WE_GPIO
+            WE_GPIO    => WE_GPIO,
+            WE_UART => WE_UART
         );
 
     GPIO_inst : GPIO
@@ -61,23 +82,38 @@ begin
             WE_GPIO        => WE_GPIO,
             Address        => Bus_address,
             Bus_data_i     => Bus_data_i(7 downto 0),
-            Bus_data_o      => GPIO_o,
+            Bus_data_o     => GPIO_o,
             Irq            => GPIO_irq
         );
-
     
-    --mux
+    UART_inst : UART
+        port map(
+            clk        => clk,
+            rst        => rst,
+            RX         => UART_RX,
+            TX         => UART_TX,
+            WE_UART    => WE_UART,
+            Address    => Bus_address,
+            Bus_data_i => Bus_data_i(7 downto 0),
+            Bus_data_o => UART_o,
+            Irq        => UART_irq
+        );
+    
+    
+    --výběr správného výstupu na základě adresy
     Bus_data_o <= x"000000" & GPIO_o  when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
+                  x"000000" & UART_o  when Bus_address >= x"80000104" and Bus_address <= x"80000110" else
           --x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
           x"00000000";
     
-    Interrupt_handler : process(GPIO_irq) is
+    Interrupt_handler : process(GPIO_irq, UART_irq) is
     begin
         IRR(0) <= GPIO_irq;
-        IRR(7 downto 1) <= (others => '0');
+        IRR(1) <= UART_irq;
+        IRR(7 downto 2) <= (others => '0');
     end process Interrupt_handler;
 
-    -- zápis do interrapt maska
+    -- zápis do interrapt masky
     W_IMR_internal <= Bus_data_i(7 downto 0) when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
     W_IMR <= W_IMR_internal; 
 

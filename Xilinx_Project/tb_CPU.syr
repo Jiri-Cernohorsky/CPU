@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: tb_CPU.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 24
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -108,41 +108,39 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/ise/shared_dir/CPU/synchronizer.vhd" in Library work.
-Entity <Synchronizer> compiled.
-Entity <Synchronizer> (Architecture <RTL>) compiled.
+Architecture rtl of Entity synchronizer is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/periferie/IO_WE_Controler.vhd" in Library work.
-Entity <IO_WE_controler> compiled.
-Entity <IO_WE_controler> (Architecture <RTL>) compiled.
+Architecture rtl of Entity io_we_controler is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/periferie/GPIO.vhd" in Library work.
-Entity <GPIO> compiled.
-Entity <GPIO> (Architecture <RTL>) compiled.
+Architecture rtl of Entity gpio is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/PC.vhd" in Library work.
-Entity <PC> compiled.
-Entity <PC> (Architecture <RTL>) compiled.
+Architecture rtl of Entity pc is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/Control_unit.vhd" in Library work.
-Entity <Control_unit> compiled.
-Entity <Control_unit> (Architecture <RTL>) compiled.
+Architecture rtl of Entity control_unit is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/registr32x4.vhd" in Library work.
-Entity <registr32x4> compiled.
-Entity <registr32x4> (Architecture <RTL>) compiled.
+Architecture rtl of Entity registr32x4 is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/Imm_decode.vhd" in Library work.
-Entity <Imm_decode> compiled.
-Entity <Imm_decode> (Architecture <RTL>) compiled.
+Architecture rtl of Entity imm_decode is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/ALU.vhd" in Library work.
-Entity <ALU> compiled.
-Entity <ALU> (Architecture <RTL>) compiled.
+Architecture rtl of Entity alu is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/RAM2048x36.vhd" in Library work.
-Entity <RAM2048x32> compiled.
-Entity <RAM2048x32> (Architecture <RTL>) compiled.
-Compiling vhdl file "/home/ise/shared_dir/CPU/old/InstrMem.vhd" in Library work.
-Entity <InstrMem> compiled.
-ERROR:HDLParsers:3374 - "/home/ise/shared_dir/CPU/old/InstrMem.vhd" Line 15. Actual for index 200 is missing in array aggregate.
+Architecture rtl of Entity ram2048x32 is up to date.
+Compiling vhdl file "/home/ise/shared_dir/CPU/periferie/SPI_flash.vhd" in Library work.
+Architecture rtl of Entity spi_flash is up to date.
+Compiling vhdl file "/home/ise/shared_dir/CPU/IO_controler.vhd" in Library work.
+Architecture rtl of Entity io_controler is up to date.
+Compiling vhdl file "/home/ise/shared_dir/CPU/CPU.vhd" in Library work.
+Architecture rtl of Entity cpu is up to date.
+Compiling vhdl file "/home/ise/shared_dir/CPU/tb/tb_CPU.vhd" in Library work.
+ERROR:HDLParsers:1015 - "/home/ise/shared_dir/CPU/tb/tb_CPU.vhd" Line 42. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "/home/ise/shared_dir/CPU/tb/tb_CPU.vhd" Line 44. Wait for statement unsupported.
+ERROR:HDLParsers:1015 - "/home/ise/shared_dir/CPU/tb/tb_CPU.vhd" Line 52. Wait for statement unsupported.
 --> 
 
 
-Total memory usage is 598776 kilobytes
+Total memory usage is 599668 kilobytes
 
-Number of errors   :    1 (   0 filtered)
+Number of errors   :    3 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

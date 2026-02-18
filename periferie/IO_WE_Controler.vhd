@@ -6,7 +6,8 @@ entity IO_WE_controler is
     port(
         WE : in std_logic;
         IO_address : in std_logic_vector(31 downto 0);
-        WE_GPIO : out std_logic
+        WE_GPIO : out std_logic;
+        WE_UART : out std_logic
     );
 end entity IO_WE_controler;
 
@@ -16,11 +17,14 @@ begin
     IO_WE_controler : process (IO_address, WE) is
     begin
     WE_GPIO <= '0';
+    WE_UART <= '0';
     if WE = '1' then
         if (IO_address >= x"80000004" and IO_address <= x"80000010") then
             WE_GPIO <= '1';
+        elsif (IO_address >= x"80000104" and IO_address <= x"80000110") then
+            WE_UART <= '1';
         end if;
     end if;
     
-end process IO_WE_controler;
+    end process IO_WE_controler;
 end architecture RTL;

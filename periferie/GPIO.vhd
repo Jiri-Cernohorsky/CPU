@@ -8,11 +8,11 @@ entity GPIO is
         rst : in std_logic;
         GPIO_pins_io : inout std_logic_vector(7 downto 0);
 
+        -- Bus info
         WE_GPIO : in std_logic;
         Address : in std_logic_vector(31 downto 0);
         Bus_data_i : in std_logic_vector(7 downto 0);
-        Bus_data_o : out std_logic_vector(7 downto 0);
-        
+        Bus_data_o : out std_logic_vector(7 downto 0); 
         Irq : out std_logic
     );
 end entity GPIO;

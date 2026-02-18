@@ -9,7 +9,9 @@ entity CPU is
         async_rst : in std_logic;
         GPIO_pins_io : inout std_logic_vector(7 downto 0);
         SPI_o : out std_logic_vector(2 downto 0);
-        SPI_i : in std_logic
+        SPI_i : in std_logic;
+        UART_TX: out std_logic;
+        UART_RX: in std_logic
     );
 end entity CPU;
 
@@ -20,10 +22,7 @@ architecture RTL of CPU is
     signal Branch_target : std_logic_vector(10 downto 0); -- PC po větvení
     signal PC_plus_imm : std_logic_vector(10 downto 0); -- aktuální PC+přímý operand
     signal ISR : std_logic; -- stav PC
-    signal stall : std_logic;
-    signal PC_start : std_logic_vector(10 downto 0);
-    
-    
+    signal stall : std_logic; -- signal aby PC z§stalo strejné
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
@@ -31,8 +30,6 @@ architecture RTL of CPU is
     signal Int_bra_tar : std_logic_vector(10 downto 0); --interrupt cíl větvení
 
     signal W_IMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
-    
-
 
     signal Data_reg_i : std_logic_vector(31 downto 0); -- data zapisující se do REG
     signal Data_reg_o_1 : std_logic_vector(31 downto 0); -- data z REG 1
@@ -56,13 +53,18 @@ architecture RTL of CPU is
     signal Semi_sync_rst : std_logic;
 	signal rst : std_logic;
 
-    signal Inst_mem_data_o : std_logic_vector(31 downto 0);
-    signal Data_i_inst_mem : std_logic_vector(31 downto 0);
-    signal WE_inst_mem : std_logic;
-    signal SPI_Adress_i : std_logic_vector(23 downto 0);
-    signal SPI_Read_en : std_logic;
-    signal Last_SPI_Read_en : std_logic;
-    signal SPI_read_done : std_logic;
+    signal Inst_mem_data_o : std_logic_vector(31 downto 0); -- výstup z instrukční paměti
+    signal Data_i_inst_mem : std_logic_vector(31 downto 0); -- vstup do instrukční paměti
+    signal WE_inst_mem : std_logic; -- WE instrukční paměti
+    signal SPI_Adress_i : std_logic_vector(23 downto 0);  -- startovní adresa SPI
+    signal SPI_Read_en : std_logic; -- povolení čtení SPI
+    signal Last_SPI_Read_en : std_logic; -- minulí stav povolení čtení SPI
+    signal SPI_read_done : std_logic; -- signal že přečetl celou instrukci
+
+    signal Ram_WE_comb : std_logic; --kontrola MSB ALU_o + Control_signal(5) pro RAM
+    signal Perf_WE_comb : std_logic; --kontrola MSB ALU_o + Control_signal(5) pro periferie
+    
+    
 
     component PC
     	port(
@@ -157,7 +159,9 @@ architecture RTL of CPU is
     		Bus_data_o   : out   std_logic_vector(31 downto 0);
     		IRR          : out   std_logic_vector(7 downto 0);
     		W_IMR        : out   std_logic_vector(7 downto 0);
-    		GPIO_pins_io : inout std_logic_vector(7 downto 0)
+    		GPIO_pins_io : inout std_logic_vector(7 downto 0);
+    		UART_TX      : out   std_logic;
+    		UART_RX      : in    std_logic
     	);
     end component IO_controler;
 
@@ -217,11 +221,11 @@ begin
         
     Data_mem : component RAM2048x32
         port map(
-            Address => ALU_o(10 downto 0),
+            Address  => ALU_o(10 downto 0),
             Data_i   => Data_reg_o_2,
-            WE           => not(ALU_o(31)) and Control_signal(5), --spodní půlka adresi paměť, horní půlka adresi I/O
-            clk  => not clk,
-            rst  => rst,
+            WE       => Ram_WE_comb, --spodní půlka adresi paměti, horní půlka adresi I/O
+            clk      => not clk,
+            rst      => rst,
             Data_o   => RD_mem
         );
 
@@ -258,12 +262,12 @@ begin
                     stall <= '0';
                     WE_inst_mem <= '0';
                 else
-                    if Data_i_inst_mem = x"FFFFFFFF" then
+                    if PC_o = "11111111111" then --ukončit čtení
                         SPI_Read_en <= '0';
                         WE_inst_mem <= '0';
-                        PC_start <= "00000000000";
+
                         stall <= '0';
-                    else
+                    else -- standartní běh
                         stall <= not(SPI_read_done);
                         WE_inst_mem <= SPI_read_done;
                     end if;
@@ -278,17 +282,20 @@ begin
         port map(
             clk          => clk,
             rst          => rst,
-            WE           => ALU_o(31) and Control_signal(5),
+            WE           => Perf_WE_comb, --spodní půlka adresi paměti, horní půlka adresi I/O
             Bus_address  => ALU_o(31 downto 0), -- mohl bych tam nedávat MSB ale 1. adresa by nebyla pravda 2. je to takhle jednodušší zapsat
             Bus_data_i   => Data_reg_o_2,
             Bus_data_o   => RD_IO,
             IRR          => IRR,
             W_IMR        => W_IMR,
-            GPIO_pins_io => GPIO_pins_io
+            GPIO_pins_io => GPIO_pins_io,
+            UART_TX => UART_TX,
+            UART_RX => UART_RX
         );
 
     Main: process (clk) is
     begin
+          -- synchronizer resetu
 			 if rising_edge(clk) then
                 Semi_sync_rst <= async_rst;  
                 rst <= Semi_sync_rst;
@@ -306,7 +313,7 @@ begin
 
     Branch_target <= '0' & ALU_o(9 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    PC_i <= PC_start when Last_SPI_Read_en /= SPI_Read_en  else
+    PC_i <= "00000000000" when Last_SPI_Read_en /= SPI_Read_en  else
             Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry
@@ -316,6 +323,10 @@ begin
 
     --and
     Branch_eq <= Control_signal(0) and Flag_z; -- kontrola jestli se může Bra
+
+    --spodní půlka adresi paměti, horní půlka adresi I/O
+    Ram_WE_comb <= not ALU_o(31) and Control_signal(5); 
+    Perf_WE_comb <=  ALU_o(31) and Control_signal(5);
 
     --or
     Branch_jalx <= Control_signal(1) or Control_signal(2);
