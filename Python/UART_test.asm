@@ -1,6 +1,8 @@
 addi x10, x0, 0x200    # x10 = 0x00000200
 addi x11, x0, 18
 sll  x10, x10, x11      # x10 = 0x80000000
+addi x3, X3, 3
+sw x3, (x10) # maska interruptu globální zapnout UART a GPIO 
 addi x10, x10, 0x104   # x10 = 0x80000104
 addi x1, x1, 1
 addi x2, x2, 2
