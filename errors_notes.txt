@@ -17,6 +17,4 @@ IO_controler
 
 interrapt prodleva jeden takt než se projeví změna PC možnost přečtení špatné addresy potřeba vyřešit
 
-BRAM je sinchroní takže vvýsledek dá až na fallinf edge musel jsme posunout její hodiny o půl takru abych četl data včas
-
-zkontrolovat konkrétní funkčnost SPI flash
+BRAM je synchroní takže vvýsledek dá až na fallinf edge musel jsme posunout její hodiny o půl takru abych četl data včas

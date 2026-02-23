@@ -8,8 +8,8 @@ entity CPU is
         clk : in std_logic;
         async_rst : in std_logic;
         GPIO_pins_io : inout std_logic_vector(7 downto 0);
-        SPI_o : out std_logic_vector(2 downto 0);
-        SPI_i : in std_logic;
+        SPI_o : out std_logic_vector(2 downto 0); -- 0. sclk 1. mosi 2. cs_n
+        SPI_i : in std_logic; 
         UART_TX: out std_logic;
         UART_RX: in std_logic
     );
