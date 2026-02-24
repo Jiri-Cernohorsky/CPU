@@ -3,3 +3,7 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 CPU.ngc CPU
 map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o CPU_map.ncd CPU.ngd CPU.pcf 
 par -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
 bitgen -intstyle ise -f CPU.ut CPU.ncd 
+xst -intstyle ise -ifn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.xst" -ofn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.xst" -ofn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.xst" -ofn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.syr" 
+xst -intstyle ise -ifn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.xst" -ofn "/home/ise/shared_dir/CPU/Xilinx_Project/CPU.syr" 

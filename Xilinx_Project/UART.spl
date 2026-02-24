@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+RX
+WE_UART
+=Address[31:0]=
+=Bus_data_i[7:0]=
+[Outputs]
+TX
+Irq
+=Bus_data_o[7:0]=
+[BiDir]

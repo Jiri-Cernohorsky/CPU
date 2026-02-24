@@ -1,0 +1,3 @@
+vhdtdtfi -lib work ../vhd/periferie/UART.vhd -prj Project -o UART.spl -module UART -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e UART.spl /home/ise/shared_dir/CPU/Xilinx_Project/UART.sym 
+vhdtdtfi -prj Project -o /home/ise/shared_dir/CPU/Xilinx_Project/UART.vhi -module UART -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../vhd/periferie/UART.vhd 

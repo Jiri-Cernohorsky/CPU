@@ -20,35 +20,37 @@ end entity UART;
 
 architecture RTL of UART is
     constant c_BAUD_RATE : integer := 9600;
-    constant c_BIT_PERIOD : integer := 50000000/c_BAUD_RATE; -- dělička je drahá takže tohle je jako konstanta možnost zlepšit na upravitelný baud rate
+    constant c_BIT_PERIOD : integer := 50000000/c_BAUD_RATE; 
 
-    --synchronizační signáli
+    -- synchronizační signály
     signal RX_semisync_1 : std_logic;
     signal RX_semisync_2 : std_logic;
     signal RX_synced   : std_logic;
 
     type STATE_t is (IDLE, START, DATA, STOP);
-    signal TX_state : STATE_t := IDLE; -- stav odeslání
-    signal RX_state : STATE_t := IDLE; -- stav příjmání
+    signal TX_state : STATE_t := IDLE; -- stav odesílání
+    signal RX_state : STATE_t := IDLE; -- stav přijímání
     
-    --TX signály
-    signal TX_start : std_logic; -- start nastavený uživatelem
-    signal TX_reg : std_logic_vector(7 downto 0); -- data od uživatele nastavitelné
-    signal TX_cnt : integer range 0 to c_BIT_PERIOD; -- počítadlo rychosti 
+    -- TX signály
+    signal TX_start : std_logic; -- start nastavený uživatelem (1-cyklový pulz)
+    signal TX_reg : std_logic_vector(7 downto 0); -- data od uživatele
+    signal TX_cnt : integer range 0 to c_BIT_PERIOD; -- počítadlo rychlosti 
     signal TX_bit_idx : integer range 0 to 7; -- počítadlo bitu
+    signal TX_done : std_logic; -- 1-cyklový pulz od TX procesu
     
-    --RX signály
+    -- RX signály
     signal RX_reg : std_logic_vector(7 downto 0);
-    signal RX_cnt : integer range 0 to c_BIT_PERIOD; -- počítadlo rychosti 
+    signal RX_cnt : integer range 0 to c_BIT_PERIOD; -- počítadlo rychlosti 
     signal RX_bit_idx : integer range 0 to 7; -- počítadlo bitu
+    signal RX_done : std_logic; -- 1-cyklový pulz od RX procesu
     
-    --interrupt
+    -- interrupt register management
     signal Int_En_reg : std_logic_vector(1 downto 0);
-    signal Irq_reg : std_logic_vector(1 downto 0); -- 01 = TX interrupt 10 = RX interupt 00 = žádný interrupt 
+    signal Irq_reg : std_logic_vector(1 downto 0); 
     
 begin
 
-    --synchronizace asinchroního Vstupu RX
+    -- synchronizace asynchronního vstupu RX
     synchronize : process (clk) is
     begin
         if rising_edge(clk) then
@@ -63,62 +65,78 @@ begin
     end process synchronize;
     RX_synced <= RX_semisync_2;
 
-    -- přístu procesoru k datům
+    -- přístup procesoru k datům (zde spravujeme všechny registry)
     Read_Write_to_reg : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                TX_reg <= x"00";
-                TX_start <= '0';
-                Irq_reg <= "00";
                 Bus_data_o <= x"00";
+                TX_start <= '0';
+                TX_reg <= x"00";
+                Int_En_reg <= "00";
+                Irq_reg <= "00";
             else
-                --zápis dat
+                -- Defaultní hodnota pro TX_start - vytvoří jednorázový pulz
+                TX_start <= '0';
+
+                -- Zápis dat
                 if WE_UART = '1' then
                     case Address is
                         when x"80000104"=> TX_reg <= Bus_data_i;
                         when x"80000108"=> TX_start <= Bus_data_i(0);
                         when x"8000010C"=> Int_En_reg <= Bus_data_i(1 downto 0);
-                        -- napíšeš 1 pro smazání prej W1C princip říkali internety
+                        -- W1C: zapíšeš 1 pro smazání příslušného bitu
                         when x"80000110"=> Irq_reg <= Irq_reg and not Bus_data_i(1 downto 0);
                         when others => null;
                     end case;  
                 end if;
+
+                -- Hardwarové nastavení Interruptů (přepíše případné W1C pokud se stanou ve stejný takt)
+                if TX_done = '1' then
+                    Irq_reg(0) <= '1';
+                end if;
+                if RX_done = '1' then
+                    Irq_reg(1) <= '1';
+                end if;
+
+                -- Čtení dat (doplnil jsem čtení všech registrů pro debug)
                 case Address is
                     when x"80000104" => Bus_data_o <= RX_reg;
+                    when x"8000010C" => Bus_data_o <= "000000" & Int_En_reg;
+                    when x"80000110" => Bus_data_o <= "000000" & Irq_reg;
                     when others => Bus_data_o <= (others => '0');
                 end case;
             end if;
         end if;
     end process Read_Write_to_reg;
     
-    --interrupt
-    Irq <= '1' when (unsigned(Irq_reg and Int_En_reg) /= 0) else '0'; -- pokud se bit 1 obou rovná 1 nebo bit 0 obou se rovná 1
+    -- interrupt výstup (kombinační logika na základě masky)
+    Irq <= '1' when (unsigned(Irq_reg and Int_En_reg) /= 0) else '0'; 
 
-    --samotný UART
+    -- samotný UART TX
     TX_process : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
+                TX_done <= '0';
                 TX_state <= IDLE;
                 TX <= '1';
                 TX_bit_idx <= 0;
                 TX_cnt <= 0;
-                Irq_reg <= "00";
-                TX_start <= '0';
             else
+                TX_done <= '0'; -- default, zaručí že flag trvá jen 1 cyklus
                 case TX_state is
                     when IDLE =>
-                        TX <= '1'; -- klidový stav UART
-                        if TX_start = '1' then --čekání na signal start
+                        TX <= '1'; 
+                        if TX_start = '1' then -- zachycení 1-cyklového pulzu
                             TX_state <= START;
                             TX_cnt <= 0;
-                            TX_start <= '0';
+                            -- TX_start se už NEMAŽE TADY, je to pulz z registru
                         end if;
 
                     when START =>
                         TX <= '0'; -- start bit
-                        if TX_cnt < c_BIT_PERIOD - 1 then -- počítadlo periody
+                        if TX_cnt < c_BIT_PERIOD - 1 then 
                             TX_cnt <= TX_cnt + 1;
                         else
                             TX_cnt <= 0;
@@ -127,12 +145,12 @@ begin
                         end if;
 
                     when DATA =>
-                        TX <= TX_reg(TX_bit_idx); -- posílání dat UARTu
-                        if TX_cnt < c_BIT_PERIOD - 1 then -- počítadlo periody
+                        TX <= TX_reg(TX_bit_idx);
+                        if TX_cnt < c_BIT_PERIOD - 1 then 
                             TX_cnt <= TX_cnt + 1;
                         else
                             TX_cnt <= 0;
-                            if TX_bit_idx /= 8 then -- počítadlo bitu zprávy
+                            if TX_bit_idx < 7 then 
                                 TX_bit_idx <= TX_bit_idx + 1;
                             else
                                 TX_state <= STOP;
@@ -140,12 +158,12 @@ begin
                         end if;
 
                     when STOP =>
-                        TX <= '1'; --stop bit
-                        if TX_cnt < c_BIT_PERIOD - 1 then -- počítadlo periody
+                        TX <= '1'; -- stop bit
+                        if TX_cnt < c_BIT_PERIOD - 1 then 
                             TX_cnt <= TX_cnt + 1;
                         else
-                            tx_state <= IDLE;
-                            Irq_reg <= Irq_reg(1) & '1'; -- vyvolání přerušení
+                            TX_state <= IDLE;
+                            TX_done <= '1'; -- vyvolání přerušení
                         end if;
 
                 end case;
@@ -153,28 +171,30 @@ begin
         end if;
     end process TX_process;
 
+    -- samotný UART RX
     RX_process : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                Irq_reg <= "00";
+                RX_done <= '0';
                 RX_bit_idx <= 0;
                 RX_cnt <= 0;
                 RX_reg <= x"00";
                 RX_state <= IDLE;
             else
+                RX_done <= '0'; -- default pulz
                 case RX_state is
                     when IDLE =>
-                        if RX_synced = '0' then --detekce start bitu
+                        if RX_synced = '0' then -- detekce start bitu
                             RX_state <= START;
                             RX_cnt <= 0;
                         end if;
 
                     when START =>
-                        if RX_cnt < c_BIT_PERIOD/2 - 1 then -- čekání do poloviny bitu 
+                        if RX_cnt < c_BIT_PERIOD/2 - 1 then 
                             RX_cnt <= RX_cnt + 1;
                         else
-                            if  RX_synced = '0' then -- kontrola start bitu
+                            if RX_synced = '0' then 
                                 RX_cnt <= 0;
                                 RX_state <= DATA;
                                 RX_bit_idx <= 0;
@@ -184,12 +204,12 @@ begin
                         end if;
 
                     when DATA =>
-                        if RX_cnt < c_BIT_PERIOD - 1 then -- počítadlo periody
+                        if RX_cnt < c_BIT_PERIOD - 1 then 
                             RX_cnt <= RX_cnt + 1;
                         else
                             RX_cnt <= 0;
                             RX_reg(RX_bit_idx) <= RX_synced;
-                            if RX_bit_idx /= 8 then -- počítadlo bitu zprávy
+                            if RX_bit_idx < 7 then 
                                 RX_bit_idx <= RX_bit_idx + 1;
                             else
                                 RX_state <= STOP;
@@ -197,11 +217,11 @@ begin
                         end if;
 
                     when STOP =>
-                        if RX_cnt < c_BIT_PERIOD - 1 then -- počítadlo periody
+                        if RX_cnt < c_BIT_PERIOD - 1 then 
                             RX_cnt <= RX_cnt + 1;
                         else
                             RX_state <= IDLE;
-                            Irq_reg <= Irq_reg(0) & '1'; -- vyvolání přerušení
+                            RX_done <= '1'; -- vyvolání přerušení
                         end if;
                 end case;
             end if;
