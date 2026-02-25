@@ -16,18 +16,18 @@ entity CPU is
 end entity CPU;
 
 architecture RTL of CPU is
-    signal PC_i : std_logic_vector(10 downto 0) := "00000000000"; --novej PC
-    signal PC_o : std_logic_vector(10 downto 0); -- aktuální PC
-    signal PC_plus_4 : std_logic_vector(10 downto 0); -- aktuální PC+4
-    signal Branch_target : std_logic_vector(10 downto 0); -- PC po větvení
-    signal PC_plus_imm : std_logic_vector(10 downto 0); -- aktuální PC+přímý operand
+    signal PC_i : std_logic_vector(11 downto 0) := "000000000000"; --novej PC
+    signal PC_o : std_logic_vector(11 downto 0); -- aktuální PC
+    signal PC_plus_4 : std_logic_vector(11 downto 0); -- aktuální PC+4
+    signal Branch_target : std_logic_vector(11 downto 0); -- PC po větvení
+    signal PC_plus_imm : std_logic_vector(11 downto 0); -- aktuální PC+přímý operand
     signal ISR : std_logic; -- stav PC
     signal stall : std_logic; -- signal aby PC z§stalo strejné
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
     signal IRR : std_logic_vector(7 downto 0); --interrupt request
-    signal Int_bra_tar : std_logic_vector(10 downto 0); --interrupt cíl větvení
+    signal Int_bra_tar : std_logic_vector(11 downto 0); --interrupt cíl větvení
 
     signal W_IMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
 
@@ -71,9 +71,9 @@ architecture RTL of CPU is
     		clk         : in  std_logic;
     		rst         : in  std_logic;
     		ISR         : in  std_logic;
-    		Int_bra_tar : in  std_logic_vector(10 downto 0);
-    		PC_i        : in  std_logic_vector(10 downto 0);
-    		PC_o        : out std_logic_vector(10 downto 0);
+    		Int_bra_tar : in  std_logic_vector(11 downto 0);
+    		PC_i        : in  std_logic_vector(11 downto 0);
+    		PC_o        : out std_logic_vector(11 downto 0);
     		stall       : in  std_logic
     	);
     end component PC;
@@ -84,7 +84,7 @@ architecture RTL of CPU is
     		rst            : in  std_logic;
     		IRR            : in  std_logic_vector(7 downto 0);
     		W_IMR          : in  std_logic_vector(7 downto 0);
-    		Int_bra_tar    : out std_logic_vector(10 downto 0);
+    		Int_bra_tar    : out std_logic_vector(11 downto 0);
     		ISR            : out std_logic;
     		Inst           : in  std_logic_vector (31 downto 0);
     		Control_signal : out std_logic_vector (12 downto 0)
@@ -127,7 +127,7 @@ architecture RTL of CPU is
     	port(
     		clk     : in  std_logic;
     		rst     : in  std_logic;
-    		Address : in  std_logic_vector(10 downto 0);
+    		Address : in  std_logic_vector(11 downto 0);
     		Data_i  : in  std_logic_vector(31 downto 0);
     		WE      : in  std_logic;
     		Data_o  : out std_logic_vector(31 downto 0)
@@ -221,7 +221,7 @@ begin
         
     Data_mem : component RAM2048x32
         port map(
-            Address  => ALU_o(10 downto 0),
+            Address  => ALU_o(11 downto 0),
             Data_i   => Data_reg_o_2,
             WE       => Ram_WE_comb, --spodní půlka adresi paměti, horní půlka adresi I/O
             clk      => not clk,
@@ -262,7 +262,7 @@ begin
                     stall <= '0';
                     WE_inst_mem <= '0';
                 else
-                    if PC_o = "11111111111" then --ukončit čtení
+                    if PC_o = x"FFF" then --ukončit čtení
                         SPI_Read_en <= '0';
                         WE_inst_mem <= '0';
 
@@ -311,9 +311,9 @@ begin
 
     Data_to_reg <= (31 downto 10 => '0') & PC_plus_4(9 downto 0) when Branch_jalx = '1' else ALU_o; -- spojeni dat z  ALU a PC+4
 
-    Branch_target <= '0' & ALU_o(9 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
+    Branch_target <= '0' & ALU_o(10 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    PC_i <= "00000000000" when Last_SPI_Read_en /= SPI_Read_en  else
+    PC_i <= x"000" when Last_SPI_Read_en /= SPI_Read_en  else
             Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry

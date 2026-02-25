@@ -1,33 +1,5 @@
-addi s1, x0, 0x400
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-addi x1, x1, 1
-sw x1, 0(s1)
-sw x1, 0xC(s1)
-loop:
-addi t1, t1, 1  #kontrola jestli se vrací do registů původní hodnoty
-jal zero, loop
-
 #obsluha přerušení
+org 0x0
 sw x1, 0(x0)
 sw x2, 4(zero)
 sw x3, 8(zero)
@@ -59,28 +31,9 @@ sw x28, 108(zero)
 sw x29, 112(zero)
 sw x30, 116(zero)
 sw x31, 120(zero)
-addi s1, x0, 0x400
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
+addi x10, x0, 0x200    # x10 = 0x00000200
+addi x11, x0, 18
+sll  x10, x10, x11      # x10 = 0x80000000
 lw t1, 8(s1)
 addi x1, zero, 1 # x1 = zero + 1
 addi x2, zero, 2 # x2 = zero + 2
@@ -131,3 +84,33 @@ lw x29, 112(zero)
 lw x30, 116(zero)
 lw x31, 120(zero)
 mret
+
+org 0x320
+addi s1, x0, 0x400
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+add s1, s1, s1
+addi x1, x1, 1
+sw x1, 0(s1)
+sw x1, 0xC(s1)
+loop:
+addi t1, t1, 1  #kontrola jestli se vrací do registů původní hodnoty
+jal zero, loop

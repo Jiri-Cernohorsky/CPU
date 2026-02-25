@@ -7,7 +7,7 @@ entity Control_unit is
         rst : in std_logic;
         IRR : in std_logic_vector(7 downto 0);
         W_IMR : in std_logic_vector(7 downto 0);
-        Int_bra_tar : out std_logic_vector(10 downto 0);
+        Int_bra_tar : out std_logic_vector(11 downto 0);
         ISR : out std_logic; -- interupt in servis registr 
         Inst : in std_logic_vector (31 downto 0);
         Control_signal : out std_logic_vector (12 downto 0)
@@ -27,15 +27,15 @@ architecture RTL of Control_unit is
     
     --IMR(0) = GPIO 
     --IMR(1) = UART
-    type Rtq_array_t is array (0 to 7) of std_logic_vector(10 downto 0);
-    constant c_IVR : Rtq_array_t := ("00000000000",
-                                     "00000111000",
-                                     "00000000000",
-                                     "00000000000",
-                                     "00000000000",
-                                     "00000000000",
-                                     "00000000000",
-                                     "00000000000");
+    type Rtq_array_t is array (0 to 7) of std_logic_vector(11 downto 0);
+    constant c_IVR : Rtq_array_t := (x"000",
+                                     x"190",
+                                     x"000",
+                                     x"000",
+                                     x"000",
+                                     x"000",
+                                     x"000",
+                                     x"000");
 begin
     IMR <= W_IMR; --interrupt maska
     Opcode <= Inst(6 downto 0);

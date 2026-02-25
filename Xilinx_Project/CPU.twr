@@ -1,0 +1,600 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf
+
+Design file:              CPU.ncd
+Physical constraint file: CPU.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1348466 paths analyzed, 4624 endpoints analyzed, 1435 failing endpoints
+ 1435 timing errors detected. (1435 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  42.250ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Data_mem/RAMB16_S36_inst_6.A (RAMB16_X0Y7.DIA7), 527 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.900ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_5.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_6.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.900ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_5.A to Data_mem/RAMB16_S36_inst_6.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y5.DOA20    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_5
+                                                       Instr_mem/RAMB16_S36_inst_5.A
+    SLICE_X40Y38.G1      net (fanout=1)        2.086   Instr_mem/Data_o_reg_5<20>
+    SLICE_X40Y38.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f512
+                                                       Instr_mem/Mmux_Data_o_3_f5_11_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_11
+    SLICE_X15Y35.G4      net (fanout=2)        1.305   Instr_mem/Mmux_Data_o_3_f512
+    SLICE_X15Y35.Y       Tilo                  0.704   Inst<20>
+                                                       Inst<20>1_1
+    SLICE_X13Y23.G1      net (fanout=512)      1.771   Inst<20>1
+    SLICE_X13Y23.F5      Tif5                  0.875   IO_controler_inst/GPIO_inst/Dir_reg<7>
+                                                       registr32x4_inst/mux61_9
+                                                       registr32x4_inst/mux61_7_f5
+    SLICE_X13Y22.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux61_7_f5
+    SLICE_X13Y22.FX      Tinbfx                0.463   registr32x4_inst/mux61_6_f51
+                                                       registr32x4_inst/mux61_5_f6
+    SLICE_X12Y23.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux61_5_f6
+    SLICE_X12Y23.FX      Tinbfx                0.364   registr32x4_inst/mux61_6_f5
+                                                       registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.Y       Tif6y                 0.521   IO_controler_inst/GPIO_inst/Dir_reg<7>
+                                                       registr32x4_inst/mux61_2_f8
+    RAMB16_X0Y7.DIA7     net (fanout=14)       4.620   Data_reg_o_2<7>
+    RAMB16_X0Y7.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_6
+                                                       Data_mem/RAMB16_S36_inst_6.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.900ns (7.118ns logic, 9.782ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.900ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_5.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_6.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.900ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_5.A to Data_mem/RAMB16_S36_inst_6.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y5.DOA20    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_5
+                                                       Instr_mem/RAMB16_S36_inst_5.A
+    SLICE_X40Y38.G1      net (fanout=1)        2.086   Instr_mem/Data_o_reg_5<20>
+    SLICE_X40Y38.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f512
+                                                       Instr_mem/Mmux_Data_o_3_f5_11_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_11
+    SLICE_X15Y35.G4      net (fanout=2)        1.305   Instr_mem/Mmux_Data_o_3_f512
+    SLICE_X15Y35.Y       Tilo                  0.704   Inst<20>
+                                                       Inst<20>1_1
+    SLICE_X13Y22.G1      net (fanout=512)      1.771   Inst<20>1
+    SLICE_X13Y22.F5      Tif5                  0.875   registr32x4_inst/mux61_6_f51
+                                                       registr32x4_inst/mux61_81
+                                                       registr32x4_inst/mux61_6_f5_0
+    SLICE_X13Y22.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_6_f51
+    SLICE_X13Y22.FX      Tinafx                0.463   registr32x4_inst/mux61_6_f51
+                                                       registr32x4_inst/mux61_5_f6
+    SLICE_X12Y23.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux61_5_f6
+    SLICE_X12Y23.FX      Tinbfx                0.364   registr32x4_inst/mux61_6_f5
+                                                       registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.Y       Tif6y                 0.521   IO_controler_inst/GPIO_inst/Dir_reg<7>
+                                                       registr32x4_inst/mux61_2_f8
+    RAMB16_X0Y7.DIA7     net (fanout=14)       4.620   Data_reg_o_2<7>
+    RAMB16_X0Y7.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_6
+                                                       Data_mem/RAMB16_S36_inst_6.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.900ns (7.118ns logic, 9.782ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_6.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.889ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to Data_mem/RAMB16_S36_inst_6.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA21    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X54Y34.G2      net (fanout=1)        1.910   Instr_mem/Data_o_reg_6<21>
+    SLICE_X54Y34.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f513
+                                                       Instr_mem/Mmux_Data_o_3_f5_12_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_12
+    SLICE_X16Y32.G2      net (fanout=1)        2.091   Instr_mem/Mmux_Data_o_3_f513
+    SLICE_X16Y32.Y       Tilo                  0.759   Inst<23>
+                                                       Inst<21>1
+    SLICE_X12Y22.BX      net (fanout=257)      1.382   Inst<21>
+    SLICE_X12Y22.F5      Tbxf5                 0.687   registr32x4_inst/mux61_5_f5
+                                                       registr32x4_inst/mux61_5_f5
+    SLICE_X12Y22.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_5_f5
+    SLICE_X12Y22.FX      Tinafx                0.364   registr32x4_inst/mux61_5_f5
+                                                       registr32x4_inst/mux61_4_f6
+    SLICE_X12Y23.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_4_f6
+    SLICE_X12Y23.FX      Tinafx                0.364   registr32x4_inst/mux61_6_f5
+                                                       registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux61_3_f7
+    SLICE_X13Y23.Y       Tif6y                 0.521   IO_controler_inst/GPIO_inst/Dir_reg<7>
+                                                       registr32x4_inst/mux61_2_f8
+    RAMB16_X0Y7.DIA7     net (fanout=14)       4.620   Data_reg_o_2<7>
+    RAMB16_X0Y7.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_6
+                                                       Data_mem/RAMB16_S36_inst_6.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.889ns (6.886ns logic, 10.003ns route)
+                                                       (40.8% logic, 59.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Data_mem/RAMB16_S36_inst_7.A (RAMB16_X0Y6.DIA0), 527 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.758ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_5.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_7.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.758ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_5.A to Data_mem/RAMB16_S36_inst_7.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y5.DOA20    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_5
+                                                       Instr_mem/RAMB16_S36_inst_5.A
+    SLICE_X40Y38.G1      net (fanout=1)        2.086   Instr_mem/Data_o_reg_5<20>
+    SLICE_X40Y38.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f512
+                                                       Instr_mem/Mmux_Data_o_3_f5_11_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_11
+    SLICE_X15Y35.G4      net (fanout=2)        1.305   Instr_mem/Mmux_Data_o_3_f512
+    SLICE_X15Y35.Y       Tilo                  0.704   Inst<20>
+                                                       Inst<20>1_1
+    SLICE_X18Y31.F4      net (fanout=512)      2.045   Inst<20>1
+    SLICE_X18Y31.F5      Tif5                  1.033   registr32x4_inst/mux32_7_f51
+                                                       registr32x4_inst/mux32_84
+                                                       registr32x4_inst/mux32_7_f5_0
+    SLICE_X18Y30.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux32_7_f51
+    SLICE_X18Y30.FX      Tinbfx                0.364   registr32x4_inst/mux32_6_f52
+                                                       registr32x4_inst/mux32_5_f6_0
+    SLICE_X18Y31.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux32_5_f61
+    SLICE_X18Y31.FX      Tinafx                0.364   registr32x4_inst/mux32_7_f51
+                                                       registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.Y       Tif6y                 0.521   IO_controler_inst/UART_inst/Int_En_reg<0>
+                                                       registr32x4_inst/mux32_2_f8
+    RAMB16_X0Y6.DIA0     net (fanout=17)       4.145   Data_reg_o_2<0>
+    RAMB16_X0Y6.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_7
+                                                       Data_mem/RAMB16_S36_inst_7.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.758ns (7.177ns logic, 9.581ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.758ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_5.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_7.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.758ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_5.A to Data_mem/RAMB16_S36_inst_7.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y5.DOA20    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_5
+                                                       Instr_mem/RAMB16_S36_inst_5.A
+    SLICE_X40Y38.G1      net (fanout=1)        2.086   Instr_mem/Data_o_reg_5<20>
+    SLICE_X40Y38.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f512
+                                                       Instr_mem/Mmux_Data_o_3_f5_11_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_11
+    SLICE_X15Y35.G4      net (fanout=2)        1.305   Instr_mem/Mmux_Data_o_3_f512
+    SLICE_X15Y35.Y       Tilo                  0.704   Inst<20>
+                                                       Inst<20>1_1
+    SLICE_X18Y30.F4      net (fanout=512)      2.045   Inst<20>1
+    SLICE_X18Y30.F5      Tif5                  1.033   registr32x4_inst/mux32_6_f52
+                                                       registr32x4_inst/mux32_73
+                                                       registr32x4_inst/mux32_6_f5_1
+    SLICE_X18Y30.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux32_6_f52
+    SLICE_X18Y30.FX      Tinafx                0.364   registr32x4_inst/mux32_6_f52
+                                                       registr32x4_inst/mux32_5_f6_0
+    SLICE_X18Y31.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux32_5_f61
+    SLICE_X18Y31.FX      Tinafx                0.364   registr32x4_inst/mux32_7_f51
+                                                       registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.Y       Tif6y                 0.521   IO_controler_inst/UART_inst/Int_En_reg<0>
+                                                       registr32x4_inst/mux32_2_f8
+    RAMB16_X0Y6.DIA0     net (fanout=17)       4.145   Data_reg_o_2<0>
+    RAMB16_X0Y6.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_7
+                                                       Data_mem/RAMB16_S36_inst_7.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.758ns (7.177ns logic, 9.581ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_7.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.615ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to Data_mem/RAMB16_S36_inst_7.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA20    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X40Y38.G2      net (fanout=1)        1.943   Instr_mem/Data_o_reg_6<20>
+    SLICE_X40Y38.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f512
+                                                       Instr_mem/Mmux_Data_o_3_f5_11_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_11
+    SLICE_X15Y35.G4      net (fanout=2)        1.305   Instr_mem/Mmux_Data_o_3_f512
+    SLICE_X15Y35.Y       Tilo                  0.704   Inst<20>
+                                                       Inst<20>1_1
+    SLICE_X18Y30.F4      net (fanout=512)      2.045   Inst<20>1
+    SLICE_X18Y30.F5      Tif5                  1.033   registr32x4_inst/mux32_6_f52
+                                                       registr32x4_inst/mux32_73
+                                                       registr32x4_inst/mux32_6_f5_1
+    SLICE_X18Y30.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux32_6_f52
+    SLICE_X18Y30.FX      Tinafx                0.364   registr32x4_inst/mux32_6_f52
+                                                       registr32x4_inst/mux32_5_f6_0
+    SLICE_X18Y31.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux32_5_f61
+    SLICE_X18Y31.FX      Tinafx                0.364   registr32x4_inst/mux32_7_f51
+                                                       registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux32_4_f7
+    SLICE_X19Y29.Y       Tif6y                 0.521   IO_controler_inst/UART_inst/Int_En_reg<0>
+                                                       registr32x4_inst/mux32_2_f8
+    RAMB16_X0Y6.DIA0     net (fanout=17)       4.145   Data_reg_o_2<0>
+    RAMB16_X0Y6.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_7
+                                                       Data_mem/RAMB16_S36_inst_7.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.615ns (7.177ns logic, 9.438ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Data_mem/RAMB16_S36_inst_2.A (RAMB16_X0Y0.DIA25), 527 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.325ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_2.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.325ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to Data_mem/RAMB16_S36_inst_2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA21    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X54Y34.G2      net (fanout=1)        1.910   Instr_mem/Data_o_reg_6<21>
+    SLICE_X54Y34.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f513
+                                                       Instr_mem/Mmux_Data_o_3_f5_12_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_12
+    SLICE_X16Y32.G2      net (fanout=1)        2.091   Instr_mem/Mmux_Data_o_3_f513
+    SLICE_X16Y32.Y       Tilo                  0.759   Inst<23>
+                                                       Inst<21>1
+    SLICE_X15Y37.BX      net (fanout=257)      2.215   Inst<21>
+    SLICE_X15Y37.F5      Tbxf5                 0.589   Data_reg_o_2<25>
+                                                       registr32x4_inst/mux49_7_f5
+    SLICE_X15Y36.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux49_7_f5
+    SLICE_X15Y36.FX      Tinbfx                0.463   registr32x4_inst/mux49_6_f51
+                                                       registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FX      Tinbfx                0.364   registr32x4_inst/mux49_6_f5
+                                                       registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.Y       Tif6y                 0.521   Data_reg_o_2<25>
+                                                       registr32x4_inst/mux49_2_f8
+    RAMB16_X0Y0.DIA25    net (fanout=10)       3.222   Data_reg_o_2<25>
+    RAMB16_X0Y0.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_2
+                                                       Data_mem/RAMB16_S36_inst_2.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.325ns (6.887ns logic, 9.438ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.325ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_2.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.325ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to Data_mem/RAMB16_S36_inst_2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA21    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X54Y34.G2      net (fanout=1)        1.910   Instr_mem/Data_o_reg_6<21>
+    SLICE_X54Y34.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f513
+                                                       Instr_mem/Mmux_Data_o_3_f5_12_F
+                                                       Instr_mem/Mmux_Data_o_3_f5_12
+    SLICE_X16Y32.G2      net (fanout=1)        2.091   Instr_mem/Mmux_Data_o_3_f513
+    SLICE_X16Y32.Y       Tilo                  0.759   Inst<23>
+                                                       Inst<21>1
+    SLICE_X15Y36.BX      net (fanout=257)      2.215   Inst<21>
+    SLICE_X15Y36.F5      Tbxf5                 0.589   registr32x4_inst/mux49_6_f51
+                                                       registr32x4_inst/mux49_6_f5_0
+    SLICE_X15Y36.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux49_6_f51
+    SLICE_X15Y36.FX      Tinafx                0.463   registr32x4_inst/mux49_6_f51
+                                                       registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FX      Tinbfx                0.364   registr32x4_inst/mux49_6_f5
+                                                       registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.Y       Tif6y                 0.521   Data_reg_o_2<25>
+                                                       registr32x4_inst/mux49_2_f8
+    RAMB16_X0Y0.DIA25    net (fanout=10)       3.222   Data_reg_o_2<25>
+    RAMB16_X0Y0.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_2
+                                                       Data_mem/RAMB16_S36_inst_2.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.325ns (6.887ns logic, 9.438ns route)
+                                                       (42.2% logic, 57.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -8.082ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_8.A (RAM)
+  Destination:          Data_mem/RAMB16_S36_inst_2.A (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      16.082ns (Levels of Logic = 6)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP falling at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_8.A to Data_mem/RAMB16_S36_inst_2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y7.DOA21    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_8
+                                                       Instr_mem/RAMB16_S36_inst_8.A
+    SLICE_X54Y34.F1      net (fanout=1)        1.667   Instr_mem/Data_o_reg_8<21>
+    SLICE_X54Y34.X       Tif5x                 1.152   Instr_mem/Mmux_Data_o_3_f513
+                                                       Instr_mem/Mmux_Data_o_3_f5_12_G
+                                                       Instr_mem/Mmux_Data_o_3_f5_12
+    SLICE_X16Y32.G2      net (fanout=1)        2.091   Instr_mem/Mmux_Data_o_3_f513
+    SLICE_X16Y32.Y       Tilo                  0.759   Inst<23>
+                                                       Inst<21>1
+    SLICE_X15Y36.BX      net (fanout=257)      2.215   Inst<21>
+    SLICE_X15Y36.F5      Tbxf5                 0.589   registr32x4_inst/mux49_6_f51
+                                                       registr32x4_inst/mux49_6_f5_0
+    SLICE_X15Y36.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux49_6_f51
+    SLICE_X15Y36.FX      Tinafx                0.463   registr32x4_inst/mux49_6_f51
+                                                       registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FXINB   net (fanout=1)        0.000   registr32x4_inst/mux49_5_f6
+    SLICE_X14Y37.FX      Tinbfx                0.364   registr32x4_inst/mux49_6_f5
+                                                       registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.FXINA   net (fanout=1)        0.000   registr32x4_inst/mux49_3_f7
+    SLICE_X15Y37.Y       Tif6y                 0.521   Data_reg_o_2<25>
+                                                       registr32x4_inst/mux49_2_f8
+    RAMB16_X0Y0.DIA25    net (fanout=10)       3.222   Data_reg_o_2<25>
+    RAMB16_X0Y0.CLKA     Tbdck                 0.227   Data_mem/RAMB16_S36_inst_2
+                                                       Data_mem/RAMB16_S36_inst_2.A
+    -------------------------------------------------  ---------------------------
+    Total                                     16.082ns (6.887ns logic, 9.195ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+
+Paths for end point Instr_mem/RAMB16_S36_inst_3.A (RAMB16_X1Y1.DIA25), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.623ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SPI_flash_inst/Data_o_25 (FF)
+  Destination:          Instr_mem/RAMB16_S36_inst_3.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.632ns (Levels of Logic = 0)
+  Clock Path Skew:      0.009ns (0.033 - 0.024)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: SPI_flash_inst/Data_o_25 to Instr_mem/RAMB16_S36_inst_3.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y19.XQ      Tcko                  0.473   SPI_flash_inst/Data_o<25>
+                                                       SPI_flash_inst/Data_o_25
+    RAMB16_X1Y1.DIA25    net (fanout=8)        0.285   SPI_flash_inst/Data_o<25>
+    RAMB16_X1Y1.CLKA     Tbckd       (-Th)     0.126   Instr_mem/RAMB16_S36_inst_3
+                                                       Instr_mem/RAMB16_S36_inst_3.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.632ns (0.347ns logic, 0.285ns route)
+                                                       (54.9% logic, 45.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Instr_mem/RAMB16_S36_inst_4.A (RAMB16_X1Y3.DIA19), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.634ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SPI_flash_inst/Data_o_19 (FF)
+  Destination:          Instr_mem/RAMB16_S36_inst_4.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.647ns (Levels of Logic = 0)
+  Clock Path Skew:      0.013ns (0.035 - 0.022)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: SPI_flash_inst/Data_o_19 to Instr_mem/RAMB16_S36_inst_4.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y31.XQ      Tcko                  0.473   SPI_flash_inst/Data_o<19>
+                                                       SPI_flash_inst/Data_o_19
+    RAMB16_X1Y3.DIA19    net (fanout=8)        0.300   SPI_flash_inst/Data_o<19>
+    RAMB16_X1Y3.CLKA     Tbckd       (-Th)     0.126   Instr_mem/RAMB16_S36_inst_4
+                                                       Instr_mem/RAMB16_S36_inst_4.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.647ns (0.347ns logic, 0.300ns route)
+                                                       (53.6% logic, 46.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Instr_mem/RAMB16_S36_inst_3.A (RAMB16_X1Y1.DIA11), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.647ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               SPI_flash_inst/Data_o_11 (FF)
+  Destination:          Instr_mem/RAMB16_S36_inst_3.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.655ns (Levels of Logic = 0)
+  Clock Path Skew:      0.008ns (0.033 - 0.025)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: SPI_flash_inst/Data_o_11 to Instr_mem/RAMB16_S36_inst_3.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X54Y20.XQ      Tcko                  0.474   SPI_flash_inst/Data_o<11>
+                                                       SPI_flash_inst/Data_o_11
+    RAMB16_X1Y1.DIA11    net (fanout=8)        0.307   SPI_flash_inst/Data_o<11>
+    RAMB16_X1Y1.CLKA     Tbckd       (-Th)     0.126   Instr_mem/RAMB16_S36_inst_3
+                                                       Instr_mem/RAMB16_S36_inst_3.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.655ns (0.348ns logic, 0.307ns route)
+                                                       (53.1% logic, 46.9% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Instr_mem/RAMB16_S36_inst_1/CLKA
+  Logical resource: Instr_mem/RAMB16_S36_inst_1.A/CLKA
+  Location pin: RAMB16_X1Y2.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Instr_mem/RAMB16_S36_inst_2/CLKA
+  Logical resource: Instr_mem/RAMB16_S36_inst_2.A/CLKA
+  Location pin: RAMB16_X1Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Instr_mem/RAMB16_S36_inst_3/CLKA
+  Logical resource: Instr_mem/RAMB16_S36_inst_3.A/CLKA
+  Location pin: RAMB16_X1Y1.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   25.974|   15.225|   16.900|         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1435  Score: 3743393  (Setup/Max: 3743393, Hold: 0)
+
+Constraints cover 1348466 paths, 0 nets, and 8390 connections
+
+Design statistics:
+   Minimum period:  42.250ns{1}   (Maximum frequency:  23.669MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Feb 25 22:07:04 2026 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 394 MB
+
+
+

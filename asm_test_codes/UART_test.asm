@@ -1,21 +1,5 @@
-addi x10, x0, 0x200    # x10 = 0x00000200
-addi x11, x0, 18
-sll  x10, x10, x11      # x10 = 0x80000000
-addi x3, X3, 3
-sw x3, (x10) # maska interruptu globální zapnout UART a GPIO 
-addi x10, x10, 0x104   # x10 = 0x80000104
-addi x1, x1, 1
-addi x2, x2, 2
-sw x2, 8(x10) # interrupt enable
-LOOP:
-lw t1, 200(x0) # načtení UART dat
-beq t1, x0, LOOP # if t1 == x0 then LOOP
-sll t1, t1, x1 # posun o 1 do leva
-sw t1, 0(x10) # poslat upravenou hodnotu UARTu
-sw x1, 4(x10) # signal start pro UART
-and t1, t1, x0   # t1 = t1 AND 0
-jal zero, LOOP
 #UART interrupt
+org 0x190
 sw x1, 0(zero) #zachování registru
 sw x2, 4(zero)
 sw x3, 8(zero)
@@ -90,3 +74,23 @@ lw x29, 112(zero)
 lw x30, 116(zero)
 lw x31, 120(zero)
 mret
+
+addi x10, x0, 0x200    # x10 = 0x00000200
+addi x11, x0, 18
+sll  x10, x10, x11      # x10 = 0x80000000
+addi x3, X3, 3
+sw x3, (x10) # maska interruptu globální zapnout UART a GPIO 
+addi x10, x10, 0x104   # x10 = 0x80000104
+addi x1, x1, 1
+addi x2, x2, 2
+sw x2, 8(x10) # interrupt enable
+LOOP:
+lw t1, 200(x0) # načtení UART dat
+beq t1, x0, LOOP # if t1 == x0 then LOOP
+sll t1, t1, x1 # posun o 1 do leva
+sw t1, 0(x10) # poslat upravenou hodnotu UARTu
+sw x1, 4(x10) # signal start pro UART
+and t1, t1, x0   # t1 = t1 AND 0
+jal zero, LOOP
+
+

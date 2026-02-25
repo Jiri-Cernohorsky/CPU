@@ -7,18 +7,18 @@ entity PC is
         clk : in std_logic;
         rst : in std_logic;
         ISR : in std_logic;
-        Int_bra_tar : in std_logic_vector(10 downto 0);
-        PC_i : in std_logic_vector(10 downto 0);
-        PC_o : out std_logic_vector(10 downto 0);
+        Int_bra_tar : in std_logic_vector(11 downto 0);
+        PC_i : in std_logic_vector(11 downto 0);
+        PC_o : out std_logic_vector(11 downto 0);
         stall: in std_logic
 
     );
 end entity PC;
 
 architecture RTL of PC is
-    signal PC_reg : std_logic_vector(10 downto 0);
+    signal PC_reg : std_logic_vector(11 downto 0);
     
-    signal mepc : std_logic_vector(10 downto 0);
+    signal mepc : std_logic_vector(11 downto 0);
     signal Int_runnig : std_logic;
     
 begin

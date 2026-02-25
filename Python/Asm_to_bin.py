@@ -84,6 +84,13 @@ def catch_labels(lines):
     labels = {}
     for line in lines:
         line = line.split('#')[0].strip()
+        if not line: continue
+        
+        if line.lower().startswith(('org ', '.org ')):
+            parts = line.split()
+            addr = parse_imm(parts[1])
+            continue
+
         if line.endswith(':'):
             label_name = line[:-1].strip()
             labels[label_name] = addr
@@ -99,6 +106,16 @@ def assembler_pass(lines, labels):
         line = line.split('#')[0].strip()
         if not line: continue
         if line.endswith(':'): continue
+
+        if line.lower().startswith(('org ', '.org ')):
+            new_addr = parse_imm(line.split()[1])
+            if new_addr > addr:
+                padding_words = (new_addr - addr) // 4
+                binary_code.extend([0] * padding_words)
+            elif new_addr < addr:
+                print(f"Varování: ORG skáče zpět z adresy {hex(addr)} na {hex(new_addr)}. Ve formátu .bin to nelze snadno zapsat.")
+            addr = new_addr
+            continue
 
         parts = line.replace(',', ' ').split()
         cmd = parts[0].lower()
@@ -177,23 +194,23 @@ def assembler_pass(lines, labels):
     return binary_code
 
 
-filename = input("Vstupní soubor (.asm): ").strip()
-try:
-    with open(filename, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+if __name__ == "__main__":
+    filename = input("Vstupní soubor (.asm): ").strip()
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
 
-    labels = {}
-    labels = catch_labels(lines)
-    print(f"Nalezeny labely: {labels}")
+        labels = catch_labels(lines)
+        print(f"Nalezeny labely: {labels}")
 
-    machine_code_ints = assembler_pass(lines, labels)
+        machine_code_ints = assembler_pass(lines, labels)
 
-    output_file = filename.rsplit('.', 1)[0] + ".bin"
-    with open(output_file, 'wb') as f:
-        for instr in machine_code_ints:
-            f.write(struct.pack('>I', instr))
+        if machine_code_ints is not None:
+            output_file = filename.rsplit('.', 1)[0] + ".bin"
+            with open(output_file, 'wb') as f:
+                for instr in machine_code_ints:
+                    f.write(struct.pack('>I', instr))
+            print(f"Uloženo do {output_file}")
 
-    print(f"Uloženo do {output_file}")
-
-except FileNotFoundError:
-    print("Soubor nenalezen")
+    except FileNotFoundError:
+        print("Soubor nenalezen")
