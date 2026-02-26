@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-vbox::  Wed Feb 25 22:06:25 2026
+localhost.localdomain::  Thu Feb 26 13:37:12 2026
 
 par -w -intstyle ise -ol high -t 1 CPU_map.ncd CPU.ncd CPU.pcf 
 
@@ -11,7 +11,7 @@ Loading device for application Rf_Device from file '3s500e.nph' in environment /
    "CPU" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
-WARNING:Security:42 - Your license support version '2026.02' for ISE expires in 3 days after which you will not qualify
+WARNING:Security:42 - Your license support version '2026.02' for ISE expires in 2 days after which you will not qualify
 for Xilinx software updates or new releases.
 
 ----------------------------------------------------------------------
@@ -19,6 +19,11 @@ for Xilinx software updates or new releases.
 Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
 
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
 Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
@@ -30,20 +35,14 @@ Design Summary Report:
    Number of External Input IOBs                  4
 
       Number of External Input IBUFs              4
-        Number of LOCed External Input IBUFs      4 out of 4     100%
-
 
    Number of External Output IOBs                 4
 
       Number of External Output IOBs              4
-        Number of LOCed External Output IOBs      4 out of 4     100%
-
 
    Number of External Bidir IOBs                  8
 
       Number of External Bidir IOBs               8
-        Number of LOCed External Bidir IOBs       8 out of 8     100%
-
 
    Number of BUFGMUXs                        2 out of 24      8%
    Number of RAMB16s                        16 out of 20     80%
@@ -57,55 +56,60 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 1 secs 
-Finished initial Timing Analysis.  REAL time: 2 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 
 Starting Placer
-Total REAL time at the beginning of Placer: 2 secs 
-Total CPU  time at the beginning of Placer: 1 secs 
+Total REAL time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:9492fd10) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:282ab2) REAL time: 5 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:9492fd10) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:282ab2) REAL time: 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:9492fd10) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:282ab2) REAL time: 6 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-
-Phase 4.2  Initial Clock and IO Placement (Checksum:67dd3168) REAL time: 4 secs 
+.............
+Phase 4.2  Initial Clock and IO Placement (Checksum:8bbcd724) REAL time: 6 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:67dd3168) REAL time: 4 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:8bbcd724) REAL time: 6 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:67dd3168) REAL time: 4 secs 
+Phase 6.36  Local Placement Optimization (Checksum:8bbcd724) REAL time: 6 secs 
 
-Phase 7.8  Global Placement
-...............
-.......................................................................................................
-...................
-............................................
-..............................................................
-..............................................................
-.............................
-.................
-Phase 7.8  Global Placement (Checksum:be783d73) REAL time: 9 secs 
+Phase 7.3  Local Placement Optimization
+.............
+Phase 7.3  Local Placement Optimization (Checksum:f193e4b7) REAL time: 6 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:be783d73) REAL time: 9 secs 
+Phase 8.5  Local Placement Optimization (Checksum:f193e4b7) REAL time: 7 secs 
 
-Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:3437220e) REAL time: 13 secs 
+Phase 9.8  Global Placement
+.................
+...............................................................................................
+.....................
+...............................................................................
+......................
+......................
+Phase 9.8  Global Placement (Checksum:919e09ed) REAL time: 15 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:3437220e) REAL time: 14 secs 
+Phase 10.5  Local Placement Optimization (Checksum:919e09ed) REAL time: 15 secs 
 
-Total REAL time to Placer completion: 14 secs 
-Total CPU  time to Placer completion: 13 secs 
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:433f58ab) REAL time: 28 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:433f58ab) REAL time: 28 secs 
+
+Total REAL time to Placer completion: 29 secs 
+Total CPU  time to Placer completion: 23 secs 
 Writing design to file CPU.ncd
 
 
@@ -113,33 +117,30 @@ Writing design to file CPU.ncd
 Starting Router
 
 
-Phase  1  : 17100 unrouted;      REAL time: 17 secs 
+Phase  1  : 17100 unrouted;      REAL time: 33 secs 
 
-Phase  2  : 16318 unrouted;      REAL time: 19 secs 
+Phase  2  : 16317 unrouted;      REAL time: 37 secs 
 
-Phase  3  : 7329 unrouted;      REAL time: 21 secs 
+Phase  3  : 5868 unrouted;      REAL time: 40 secs 
 
-Phase  4  : 7652 unrouted; (Setup:2369666, Hold:0, Component Switching Limit:0)     REAL time: 25 secs 
-WARNING:Route:441 - The router has detected a very high timing score (1329656) for this design. It is extremely unlikely
-   the router will be able to meet your timing requirements. To prevent excessive run time the router will change
-   strategy. The router will now work to completely route this design but not to improve timing. This behavior will
-   allow you to use the Static Timing Report and FPGA Editor to isolate the paths with timing problems. The cause of
-   this behavior is either overly difficult constraints, or issues with the implementation or synthesis of logic in the
-   critical timing path. If you would prefer the router continue trying to meet timing and you are willing to accept a
-   long run time set the option "-xe c" to override the present behavior.
+Phase  4  : 6220 unrouted; (Par is working to improve performance)     REAL time: 59 secs 
 
-Phase  5  : 0 unrouted; (Setup:3778685, Hold:0, Component Switching Limit:0)     REAL time: 28 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
 
 Updating file: CPU.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:3778685, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 22 secs 
 
-Phase  7  : 0 unrouted; (Setup:3778685, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 mins 49 secs 
 
-Phase  8  : 0 unrouted; (Setup:3743393, Hold:0, Component Switching Limit:0)     REAL time: 31 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 mins 49 secs 
 
-Total REAL time to Router completion: 31 secs 
-Total CPU time to Router completion: 29 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 mins 50 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 mins 51 secs 
+
+Total REAL time to Router completion: 4 mins 51 secs 
+Total CPU time to Router completion: 3 mins 41 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -157,14 +158,14 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X1Y11| No   |  674 |  0.089     |  0.206      |
+|           clk_BUFGP | BUFGMUX_X2Y10| No   |  674 |  0.083     |  0.200      |
 +---------------------+--------------+------+------+------------+-------------+
 |ALU_inst/ALU_result_ |              |      |      |            |             |
-|             not0001 | BUFGMUX_X1Y10| No   |   32 |  0.034     |  0.165      |
+|             not0001 | BUFGMUX_X1Y10| No   |   32 |  0.049     |  0.171      |
 +---------------------+--------------+------+------+------------+-------------+
 |IO_controler_inst/W_ |              |      |      |            |             |
 |IMR_internal_cmp_eq0 |              |      |      |            |             |
-|                 000 |         Local|      |    1 |  0.000     |  0.870      |
+|                 000 |         Local|      |    1 |  0.000     |  0.853      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -175,24 +176,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 3743393 (Setup: 3743393, Hold: 0, Component Switching Limit: 0)
-
-WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
-   your design.
-
-   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
-   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
-
-   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
-   ensure the best options are set in the tools for timing closure.
-
-   Use the Xilinx "SmartXplorer" script to try special combinations of
-   options known to produce very good results.
-
-   Visit the Xilinx technical support web at http://support.xilinx.com and go to
-   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
-   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
-   in your design.
+Timing Score: 0 (Setup: 0, Hold: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -201,30 +185,34 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | SETUP       |    -8.900ns|    42.250ns|    1435|     3743393
-   40%                                      | HOLD        |     0.623ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    27.652ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.663ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-1 constraint not met.
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
 
 
 Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 33 secs 
-Total CPU time to PAR completion: 31 secs 
+Total REAL time to PAR completion: 4 mins 59 secs 
+Total CPU time to PAR completion: 3 mins 47 secs 
 
-Peak Memory Usage:  734 MB
+Peak Memory Usage:  737 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
-Timing: Completed - 1435 errors found.
 
 Number of error messages: 0
-Number of warning messages: 2
-Number of info messages: 0
+Number of warning messages: 0
+Number of info messages: 1
 
 Writing design to file CPU.ncd
 

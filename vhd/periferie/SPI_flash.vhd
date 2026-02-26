@@ -7,7 +7,8 @@ entity SPI_flash is
         clk : in std_logic;
         rst : in std_logic;
         Adress_i : in std_logic_vector(23 downto 0);
-        Read_en : in std_logic;
+        Data_i : in std_logic_vector(31 downto 0);
+        CMD_sel : in std_logic_vector(1 downto 0);
 
         Data_o : out std_logic_vector(31 downto 0) := (others => '0');
         Read_done : out std_logic;
@@ -21,17 +22,21 @@ entity SPI_flash is
 end entity SPI_flash;
 
 architecture RTL of SPI_flash is
-    type STATE_t is (IDLE, SEND_CMD_AND_ADDR, READ_LOOP, CLEANUP);
+    type STATE_t is (IDLE, SEND_CMD, SEND_ADDR, DATA_LOOP, CLEANUP);
     signal State : STATE_t := IDLE;
 
     signal Shift_reg : std_logic_vector(31 downto 0);
     signal Bit_cnt   : integer range 0 to 31 := 0;
     
-    signal clk_div_cnt : integer range 0 to 3 := 0;
+    signal clk_div_cnt : integer range 0 to 3 := 0; --dělič hodin
     signal spi_tick    : std_logic := '0';
     signal sclk_reg     : std_logic := '0';
 
-    constant c_CMD_READ : std_logic_vector(7 downto 0) := x"03";
+    constant c_CMD_READ : std_logic_vector(7 downto 0)     := x"03";
+    constant c_CMD_WRITE_EN : std_logic_vector(7 downto 0) := x"06";
+    constant c_CMD_WRITE : std_logic_vector(7 downto 0)    := x"02";
+    constant c_CMD_ERASE : std_logic_vector(7 downto 0)    := x"C7";
+
 begin
     -- zpomalení hodin na čtvrtinu rychleji číst nejde 20 MHz max takže by jsme měli stíhat
     SPI_clk_gen : process (clk) is
@@ -62,7 +67,7 @@ begin
                 sclk_reg <= '0';
                 -- vystrčen ven z casu State aby měl okamžitou reakci na Read_en
             elsif (State = IDLE and Read_en = '1') then
-                state <= SEND_CMD_AND_ADDR;
+                state <= SEND_CMD;
                 shift_reg <= c_CMD_READ & Adress_i;
                 spi_cs_n <= '0';
                 sclk_reg <= '0';
@@ -70,7 +75,15 @@ begin
             elsif spi_tick = '1' then
                 
                 case State is
-                    when SEND_CMD_AND_ADDR => -- zápis příkazu pro flash
+                    when IDLE =>
+                        if Read_en = '1' then
+                            state <= SEND_CMD;
+                        shift_reg <= c_CMD_READ & Adress_i;
+                        spi_cs_n <= '0';
+                        sclk_reg <= '0';
+                        Bit_cnt <= 31;
+                        end if;
+                    when SEND_CMD => -- zápis příkazu pro flash
                         if sclk_reg = '0' then sclk_reg <= '1';  
                         else
                             sclk_reg <='0';
@@ -104,8 +117,6 @@ begin
                     when CLEANUP =>
                          spi_cs_n <= '1';
                         state <= IDLE;
-                    when IDLE =>
-                    	null;
                 end case;
             end if;
         end if;

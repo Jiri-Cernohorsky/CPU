@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Wed Feb 25 22:06:14 2026">
+  <application stringID="NgdBuild" timeStamp="Thu Feb 26 13:36:49 2026">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -43,13 +43,13 @@
         <item stringID="User_EnvOsname" value="OracleServer"/>
         <item stringID="User_EnvOsrelease" value="Oracle Linux Server release 6.4"/>
       </item>
-      <item stringID="User_EnvHost" value="vbox"/>
+      <item stringID="User_EnvHost" value="localhost.localdomain"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz"/>
-          <item stringID="speed" value="2904.000 MHz"/>
+          <item stringID="arch" value="AMD Ryzen 7 8840HS w/ Radeon 780M Graphics     "/>
+          <item stringID="speed" value="3293.868 MHz"/>
         </row>
       </table>
     </section>
@@ -58,7 +58,6 @@
         <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
         <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
         <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc3s500e-fg320-4"/>
-        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="/home/ise/shared_dir/CPU/asm_test_codes/config_CPU.ucf"/>
       </section>
     </task>
     <task stringID="NGDBUILD_REPORT">
@@ -67,7 +66,7 @@
         <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
         <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="0"/>
         <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="0"/>
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
@@ -140,7 +139,6 @@
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF8" value="64"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUFT" value="8"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_PULLDOWN" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_RAMB16_S36" value="16"/>
         <item dataType="int" stringID="NGDBUILD_NUM_SRLC16E" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>

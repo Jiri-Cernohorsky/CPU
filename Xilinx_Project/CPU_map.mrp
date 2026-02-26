@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Feb 25 22:06:17 2026
+Mapped Date    : Thu Feb 26 13:36:56 2026
 
 Design Summary
 --------------
@@ -39,9 +39,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                3.83
 
-Peak Memory Usage:  716 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  714 MB
+Total REAL time to MAP completion:  10 secs 
+Total CPU time to MAP completion:   7 secs 
 
 NOTES:
 
@@ -83,7 +83,7 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:Security:42 - Your license support version '2026.02' for ISE expires in
-3 days after which you will not qualify for Xilinx software updates or new
+2 days after which you will not qualify for Xilinx software updates or new
 releases.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    IO_controler_inst/W_IMR_internal_cmp_eq0000 is sourced by a combinatorial
@@ -94,8 +94,9 @@ Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
 INFO:MapLib:562 - No environment variables are currently set.
-INFO:MapLib:159 - Net Timing constraints on signal clk are pushed forward
-   through input buffer.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
@@ -119,22 +120,22 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| GPIO_pins_io<0>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<1>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<2>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<3>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<4>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<5>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<6>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| GPIO_pins_io<7>                    | IOB              | BIDIR     | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| SPI_i                              | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
-| SPI_o<0>                           | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
-| SPI_o<1>                           | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
-| SPI_o<2>                           | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
-| UART_RX                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
-| UART_TX                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | FAST |              |          | 0 / 0    |
-| async_rst                          | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLDOWN | 0 / 0    |
-| clk                                | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| GPIO_pins_io<0>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<1>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<2>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<3>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<4>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<5>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<6>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| GPIO_pins_io<7>                    | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| SPI_i                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| SPI_o<0>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| SPI_o<1>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| SPI_o<2>                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| UART_RX                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| UART_TX                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| async_rst                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="ConstraintSystem" num="0" >The Period constraint &lt;NET &quot;clk&quot; PERIOD = 20.0ns HIGH 40%;&gt; [/home/ise/shared_dir/CPU/asm_test_codes/config_CPU.ucf(1)], is specified using the Net Period method which is not recommended. Please use the Timespec PERIOD method.
-</msg>
-
 </messages>
 

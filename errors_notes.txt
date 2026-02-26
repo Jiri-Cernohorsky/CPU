@@ -18,3 +18,6 @@ IO_controler
 interrapt prodleva jeden takt než se projeví změna PC možnost přečtení špatné addresy potřeba vyřešit
 
 BRAM je synchroní takže vvýsledek dá až na fallinf edge musel jsme posunout její hodiny o půl takru abych četl data včas
+
+datasheet flashky
+https://datasheet.octopart.com/M25P16-VME6G-STMicroelectronics-datasheet-7623188.pdf

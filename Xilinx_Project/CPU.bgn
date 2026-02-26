@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '3s500e.nph' in environment
    "CPU" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
 Opened constraints file CPU.pcf.
 
-Wed Feb 25 22:07:35 2026
+Thu Feb 26 13:42:38 2026
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No CPU.ncd 
 
@@ -98,7 +98,7 @@ DRC detected 0 errors and 1 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 INFO:Security:54 - 'xc3s500e' is a WebPack part.
 WARNING:Security:42 - Your license support version '2026.02' for ISE expires in
-3 days after which you will not qualify for Xilinx software updates or new
+2 days after which you will not qualify for Xilinx software updates or new
 releases.
 
 Creating bit map...

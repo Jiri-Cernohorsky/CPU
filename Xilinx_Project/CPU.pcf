@@ -1,25 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Feb 25 22:06:21 2026
+// Written by: Map P.20131013 on Thu Feb 26 13:37:04 2026
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "UART_RX" LOCATE = SITE "C7" LEVEL 1;
-COMP "UART_TX" LOCATE = SITE "D7" LEVEL 1;
-COMP "clk" LOCATE = SITE "C9" LEVEL 1;
-COMP "SPI_o<0>" LOCATE = SITE "U16" LEVEL 1;
-COMP "SPI_o<1>" LOCATE = SITE "T4" LEVEL 1;
-COMP "SPI_o<2>" LOCATE = SITE "U3" LEVEL 1;
-COMP "SPI_i" LOCATE = SITE "N10" LEVEL 1;
-COMP "async_rst" LOCATE = SITE "D18" LEVEL 1;
-COMP "GPIO_pins_io<0>" LOCATE = SITE "B4" LEVEL 1;
-COMP "GPIO_pins_io<1>" LOCATE = SITE "A4" LEVEL 1;
-COMP "GPIO_pins_io<2>" LOCATE = SITE "D5" LEVEL 1;
-COMP "GPIO_pins_io<3>" LOCATE = SITE "C5" LEVEL 1;
-COMP "GPIO_pins_io<4>" LOCATE = SITE "A6" LEVEL 1;
-COMP "GPIO_pins_io<5>" LOCATE = SITE "B6" LEVEL 1;
-COMP "GPIO_pins_io<6>" LOCATE = SITE "E7" LEVEL 1;
-COMP "GPIO_pins_io<7>" LOCATE = SITE "F7" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
-NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
 SCHEMATIC END;
 
