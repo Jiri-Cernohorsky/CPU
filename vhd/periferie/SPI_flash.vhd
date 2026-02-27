@@ -71,6 +71,12 @@ begin
                 State <= IDLE;
                 SPI_cs_n <= '1';
                 sclk_reg <= '0';
+                Bit_cnt  <= 0;
+                CMD_done <= '0';
+                Data_o  <= x"00000000";
+                Read_done <= '0';
+                Write_start <= '0';
+                Shift_reg <= x"00000000";
             elsif spi_tick = '1' then
                 Read_done <= '0';
                 Write_start <= '0';
@@ -162,7 +168,7 @@ begin
                                 bit_cnt <= 31;
                                 State  <= WRITE_LOOP;
                             end if;
-                        else
+                        else 
                             State <= CLEANUP;
                         end if; 
                     when CLEANUP =>
