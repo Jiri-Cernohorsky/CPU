@@ -22,7 +22,7 @@ architecture RTL of CPU is
     signal Branch_target : std_logic_vector(11 downto 0); -- PC po větvení
     signal PC_plus_imm : std_logic_vector(11 downto 0); -- aktuální PC+přímý operand
     signal ISR : std_logic; -- stav PC
-    signal stall : std_logic; -- signal aby PC z§stalo strejné
+    signal stall : std_logic; -- signal aby PC zustalo strejné
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
@@ -56,10 +56,6 @@ architecture RTL of CPU is
     signal Inst_mem_data_o : std_logic_vector(31 downto 0); -- výstup z instrukční paměti
     signal Data_i_inst_mem : std_logic_vector(31 downto 0); -- vstup do instrukční paměti
     signal WE_inst_mem : std_logic; -- WE instrukční paměti
-    signal SPI_Adress_i : std_logic_vector(23 downto 0);  -- startovní adresa SPI
-    signal SPI_Read_en : std_logic; -- povolení čtení SPI
-    signal Last_SPI_Read_en : std_logic; -- minulí stav povolení čtení SPI
-    signal SPI_read_done : std_logic; -- signal že přečetl celou instrukci
 
     signal Ram_WE_comb : std_logic; --kontrola MSB ALU_o + Control_signal(5) pro RAM
     signal Perf_WE_comb : std_logic; --kontrola MSB ALU_o + Control_signal(5) pro periferie
@@ -133,21 +129,6 @@ architecture RTL of CPU is
     		Data_o  : out std_logic_vector(31 downto 0)
     	);
     end component RAM2048x32;
-
-    component SPI_flash
-        port(
-            clk       : in  std_logic;
-            rst       : in  std_logic;
-            Adress_i  : in  std_logic_vector(23 downto 0);
-            Read_en   : in  std_logic;
-            Data_o    : out std_logic_vector(31 downto 0);
-            Read_done : out std_logic;
-            SPI_sclk  : out std_logic;
-            SPI_mosi  : out std_logic;
-            SPI_miso  : in  std_logic;
-            SPI_cs_n  : out std_logic
-        );
-    end component SPI_flash;
    
     component IO_controler
     	port(
@@ -238,45 +219,7 @@ begin
             rst      => rst,
             Data_o   => Inst_mem_data_o
         );
-        Inst <= Inst_mem_data_o when SPI_Read_en = '0' else x"00000000";
-
-    SPI_flash_inst : component SPI_flash
-        port map(
-            clk       => clk,
-            rst       => rst,
-            Adress_i  => SPI_Adress_i,
-            Read_en   => SPI_Read_en,
-            Data_o    => Data_i_inst_mem,
-            Read_done => SPI_read_done,
-            SPI_sclk  => SPI_o(0),
-            SPI_mosi  => SPI_o(1),
-            SPI_miso  => SPI_i,
-            SPI_cs_n  => SPI_o(2)
-        );
-        SPI_controler : process (clk) is
-        begin
-            if rising_edge(clk) then
-                if rst = '1' then
-                    SPI_Adress_i <= x"000000";
-                    SPI_Read_en <= '1';
-                    stall <= '0';
-                    WE_inst_mem <= '0';
-                else
-                    if PC_o = x"FFF" then --ukončit čtení
-                        SPI_Read_en <= '0';
-                        WE_inst_mem <= '0';
-
-                        stall <= '0';
-                    else -- standartní běh
-                        stall <= not(SPI_read_done);
-                        WE_inst_mem <= SPI_read_done;
-                    end if;
-                end if;
-                Last_SPI_Read_en <= SPI_Read_en;
-            end if;
-        end process SPI_controler;
-        
-    
+        Inst <= Inst_mem_data_o;
     
     IO_controler_inst : IO_controler
         port map(
@@ -313,8 +256,7 @@ begin
 
     Branch_target <= '0' & ALU_o(10 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    PC_i <= x"000" when Last_SPI_Read_en /= SPI_Read_en  else
-            Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
+    PC_i <= Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry
     PC_plus_imm <= std_logic_vector(signed(PC_o) + signed(Imm_op(10 downto 0))); -- PC + skok    !!!!!!!!!!!!

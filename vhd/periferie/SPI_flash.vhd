@@ -10,11 +10,12 @@ entity SPI_flash is
         Data_i : in std_logic_vector(31 downto 0);
         CMD_sel : in std_logic_vector(1 downto 0);
         EN_comm : in std_logic;
-        Ready_to_read : in std_logic := '1'; -- pokud ještě procesor zpracoval read = '1' 
+        Ready_to_read : in std_logic := '1'; -- pokud  procesor zpracoval read = '1' 
+        Ready_to_write : in std_logic  := '1'; -- pokud  procesor zpracoval write = '1' 
         
         Data_o : out std_logic_vector(31 downto 0) := (others => '0');
         Read_done : out std_logic;
-        Write_done : out std_logic;
+        Write_start : out std_logic;
         CMD_done : out std_logic;
 
         SPI_sclk : out std_logic;  -- zpomalené hodiny
@@ -26,7 +27,7 @@ entity SPI_flash is
 end entity SPI_flash;
 
 architecture RTL of SPI_flash is
-    type STATE_t is (IDLE, SEND_CMD, SEND_ADDR, READ_LOOP, WRITE_LOOP, CLEANUP);
+    type STATE_t is (IDLE, SEND_CMD, SEND_ADDR, READ_LOOP, WRITE_LOOP, WRITE_WAIT, READ_WAIT, CLEANUP);
     signal State : STATE_t := IDLE;
 
     signal Shift_reg : std_logic_vector(31 downto 0);
@@ -71,24 +72,27 @@ begin
                 SPI_cs_n <= '1';
                 sclk_reg <= '0';
             elsif spi_tick = '1' then
+                Read_done <= '0';
+                Write_start <= '0';
                 case State is
                     when IDLE =>
                         if EN_comm = '1' then
                             state <= SEND_CMD;
-                            shift_reg <= c_COMMANDS(to_integer(unsigned(CMD_sel)))(31 downto 24) & (23 downto 0 => '0');
+                            shift_reg <= c_COMMANDS(to_integer(unsigned(CMD_sel))) & (23 downto 0 => '0');
                             spi_cs_n <= '0';
                             sclk_reg <= '0';
-                            Bit_cnt <= 8;  
+                            Bit_cnt <= 7;  
                         end if;
-                    when SEND_CMD => --  vybraného příkazu pro flash
+                    when SEND_CMD => --  poslání vybraného příkazu pro flash
                         if sclk_reg = '0' then sclk_reg <= '1';  
                         else
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
-                                if CMD_sel = "00" then
+                                if CMD_sel = "00" then -- write enable
                                     State  <= CLEANUP;
                                 else
                                     State <= SEND_ADDR;
+                                    shift_reg  <= Adress_i & (7 downto 0 => '0');
                                     bit_cnt <= 23;
                                 end if;
                             else
@@ -101,14 +105,14 @@ begin
                         else
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
-                                if CMD_sel = "01" then
+                                if CMD_sel = "01" then    --read
                                     State  <= READ_LOOP;
-                                    bit_cnt <= 32;
-                                elsif CMD_sel = "10" then
+                                    bit_cnt <= 31;
+                                elsif CMD_sel = "10" then --write
                                     State  <= WRITE_LOOP;
                                     Shift_reg  <= Data_i;
-                                    bit_cnt <= 32;
-                                else 
+                                    bit_cnt <= 31;
+                                else                      --erase sector
                                     State  <= CLEANUP;
                                 end if;
                             else
@@ -117,46 +121,50 @@ begin
                             end if;
                         end if;
                     when READ_LOOP => -- čtení z flash
-                        if sclk_reg = '0' -- isr aby se neaktualizoval kdy
+                        if sclk_reg = '0' then
                             sclk_reg <= '1';
                             shift_reg(0) <= spi_miso;
                         else
                             sclk_reg <= '0';
                             if Bit_cnt = 0 then
-                                while ISR = '1' loop -- čeká až CPU zapíše předešlá přečtená data 
-                                end loop;
                                 Data_o <= shift_reg;
                                 Read_done <= '1';
-                                if EN_comm = '1' then
-                                    bit_cnt <= 31;
-                                else
-                                    State <= CLEANUP;
-                                end if;
+                                State  <= READ_WAIT;
                             else
                                 shift_reg <= shift_reg(30 downto 0) & '0';
                                 bit_cnt <= bit_cnt - 1;
                             end if;
                         end if;  
+                    when READ_WAIT  => 
+                            if EN_comm = '1' then
+                                if Ready_to_read = '1' then
+                                    bit_cnt <= 31;
+                                end if;
+                            else
+                                State <= CLEANUP;
+                            end if;
                     when WRITE_LOOP => -- nefunguje porav nečeká na cpu
                         if sclk_reg = '0' then sclk_reg <= '1';  
                         else
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
-                                Write_done <= '1';
-                                if ISR = '0' then -- čeká až CPU pošle nová data nebo ne když budeme končit
-                                    shift_reg  <= Data_i;
-                                    Write_done  <= '0';
-                                    if EN_comm = '1' then
-                                        bit_cnt <= 31;
-                                    else
-                                        State <= CLEANUP;
-                                    end if;
-                                end if;  
+                                State  <= WRITE_WAIT;
                             else
                                 shift_reg <= shift_reg(30 downto 0) & '0';
                                 bit_cnt <= bit_cnt - 1;
                             end if;
                         end if;
+                    when WRITE_WAIT =>
+                        if EN_comm = '1' then
+                            if Ready_to_write = '1' then
+                                shift_reg  <= Data_i;
+                                Write_start <= '1';
+                                bit_cnt <= 31;
+                                State  <= WRITE_LOOP;
+                            end if;
+                        else
+                            State <= CLEANUP;
+                        end if; 
                     when CLEANUP =>
                         spi_cs_n <= '1';
                         CMD_done <= '1';
