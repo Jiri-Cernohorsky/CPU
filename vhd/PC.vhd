@@ -39,11 +39,7 @@ begin
                     PC_reg <= mepc;
                     Int_runnig <= '0';
                 else 
-                    if stall = '1' then
-                        PC_reg <= PC_reg;
-                    else
-                        PC_reg <= PC_i;
-                    end if;
+                    PC_reg <= PC_i;
                 end if;
             end if;
         end if;

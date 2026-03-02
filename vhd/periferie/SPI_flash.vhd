@@ -149,7 +149,7 @@ begin
                             else
                                 State <= CLEANUP;
                             end if;
-                    when WRITE_LOOP => -- nefunguje porav nečeká na cpu
+                        when WRITE_LOOP =>
                         if sclk_reg = '0' then sclk_reg <= '1';  
                         else
                             sclk_reg <='0';

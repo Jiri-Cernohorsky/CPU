@@ -16,7 +16,8 @@ entity IO_controler is
         UART_TX : out std_logic;
         UART_RX : in std_logic;
         SPI_o : out std_logic_vector(2 downto 0); -- 0. sclk 1. mosi 2. cs_n
-        SPI_i : in std_logic
+        SPI_i : in std_logic;
+        Start_program : out std_logic
     );
 end entity IO_controler;
 
@@ -88,16 +89,11 @@ architecture RTL of IO_controler is
     signal SPI_address : std_logic_vector(23 downto 0);
     signal SPI_data_i : std_logic_vector(31 downto 0);
     signal SPI_data_o : std_logic_vector(31 downto 0);
-  
-    
-    
-    
-    
-    
     
 
     signal W_IMR_internal : std_logic_vector(7 downto 0);
-
+    signal Start_program_reg : std_logic :=  '0';
+    
 begin
     
     IO_WE_controler_inst : component IO_WE_controler
@@ -154,27 +150,26 @@ begin
         );
 
 
-    -- write adresy
-    W_IMR_internal  <= Bus_data_i(7 downto 0)   when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
+    -- write adresy         délka signálu               adresa
+    --system
+    W_IMR_internal      <= Bus_data_i(7 downto 0)   when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
+    Start_program_reg   <= Bus_data_i(1)            when Bus_address = x"80000004" and WE = '1' else Start_program_reg ;
         --SPI
-    SPI_control_i   <= Bus_data_i(4 downto 0)   when Bus_address = x"80000004" and WE = '1' else SPI_control_i;
-    SPI_address     <= Bus_data_i(23 downto 0)  when Bus_address = x"8000000C" and WE = '1' else SPI_address;
-    SPI_data_i      <= Bus_data_i               when Bus_address = x"80000010" and WE = '1' else SPI_data_i ;
+    SPI_control_i       <= Bus_data_i(4 downto 0)   when Bus_address = x"80000204" and WE = '1' else SPI_control_i;
+    SPI_address         <= Bus_data_i(23 downto 0)  when Bus_address = x"8000020C" and WE = '1' else SPI_address;
+    SPI_data_i          <= Bus_data_i               when Bus_address = x"80000210" and WE = '1' else SPI_data_i ;
 
-
-    -- read adresy
-    Bus_data_o <= x"000000" & "000" &   SPI_control_i   when Bus_address = x"80000004" else
-                  x"0000000" & "0" &    SPI_control_o   when Bus_address = x"80000008" else
-                  x"00" &               SPI_address     when Bus_address = x"8000000C" else
-                                        SPI_data_i      when Bus_address = x"80000010" else
-                                        SPI_data_o      when Bus_address = x"80000014";
-
-    --výběr správného výstupu na základě adresy
-    Bus_data_o <= x"000000" & GPIO_o  when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
-                  x"000000" & UART_o  when Bus_address >= x"80000104" and Bus_address <= x"80000110" else
-          --x"000000" & JINA_DATA when JINA_PODMINKA = '1' else
-          x"00000000";
-    
+    -- read adresy  doplnění do 32      název               adresa
+    Bus_data_o <= x"000000" &           W_IMR_internal      when Bus_address = x"80000000" else
+                  x"0000000" & "000" &  Start_program_reg   when Bus_address = x"80000004" else
+                  x"000000" & "000" &   SPI_control_i       when Bus_address = x"80000204" else
+                  x"0000000" & "0" &    SPI_control_o       when Bus_address = x"80000208" else
+                  x"00" &               SPI_address         when Bus_address = x"8000020C" else
+                                        SPI_data_i          when Bus_address = x"80000210" else
+                                        SPI_data_o          when Bus_address = x"80000214" else
+                  x"000000" &           GPIO_o              when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
+                  x"000000" &           UART_o              when Bus_address >= x"80000104" and Bus_address <= x"80000110" else x"00000000";
+                 
     Interrupt_handler : process(GPIO_irq, UART_irq) is
     begin
         IRR(0) <= GPIO_irq;
@@ -184,5 +179,5 @@ begin
 
     -- zápis do interrapt masky
     W_IMR <= W_IMR_internal; 
-
+    Start_program  <= Start_program_reg;
 end architecture RTL;

@@ -83,15 +83,13 @@ begin
                 if WE_UART = '1' then
                     case Address is
                         when x"80000104"=> TX_reg <= Bus_data_i;
-                        when x"80000108"=> TX_start <= Bus_data_i(0);
-                        when x"8000010C"=> Int_En_reg <= Bus_data_i(1 downto 0);
+                        when x"8000010C"=> TX_start <= Bus_data_i(0);
+                        when x"80000110"=> Int_En_reg <= Bus_data_i(1 downto 0);
                         -- W1C: zapíšeš 1 pro smazání příslušného bitu
-                        when x"80000110"=> Irq_reg <= Irq_reg and not Bus_data_i(1 downto 0);
+                        when x"80000114"=> Irq_reg <= Irq_reg and not Bus_data_i(1 downto 0);
                         when others => null;
                     end case;  
                 end if;
-
-                -- Hardwarové nastavení Interruptů (přepíše případné W1C pokud se stanou ve stejný takt)
                 if TX_done = '1' then
                     Irq_reg(0) <= '1';
                 end if;
@@ -99,18 +97,18 @@ begin
                     Irq_reg(1) <= '1';
                 end if;
 
-                -- Čtení dat (doplnil jsem čtení všech registrů pro debug)
+                -- Čtení dat
                 case Address is
-                    when x"80000104" => Bus_data_o <= RX_reg;
-                    when x"8000010C" => Bus_data_o <= "000000" & Int_En_reg;
-                    when x"80000110" => Bus_data_o <= "000000" & Irq_reg;
+                    when x"80000108" => Bus_data_o <= RX_reg;
+                    when x"80000110" => Bus_data_o <= "000000" & Int_En_reg;
+                    when x"80000114" => Bus_data_o <= "000000" & Irq_reg;
                     when others => Bus_data_o <= (others => '0');
                 end case;
             end if;
         end if;
     end process Read_Write_to_reg;
     
-    -- interrupt výstup (kombinační logika na základě masky)
+    -- interrupt výstup na základě masky)
     Irq <= '1' when (unsigned(Irq_reg and Int_En_reg) /= 0) else '0'; 
 
     -- samotný UART TX
@@ -124,14 +122,13 @@ begin
                 TX_bit_idx <= 0;
                 TX_cnt <= 0;
             else
-                TX_done <= '0'; -- default, zaručí že flag trvá jen 1 cyklus
                 case TX_state is
                     when IDLE =>
                         TX <= '1'; 
-                        if TX_start = '1' then -- zachycení 1-cyklového pulzu
+                        if TX_start = '1' then
                             TX_state <= START;
                             TX_cnt <= 0;
-                            -- TX_start se už NEMAŽE TADY, je to pulz z registru
+                            TX_start  <= '0';
                         end if;
 
                     when START =>
