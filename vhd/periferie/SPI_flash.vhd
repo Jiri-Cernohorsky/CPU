@@ -8,7 +8,7 @@ entity SPI_flash is
         rst : in std_logic;
         Adress_i : in std_logic_vector(23 downto 0);
         Data_i : in std_logic_vector(31 downto 0);
-        CMD_sel : in std_logic_vector(1 downto 0);
+        CMD_sel : in std_logic_vector(2 downto 0);
         EN_comm : in std_logic;
         Ready_to_read : in std_logic := '1'; -- pokud  procesor zpracoval read = '1' 
         Ready_to_write : in std_logic  := '1'; -- pokud  procesor zpracoval write = '1' 
@@ -38,11 +38,12 @@ architecture RTL of SPI_flash is
     signal spi_tick    : std_logic := '0';
     signal sclk_reg     : std_logic := '0';
 
-    type COMMANDS_t is array (0 to 3) of std_logic_vector(7 downto 0) ;
+    type COMMANDS_t is array (0 to 4) of std_logic_vector(7 downto 0) ;
     constant c_COMMANDS : COMMANDS_t := (x"06",  --write enable
                                          x"03",  --read
                                          x"02",  --write
-                                         x"d8"); --erase sector
+                                         x"d8",  --erase sector
+                                         x"05"); --status registr
 
 begin
     -- zpomalení hodin na čtvrtinu rychleji číst nejde 20 MHz max takže by jsme měli stíhat
@@ -94,8 +95,11 @@ begin
                         else
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
-                                if CMD_sel = "00" then -- write enable
+                                if CMD_sel = "000" then -- write enable
                                     State  <= CLEANUP;
+                                elsif CMD_sel = "100" then
+                                    State  <= READ_LOOP;
+                                    bit_cnt <= 7;
                                 else
                                     State <= SEND_ADDR;
                                     shift_reg  <= Adress_i & (7 downto 0 => '0');
@@ -111,14 +115,16 @@ begin
                         else
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
-                                if CMD_sel = "01" then    --read
-                                    State  <= READ_LOOP;
+                                if CMD_sel = "001" then    --read
+                                    State  <= READ_WAIT;
                                     bit_cnt <= 31;
-                                elsif CMD_sel = "10" then --write
+                                elsif CMD_sel = "010" then --write
                                     State  <= WRITE_LOOP;
                                     Shift_reg  <= Data_i;
                                     bit_cnt <= 31;
-                                else                      --erase sector
+                                elsif CMD_sel = "011" then --erase sector
+                                    State  <= CLEANUP;
+                                else
                                     State  <= CLEANUP;
                                 end if;
                             else
@@ -135,7 +141,11 @@ begin
                             if Bit_cnt = 0 then
                                 Data_o <= shift_reg;
                                 Read_done <= '1';
-                                State  <= READ_WAIT;
+                                if CMD_sel = "100" then
+                                    State  <= CLEANUP;
+                                else
+                                    State  <= READ_WAIT;
+                                end if;
                             else
                                 shift_reg <= shift_reg(30 downto 0) & '0';
                                 bit_cnt <= bit_cnt - 1;

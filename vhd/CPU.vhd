@@ -75,7 +75,8 @@ architecture RTL of CPU is
     		ISR         : in  std_logic;
     		Int_bra_tar : in  std_logic_vector(11 downto 0);
     		PC_i        : in  std_logic_vector(11 downto 0);
-    		PC_o        : out std_logic_vector(11 downto 0)
+    		PC_o        : out std_logic_vector(11 downto 0);
+    		stall       : in  std_logic
     	);
     end component PC;
 
@@ -174,7 +175,8 @@ begin
             ISR => ISR,
             Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
-            PC_o => PC_o
+            PC_o => PC_o,
+            stall => stall
         );
     
     Control_unit_inst : component Control_unit

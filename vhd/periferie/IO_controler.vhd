@@ -65,27 +65,27 @@ architecture RTL of IO_controler is
     signal UART_irq : std_logic;
 
     component SPI_flash
-        port(
-            clk            : in  std_logic;
-            rst            : in  std_logic;
-            Adress_i       : in  std_logic_vector(23 downto 0);
-            Data_i         : in  std_logic_vector(31 downto 0);
-            CMD_sel        : in  std_logic_vector(1 downto 0);
-            EN_comm        : in  std_logic;
-            Ready_to_read  : in  std_logic                     := '1';
-            Ready_to_write : in  std_logic                     := '1';
-            Data_o         : out std_logic_vector(31 downto 0) := (others => '0');
-            Read_done      : out std_logic;
-            Write_start    : out std_logic;
-            CMD_done       : out std_logic;
-            SPI_sclk       : out std_logic;
-            SPI_mosi       : out std_logic;
-            SPI_miso       : in  std_logic;
-            SPI_cs_n       : out std_logic
-        );
+    	port(
+    		clk            : in  std_logic;
+    		rst            : in  std_logic;
+    		Adress_i       : in  std_logic_vector(23 downto 0);
+    		Data_i         : in  std_logic_vector(31 downto 0);
+    		CMD_sel        : in  std_logic_vector(2 downto 0);
+    		EN_comm        : in  std_logic;
+    		Ready_to_read  : in  std_logic                     := '1';
+    		Ready_to_write : in  std_logic                     := '1';
+    		Data_o         : out std_logic_vector(31 downto 0) := (others => '0');
+    		Read_done      : out std_logic;
+    		Write_start    : out std_logic;
+    		CMD_done       : out std_logic;
+    		SPI_sclk       : out std_logic;
+    		SPI_mosi       : out std_logic;
+    		SPI_miso       : in  std_logic;
+    		SPI_cs_n       : out std_logic
+    	);
     end component SPI_flash;
     signal SPI_control_o : std_logic_vector(2 downto 0);
-    signal SPI_control_i : std_logic_vector(4 downto 0);
+    signal SPI_control_i : std_logic_vector(5 downto 0);
     signal SPI_address : std_logic_vector(23 downto 0);
     signal SPI_data_i : std_logic_vector(31 downto 0);
     signal SPI_data_o : std_logic_vector(31 downto 0);
@@ -135,10 +135,10 @@ begin
             rst            => rst,
             Adress_i       => SPI_address,
             Data_i         => SPI_data_i,
-            CMD_sel        => SPI_control_i(1 downto 0),
-            EN_comm        => SPI_control_i(2),
-            Ready_to_read  => SPI_control_i(3),
-            Ready_to_write => SPI_control_i(4),
+            CMD_sel        => SPI_control_i(2 downto 0),
+            EN_comm        => SPI_control_i(3),
+            Ready_to_read  => SPI_control_i(4),
+            Ready_to_write => SPI_control_i(5),
             Data_o         => SPI_data_o,
             Read_done      => SPI_control_o(0),
             Write_start    => SPI_control_o(1),
@@ -155,18 +155,20 @@ begin
     W_IMR_internal      <= Bus_data_i(7 downto 0)   when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
     Start_program_reg   <= Bus_data_i(1)            when Bus_address = x"80000004" and WE = '1' else Start_program_reg ;
         --SPI
-    SPI_control_i       <= Bus_data_i(4 downto 0)   when Bus_address = x"80000204" and WE = '1' else SPI_control_i;
+    SPI_control_i       <= Bus_data_i(5 downto 0)   when Bus_address = x"80000204" and WE = '1' else SPI_control_i;
     SPI_address         <= Bus_data_i(23 downto 0)  when Bus_address = x"8000020C" and WE = '1' else SPI_address;
     SPI_data_i          <= Bus_data_i               when Bus_address = x"80000210" and WE = '1' else SPI_data_i ;
 
     -- read adresy  doplnění do 32      název               adresa
     Bus_data_o <= x"000000" &           W_IMR_internal      when Bus_address = x"80000000" else
                   x"0000000" & "000" &  Start_program_reg   when Bus_address = x"80000004" else
-                  x"000000" & "000" &   SPI_control_i       when Bus_address = x"80000204" else
+    -- SPI              
+                  x"000000" & "00" &    SPI_control_i       when Bus_address = x"80000204" else
                   x"0000000" & "0" &    SPI_control_o       when Bus_address = x"80000208" else
                   x"00" &               SPI_address         when Bus_address = x"8000020C" else
                                         SPI_data_i          when Bus_address = x"80000210" else
                                         SPI_data_o          when Bus_address = x"80000214" else
+                                        
                   x"000000" &           GPIO_o              when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
                   x"000000" &           UART_o              when Bus_address >= x"80000104" and Bus_address <= x"80000110" else x"00000000";
                  

@@ -65,7 +65,7 @@ begin
     end process synchronize;
     RX_synced <= RX_semisync_2;
 
-    -- přístup procesoru k datům (zde spravujeme všechny registry)
+    -- přístup procesoru k datům
     Read_Write_to_reg : process (clk) is
     begin
         if rising_edge(clk) then
@@ -76,7 +76,6 @@ begin
                 Int_En_reg <= "00";
                 Irq_reg <= "00";
             else
-                -- Defaultní hodnota pro TX_start - vytvoří jednorázový pulz
                 TX_start <= '0';
 
                 -- Zápis dat
@@ -108,7 +107,7 @@ begin
         end if;
     end process Read_Write_to_reg;
     
-    -- interrupt výstup na základě masky)
+    -- interrupt výstup na základě masky
     Irq <= '1' when (unsigned(Irq_reg and Int_En_reg) /= 0) else '0'; 
 
     -- samotný UART TX
