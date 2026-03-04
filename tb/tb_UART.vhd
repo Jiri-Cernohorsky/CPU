@@ -46,7 +46,7 @@ begin
         end loop;
     end process;
 
-    stim_proc: process
+    sim_proc: process
     begin
         async_rst <= '1';
         wait for 500 ns;

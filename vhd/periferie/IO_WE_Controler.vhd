@@ -21,7 +21,7 @@ begin
     if WE = '1' then
         if (IO_address >= x"80000004" and IO_address <= x"80000010") then
             WE_GPIO <= '1';
-        elsif (IO_address >= x"80000104" and IO_address <= x"80000110") then
+        elsif (IO_address >= x"80000104" and IO_address <= x"80000114") then
             WE_UART <= '1';
         end if;
     end if;

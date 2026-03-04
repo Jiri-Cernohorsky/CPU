@@ -21,3 +21,6 @@ BRAM je synchroní takže vvýsledek dá až na fallinf edge musel jsme posunout
 
 datasheet flashky
 https://datasheet.octopart.com/M25P16-VME6G-STMicroelectronics-datasheet-7623188.pdf
+
+nezkace zpet 
+pameti jsou synchroni vsechno ostatni mam asynchroni vvsechny oameti jsem dal an falling edge (not clk)

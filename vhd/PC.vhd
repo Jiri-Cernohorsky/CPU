@@ -4,45 +4,50 @@ use ieee.numeric_std.all;
 
 entity PC is
     port(
-        clk : in std_logic;
-        rst : in std_logic;
-        ISR : in std_logic;
-        Int_bra_tar : in std_logic_vector(11 downto 0);
-        PC_i : in std_logic_vector(11 downto 0);
-        PC_o : out std_logic_vector(11 downto 0);
-        stall: in std_logic
-
+        clk         : in  std_logic;
+        rst         : in  std_logic;
+        ISR         : in  std_logic;
+        Int_bra_tar : in  std_logic_vector(13 downto 0);
+        PC_i        : in  std_logic_vector(13 downto 0);
+        PC_o        : out std_logic_vector(13 downto 0)
     );
 end entity PC;
 
 architecture RTL of PC is
-    signal PC_reg : std_logic_vector(11 downto 0);
-    
-    signal mepc : std_logic_vector(11 downto 0);
-    signal Int_runnig : std_logic;
-    
+
+    signal PC_reg     : std_logic_vector(13 downto 0);
+    signal PC_next    : std_logic_vector(13 downto 0);
+    signal mepc       : std_logic_vector(13 downto 0);
+    signal Int_running : std_logic;
+
 begin
 
-    PC : process (clk) is
+    -- Kombinační next-state logika
+    PC_next <= Int_bra_tar when (ISR = '1' and Int_running = '0') else
+               mepc         when (ISR = '0' and Int_running = '1') else
+               PC_i;
+
+    -- Registrovaný proces
+    PC_proc : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                mepc <= (others => '0');
-                PC_reg <= (others => '0');
-                Int_runnig <= '0';
+                PC_reg      <= "00000110010000";
+                mepc        <= (others => '0');
+                Int_running <= '0';
             else
-                if ISR = '1' and Int_runnig = '0' then
-                    mepc <= PC_i;
-                    PC_reg <= Int_bra_tar;
-                    Int_runnig <= '1';
-                elsif ISR = '0' and INT_runnig = '1'then
-                    PC_reg <= mepc;
-                    Int_runnig <= '0';
-                else 
-                    PC_reg <= PC_i;
+                PC_reg <= PC_next;
+
+                if ISR = '1' and Int_running = '0' then
+                    mepc        <= PC_reg;
+                    Int_running <= '1';
+                elsif ISR = '0' and Int_running = '1' then
+                    Int_running <= '0';
                 end if;
             end if;
         end if;
-    end process PC;
+    end process PC_proc;
+
     PC_o <= PC_reg;
+
 end architecture RTL;

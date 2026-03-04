@@ -91,7 +91,7 @@ architecture RTL of IO_controler is
     signal SPI_data_o : std_logic_vector(31 downto 0);
     
 
-    signal W_IMR_internal : std_logic_vector(7 downto 0);
+    signal W_IMR_internal : std_logic_vector(7 downto 0) :=  x"00";
     signal Start_program_reg : std_logic :=  '0';
     
 begin
@@ -150,14 +150,30 @@ begin
         );
 
 
-    -- write adresy         délka signálu               adresa
-    --system
-    W_IMR_internal      <= Bus_data_i(7 downto 0)   when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
-    Start_program_reg   <= Bus_data_i(1)            when Bus_address = x"80000004" and WE = '1' else Start_program_reg ;
-        --SPI
-    SPI_control_i       <= Bus_data_i(5 downto 0)   when Bus_address = x"80000204" and WE = '1' else SPI_control_i;
-    SPI_address         <= Bus_data_i(23 downto 0)  when Bus_address = x"8000020C" and WE = '1' else SPI_address;
-    SPI_data_i          <= Bus_data_i               when Bus_address = x"80000210" and WE = '1' else SPI_data_i ;
+    write_reg : process (clk) is
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+            W_IMR_internal      <= (others => '0');
+            Start_program_reg   <= '0';
+            SPI_control_i       <= (others => '0');
+            SPI_address         <= (others => '0');
+            SPI_data_i          <= (others => '0');
+            else
+                case Bus_address is
+                    -- write adresy                      nazev               délka signálu               
+                    --system
+                    when x"80000000" => if WE = '1' then W_IMR_internal     <= Bus_data_i(7 downto 0) ; end if;
+                    when x"80000004" => if WE = '1' then Start_program_reg  <= Bus_data_i(1)          ; end if;
+                    --SPI
+                    when x"80000204" => if WE = '1' then SPI_control_i      <= Bus_data_i(5 downto 0) ; end if;
+                    when x"8000020C" => if WE = '1' then SPI_address        <= Bus_data_i(23 downto 0); end if;
+                    when x"80000210" => if WE = '1' then SPI_data_i         <= Bus_data_i             ; end if;
+                    when others => null;
+                end case;
+            end if;
+        end if;
+    end process write_reg;
 
     -- read adresy  doplnění do 32      název               adresa
     Bus_data_o <= x"000000" &           W_IMR_internal      when Bus_address = x"80000000" else
@@ -174,8 +190,8 @@ begin
                  
     Interrupt_handler : process(GPIO_irq, UART_irq) is
     begin
-        IRR(0) <= GPIO_irq;
-        IRR(1) <= UART_irq;
+        IRR(0) <= UART_irq;
+        IRR(1) <= GPIO_irq;
         IRR(7 downto 2) <= (others => '0');
     end process Interrupt_handler;
 

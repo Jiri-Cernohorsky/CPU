@@ -16,17 +16,17 @@ entity CPU is
 end entity CPU;
 
 architecture RTL of CPU is
-    signal PC_i : std_logic_vector(11 downto 0) := "000000000000"; --novej PC
-    signal PC_o : std_logic_vector(11 downto 0); -- aktuální PC
-    signal PC_plus_4 : std_logic_vector(11 downto 0); -- aktuální PC+4
-    signal Branch_target : std_logic_vector(11 downto 0); -- PC po větvení
-    signal PC_plus_imm : std_logic_vector(11 downto 0); -- aktuální PC+přímý operand
+    signal PC_i : std_logic_vector(13 downto 0); --novej PC
+    signal PC_o : std_logic_vector(13 downto 0); -- aktuální PC
+    signal PC_plus_4 : std_logic_vector(13 downto 0); -- aktuální PC+4
+    signal Branch_target : std_logic_vector(13 downto 0); -- PC po větvení
+    signal PC_plus_imm : std_logic_vector(13 downto 0); -- aktuální PC+přímý operand
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
     signal IRR : std_logic_vector(7 downto 0); --interrupt request
     signal ISR : std_logic;
-    signal Int_bra_tar : std_logic_vector(11 downto 0); --interrupt cíl větvení
+    signal Int_bra_tar : std_logic_vector(13 downto 0); --interrupt cíl větvení
 
     signal W_IMR : std_logic_vector(7 downto 0); -- zápis do interrapt masky
 
@@ -54,8 +54,9 @@ architecture RTL of CPU is
 
     signal Bootloader_data_o : std_logic_vector(31 downto 0);
     signal instr_mem_data_o : std_logic_vector(31 downto 0);
-    signal Start_program : std_logic; -- čtu program = 1 jsme v bootlooaderu = 1
+    signal Start_program : std_logic; -- čtu program = 1 jsme v bootlooaderu = 0
     signal Start_program_prev : std_logic;
+    signal Instr_mem_address : std_logic_vector(13 downto 0);
     
     
     
@@ -73,10 +74,9 @@ architecture RTL of CPU is
     		clk         : in  std_logic;
     		rst         : in  std_logic;
     		ISR         : in  std_logic;
-    		Int_bra_tar : in  std_logic_vector(11 downto 0);
-    		PC_i        : in  std_logic_vector(11 downto 0);
-    		PC_o        : out std_logic_vector(11 downto 0);
-    		stall       : in  std_logic
+    		Int_bra_tar : in  std_logic_vector(13 downto 0);
+    		PC_i        : in  std_logic_vector(13 downto 0);
+    		PC_o        : out std_logic_vector(13 downto 0)
     	);
     end component PC;
 
@@ -86,7 +86,7 @@ architecture RTL of CPU is
     		rst            : in  std_logic;
     		IRR            : in  std_logic_vector(7 downto 0);
     		W_IMR          : in  std_logic_vector(7 downto 0);
-    		Int_bra_tar    : out std_logic_vector(11 downto 0);
+    		Int_bra_tar    : out std_logic_vector(13 downto 0);
     		ISR            : out std_logic;
     		Inst           : in  std_logic_vector (31 downto 0);
     		Control_signal : out std_logic_vector (12 downto 0)
@@ -137,14 +137,14 @@ architecture RTL of CPU is
     end component RAM2048x32;
    
     component Bootloader
-        port(
-            clk     : in  std_logic;
-            rst     : in  std_logic;
-            Address : in  std_logic_vector(8 downto 0);
-            Data_i  : in  std_logic_vector(31 downto 0);
-            WE      : in  std_logic;
-            Data_o  : out std_logic_vector(31 downto 0)
-        );
+    	port(
+    		clk     : in  std_logic;
+    		rst     : in  std_logic;
+    		Address : in  std_logic_vector(8 downto 0);
+    		Data_i  : in  std_logic_vector(31 downto 0);
+    		WE      : in  std_logic;
+    		Data_o  : out std_logic_vector(31 downto 0)
+    	);
     end component Bootloader;
 
     component IO_controler
@@ -175,8 +175,7 @@ begin
             ISR => ISR,
             Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
-            PC_o => PC_o,
-            stall => stall
+            PC_o => PC_o
         );
     
     Control_unit_inst : component Control_unit
@@ -222,7 +221,7 @@ begin
         
     Data_mem : component RAM2048x32
         port map(
-            Address  => ALU_o(11 downto 0),
+            Address  => ALU_o(13 downto 2),
             Data_i   => Data_reg_o_2,
             WE       => Ram_WE, --spodní půlka adresi paměti, horní půlka adresi I/O
             clk      => not clk,
@@ -232,19 +231,21 @@ begin
 
     Instr_mem : component RAM2048x32
         port map(
-            Address  => PC_o,
+            Address  => Instr_mem_address(13 downto 2),
             Data_i   => Data_reg_o_2,
             WE       => WE_inst_mem,
-            clk      => clk,
+            clk      => not clk,
             rst      => rst,
             Data_o   => Instr_mem_data_o
         );
+    Instr_mem_address  <= PC_o when Start_program = '1' else
+                          ALU_o(13 downto 0);
 
     Bootloader_inst : component Bootloader
         port map(
-            clk     => clk,
+            clk     => not clk,
             rst     => rst,
-            Address => PC_o(8 downto 0),
+            Address => PC_o(10 downto 2),
             Data_i  => disconnected_Data_i,
             WE      => disconnected_WE,
             Data_o  => Bootloader_data_o
@@ -290,13 +291,13 @@ begin
 
     Data_to_reg <= (31 downto 10 => '0') & PC_plus_4(9 downto 0) when Branch_jalx = '1' else ALU_o; -- spojeni dat z  ALU a PC+4
 
-    Branch_target <= '0' & ALU_o(10 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
+    Branch_target <= '0' & ALU_o(12 downto 0) when Control_signal(2) = '1' else PC_plus_imm; -- adresa kam se má skočit
     
-    PC_i <= x"000" when Start_program /= Start_program_prev else
+    PC_i <= "00001100100000" when Start_program /= Start_program_prev else
         Branch_target when Branch_outcome = '1' else PC_plus_4; -- novej PC
 
     --addry
-    PC_plus_imm <= std_logic_vector(signed(PC_o) + signed(Imm_op(10 downto 0))); -- PC + skok    !!!!!!!!!!!!
+    PC_plus_imm <= std_logic_vector(signed(PC_o) + signed(Imm_op(13 downto 0))); -- PC + skok    !!!!!!!!!!!!
 
     PC_plus_4 <= std_logic_vector(signed(PC_o) + 4);-- PC++
 

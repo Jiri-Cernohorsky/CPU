@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="tb_bootloader" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="31" />
+   <wvobject fp_name="/tb_bootloader/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/async_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">async_rst</obj_property>
+      <obj_property name="ObjectShortName">async_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/gpio_pins_io" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">gpio_pins_io[7:0]</obj_property>
+      <obj_property name="ObjectShortName">gpio_pins_io[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/spi_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_o[2:0]</obj_property>
+      <obj_property name="ObjectShortName">spi_o[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/spi_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">spi_i</obj_property>
+      <obj_property name="ObjectShortName">spi_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/uart_rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">uart_rx</obj_property>
+      <obj_property name="ObjectShortName">uart_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/uart_tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">uart_tx</obj_property>
+      <obj_property name="ObjectShortName">uart_tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/c_clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_clk_period</obj_property>
+      <obj_property name="ObjectShortName">c_clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/c_baud_rate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_baud_rate</obj_property>
+      <obj_property name="ObjectShortName">c_baud_rate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/c_bit_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_bit_period</obj_property>
+      <obj_property name="ObjectShortName">c_bit_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Control_unit_inst/control_signal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">control_signal[12:0]</obj_property>
+      <obj_property name="ObjectShortName">control_signal[12:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/pc_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_o[13:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_o[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Bootloader_inst/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[8:0]</obj_property>
+      <obj_property name="ObjectShortName">address[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Control_unit_inst/inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/bus_data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bus_data_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">bus_data_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg[31:0]</obj_property>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[31]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[31]</obj_property>
+         <obj_property name="ObjectShortName">reg[31]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[30]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[30]</obj_property>
+         <obj_property name="ObjectShortName">reg[30]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[29]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[29]</obj_property>
+         <obj_property name="ObjectShortName">reg[29]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[28]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[28]</obj_property>
+         <obj_property name="ObjectShortName">reg[28]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[27]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[27]</obj_property>
+         <obj_property name="ObjectShortName">reg[27]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[26]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[26]</obj_property>
+         <obj_property name="ObjectShortName">reg[26]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[25]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[25]</obj_property>
+         <obj_property name="ObjectShortName">reg[25]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[24]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[24]</obj_property>
+         <obj_property name="ObjectShortName">reg[24]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[23]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[23]</obj_property>
+         <obj_property name="ObjectShortName">reg[23]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[22]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[22]</obj_property>
+         <obj_property name="ObjectShortName">reg[22]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[21]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[21]</obj_property>
+         <obj_property name="ObjectShortName">reg[21]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[20]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[20]</obj_property>
+         <obj_property name="ObjectShortName">reg[20]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[19]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[19]</obj_property>
+         <obj_property name="ObjectShortName">reg[19]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[18]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[18]</obj_property>
+         <obj_property name="ObjectShortName">reg[18]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[17]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[17]</obj_property>
+         <obj_property name="ObjectShortName">reg[17]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[16]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[16]</obj_property>
+         <obj_property name="ObjectShortName">reg[16]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">reg[15]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">reg[14]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">reg[13]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">reg[12]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">reg[11]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">reg[10]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">reg[9]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">reg[8]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">reg[7]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">reg[6]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">reg[5]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">reg[4]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">reg[3]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">reg[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">reg[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_bootloader/CPU_inst/registr32x4_inst/reg[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">reg[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/w_imr_internal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w_imr_internal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_imr_internal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/start_program_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start_program_reg</obj_property>
+      <obj_property name="ObjectShortName">start_program_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/int_en_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">int_en_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">int_en_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/irq_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">irq_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">irq_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rx</obj_property>
+      <obj_property name="ObjectShortName">rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/rx_reg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rx_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/address" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">address[11:0]</obj_property>
+      <obj_property name="ObjectShortName">address[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/data_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/data_o" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/data_o_reg_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_o_reg_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o_reg_1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bootloader/CPU_inst/Data_mem/we_1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">we_1</obj_property>
+      <obj_property name="ObjectShortName">we_1</obj_property>
+   </wvobject>
+</wave_config>

@@ -66,11 +66,10 @@ begin
     RX_synced <= RX_semisync_2;
 
     -- přístup procesoru k datům
-    Read_Write_to_reg : process (clk) is
+    Write_to_reg : process (clk) is
     begin
         if rising_edge(clk) then
             if rst = '1' then
-                Bus_data_o <= x"00";
                 TX_start <= '0';
                 TX_reg <= x"00";
                 Int_En_reg <= "00";
@@ -95,18 +94,14 @@ begin
                 if RX_done = '1' then
                     Irq_reg(1) <= '1';
                 end if;
-
-                -- Čtení dat
-                case Address is
-                    when x"80000108" => Bus_data_o <= RX_reg;
-                    when x"80000110" => Bus_data_o <= "000000" & Int_En_reg;
-                    when x"80000114" => Bus_data_o <= "000000" & Irq_reg;
-                    when others => Bus_data_o <= (others => '0');
-                end case;
             end if;
         end if;
-    end process Read_Write_to_reg;
-    
+    end process Write_to_reg;
+    -- Čtení dat
+    Bus_data_o  <=              RX_reg when Address = x"80000108" else
+                    "000000" &  Int_En_reg when Address = x"80000110" else
+                    "000000" &  Irq_reg when Address = x"80000114" else (others => '0');
+
     -- interrupt výstup na základě masky
     Irq <= '1' when (unsigned(Irq_reg and Int_En_reg) /= 0) else '0'; 
 

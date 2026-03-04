@@ -1,0 +1,6 @@
+vhdl isim_temp "../vhd/synchronizer.vhd"
+vhdl isim_temp "../vhd/periferie/UART.vhd"
+vhdl isim_temp "../vhd/periferie/SPI_flash.vhd"
+vhdl isim_temp "../vhd/periferie/IO_WE_Controler.vhd"
+vhdl isim_temp "../vhd/periferie/GPIO.vhd"
+vhdl isim_temp "../vhd/periferie/IO_controler.vhd"

@@ -116,10 +116,10 @@ begin
                             sclk_reg <='0';
                             if Bit_cnt = 0 then
                                 if CMD_sel = "001" then    --read
-                                    State  <= READ_WAIT;
+                                    State  <= READ_LOOP;
                                     bit_cnt <= 31;
                                 elsif CMD_sel = "010" then --write
-                                    State  <= WRITE_LOOP;
+                                    State  <= WRITE_WAIT;
                                     Shift_reg  <= Data_i;
                                     bit_cnt <= 31;
                                 elsif CMD_sel = "011" then --erase sector
