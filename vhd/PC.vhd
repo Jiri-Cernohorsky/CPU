@@ -9,7 +9,8 @@ entity PC is
         ISR         : in  std_logic;
         Int_bra_tar : in  std_logic_vector(13 downto 0);
         PC_i        : in  std_logic_vector(13 downto 0);
-        PC_o        : out std_logic_vector(13 downto 0)
+        PC_o        : out std_logic_vector(13 downto 0);
+        write_en    : in std_logic
     );
 end entity PC;
 
@@ -22,7 +23,6 @@ architecture RTL of PC is
 
 begin
 
-    -- Kombinační next-state logika
     PC_next <= Int_bra_tar when (ISR = '1' and Int_running = '0') else
                mepc         when (ISR = '0' and Int_running = '1') else
                PC_i;
@@ -36,13 +36,13 @@ begin
                 mepc        <= (others => '0');
                 Int_running <= '0';
             else
-                PC_reg <= PC_next;
-
                 if ISR = '1' and Int_running = '0' then
                     mepc        <= PC_reg;
                     Int_running <= '1';
                 elsif ISR = '0' and Int_running = '1' then
                     Int_running <= '0';
+                elsif write_en = '1' then
+                    PC_reg <= PC_next;
                 end if;
             end if;
         end if;

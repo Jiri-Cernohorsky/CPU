@@ -224,7 +224,7 @@ begin
             Address  => ALU_o(13 downto 2),
             Data_i   => Data_reg_o_2,
             WE       => Ram_WE, --spodní půlka adresi paměti, horní půlka adresi I/O
-            clk      => not clk,
+            clk      => clk,
             rst      => rst,
             Data_o   => RD_mem
         );
@@ -234,7 +234,7 @@ begin
             Address  => Instr_mem_address(13 downto 2),
             Data_i   => Data_reg_o_2,
             WE       => WE_inst_mem,
-            clk      => not clk,
+            clk      => clk,
             rst      => rst,
             Data_o   => Instr_mem_data_o
         );
@@ -243,7 +243,7 @@ begin
 
     Bootloader_inst : component Bootloader
         port map(
-            clk     => not clk,
+            clk     => clk,
             rst     => rst,
             Address => PC_o(10 downto 2),
             Data_i  => disconnected_Data_i,
