@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-03-04T04:13:29</DateModified>
+  <DateModified>2026-03-06T12:36:08</DateModified>
   <ModuleName>CPU</ModuleName>
   <SummaryTimeStamp>2026-02-24T21:45:13</SummaryTimeStamp>
   <SavedFilePath>/home/ise/shared_dir/CPU/Xilinx_Project/iseconfig/CPU.xreport</SavedFilePath>

@@ -18,26 +18,4 @@ at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning
 at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
 at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-ISim P.20131013 (signature 0xfbc00daa)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 1ms
-at 1984793327 ps: Note: Data_i: 3 (/tb_bootloader/).
-at 1984793327 ps: Note: Data_o: 3 (/tb_bootloader/).
-at 1984793327 ps: Note: did return (/tb_bootloader/).
-# run 1ms
-# run 1ms
+# exit 0

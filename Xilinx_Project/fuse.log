@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.exe" -prj "/home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_beh.prj" "work.tb_Bootloader" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.exe -prj /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_beh.prj work.tb_Bootloader 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 1
 Turning on mult-threading, number of parallel sub-compilation jobs: 0 
@@ -20,8 +20,8 @@ Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/CPU.vhd" into 
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../tb/tb_Bootloader.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 127424 KB
-Fuse CPU Usage: 1410 ms
+Fuse Memory Usage: 127512 KB
+Fuse CPU Usage: 1480 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -50,6 +50,6 @@ Compiling architecture behavior of entity tb_bootloader
 Time Resolution for simulation is 1ps.
 Compiled 41 VHDL Units
 Built simulation executable /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.exe
-Fuse Memory Usage: 156824 KB
-Fuse CPU Usage: 1730 ms
-GCC CPU Usage: 310 ms
+Fuse Memory Usage: 156908 KB
+Fuse CPU Usage: 1870 ms
+GCC CPU Usage: 1440 ms

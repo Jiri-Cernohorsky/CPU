@@ -158,7 +158,7 @@
       <outfile xil_pn:name="../vhd/registr32x4.vhd"/>
       <outfile xil_pn:name="../vhd/synchronizer.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1772720687" xil_pn:in_ck="-614223255600838221" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5056488990682025870" xil_pn:start_ts="1772720680">
+    <transform xil_pn:end_ts="1772800586" xil_pn:in_ck="-614223255600838221" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5056488990682025870" xil_pn:start_ts="1772800579">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -170,7 +170,7 @@
       <outfile xil_pn:name="tb_Bootloader_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1772720687" xil_pn:in_ck="1638792340226202501" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4587877137076916421" xil_pn:start_ts="1772720687">
+    <transform xil_pn:end_ts="1772800587" xil_pn:in_ck="1638792340226202501" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4587877137076916421" xil_pn:start_ts="1772800586">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
