@@ -65,7 +65,7 @@ begin
    generic map (
       INIT => X"000000000",  --  Value of output RAM registers at startup
       SRVAL => X"000000000", --  Output value upon SSR assertion
-      WRITE_MODE => "READ_FIRST", --  WRITE_FIRST, READ_FIRST or NO_CHANGE
+      WRITE_MODE => "WRITE_FIRST", --  WRITE_FIRST, READ_FIRST or NO_CHANGE
       -- The following INIT_xx declarations specify the initial contents of the RAM
       -- Address 0 to 127
       INIT_00 => X"0000000000000000000000000000000000000000000000000000000000000000",

@@ -42,7 +42,6 @@ int main(int argc, char **argv)
     ieee_p_2717149903_init();
     ieee_p_1367372525_init();
     unisim_p_3222816464_init();
-    unisim_a_1966338062_2381219257_init();
     unisim_a_4210602710_2381219257_init();
     work_a_0206001254_1516540902_init();
     unisim_a_1922649819_2381219257_init();

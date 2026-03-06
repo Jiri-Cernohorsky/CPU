@@ -21,6 +21,10 @@ architecture RTL of CPU is
     signal PC_plus_4 : std_logic_vector(13 downto 0); -- aktuální PC+4
     signal Branch_target : std_logic_vector(13 downto 0); -- PC po větvení
     signal PC_plus_imm : std_logic_vector(13 downto 0); -- aktuální PC+přímý operand
+    signal PC_write_en : std_logic;
+    signal Reg_WE : std_logic;
+    signal reg_we_gated : std_logic;
+
 
     signal Inst : std_logic_vector(31 downto 0); -- instrukce
     signal Control_signal :  std_logic_vector (12 downto 0); -- ovládací signál
@@ -76,7 +80,8 @@ architecture RTL of CPU is
     		ISR         : in  std_logic;
     		Int_bra_tar : in  std_logic_vector(13 downto 0);
     		PC_i        : in  std_logic_vector(13 downto 0);
-    		PC_o        : out std_logic_vector(13 downto 0)
+    		PC_o        : out std_logic_vector(13 downto 0);
+    		write_en    : in  std_logic
     	);
     end component PC;
 
@@ -89,6 +94,8 @@ architecture RTL of CPU is
     		Int_bra_tar    : out std_logic_vector(13 downto 0);
     		ISR            : out std_logic;
     		Inst           : in  std_logic_vector (31 downto 0);
+    		PC_EN          : out std_logic;
+    		Reg_WE         : out std_logic;
     		Control_signal : out std_logic_vector (12 downto 0)
     	);
     end component Control_unit;
@@ -175,7 +182,8 @@ begin
             ISR => ISR,
             Int_bra_tar => Int_bra_tar,
             PC_i  => PC_i,
-            PC_o => PC_o
+            PC_o => PC_o,
+            write_en => PC_write_en
         );
     
     Control_unit_inst : component Control_unit
@@ -187,7 +195,9 @@ begin
             IRR            => IRR,
             Int_bra_tar    => Int_bra_tar,
             ISR            => ISR,
-            W_IMR          => W_IMR
+            W_IMR          => W_IMR,
+            PC_EN          => PC_write_en,
+            Reg_WE         => Reg_WE
         );
     
     registr32x4_inst : component registr32x4
@@ -196,13 +206,13 @@ begin
             A2  => Inst(24 downto 20),
             A3  => Inst(11 downto 7),
             WD3 => Data_reg_i,
-            WE3 => Control_signal(3),
+            WE3 => reg_we_gated,
             clk => clk,
             rst => rst,
             RD1 => Data_reg_o_1,
             RD2 => Data_reg_o_2
         );
-    
+    reg_we_gated <= Control_signal(3) and Reg_WE;
     Imm_decode_inst : component Imm_decode
         port map(
             Inst       => Inst,

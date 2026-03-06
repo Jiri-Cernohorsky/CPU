@@ -17,14 +17,11 @@ Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/Control_unit.v
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/bootloader.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/ALU.vhd" into library work
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/CPU.vhd" into library work
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/CPU.vhd" Line 227: Actual for formal port clk is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/CPU.vhd" Line 237: Actual for formal port clk is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "/home/ise/shared_dir/CPU/Xilinx_Project/../vhd/CPU.vhd" Line 246: Actual for formal port clk is neither a static name nor a globally static expression
 Parsing VHDL file "/home/ise/shared_dir/CPU/Xilinx_Project/../tb/tb_Bootloader.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 132300 KB
-Fuse CPU Usage: 1480 ms
+Fuse Memory Usage: 127424 KB
+Fuse CPU Usage: 1410 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -39,7 +36,6 @@ Compiling package vital_timing
 Compiling package vital_primitives
 Compiling package vpkg
 Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
-Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
 Compiling architecture rtl of entity RAM2048x32 [ram2048x32_default]
 Compiling architecture ramb16_s36_v of entity RAMB16_S36 [\RAMB16_S36("0000000000000000000...]
 Compiling architecture rtl of entity Bootloader [bootloader_default]
@@ -52,8 +48,8 @@ Compiling architecture rtl of entity IO_controler [io_controler_default]
 Compiling architecture rtl of entity CPU [cpu_default]
 Compiling architecture behavior of entity tb_bootloader
 Time Resolution for simulation is 1ps.
-Compiled 43 VHDL Units
+Compiled 41 VHDL Units
 Built simulation executable /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.exe
-Fuse Memory Usage: 161748 KB
-Fuse CPU Usage: 1910 ms
-GCC CPU Usage: 540 ms
+Fuse Memory Usage: 156824 KB
+Fuse CPU Usage: 1730 ms
+GCC CPU Usage: 310 ms

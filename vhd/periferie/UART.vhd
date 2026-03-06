@@ -116,13 +116,13 @@ begin
                 TX_bit_idx <= 0;
                 TX_cnt <= 0;
             else
+                TX_done <= '0'; -- default pulz
                 case TX_state is
                     when IDLE =>
                         TX <= '1'; 
                         if TX_start = '1' then
                             TX_state <= START;
                             TX_cnt <= 0;
-                            TX_start  <= '0';
                         end if;
 
                     when START =>

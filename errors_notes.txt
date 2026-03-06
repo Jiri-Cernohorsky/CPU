@@ -23,4 +23,7 @@ datasheet flashky
 https://datasheet.octopart.com/M25P16-VME6G-STMicroelectronics-datasheet-7623188.pdf
 
 nezkace zpet 
-pameti jsou synchroni vsechno ostatni mam asynchroni vvsechny oameti jsem dal an falling edge (not clk)
+
+
+omezeni page program jen 256bajtu pak novej PP 
+    neresim to vubec proste to musi posilat arduino dost mali 

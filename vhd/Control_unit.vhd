@@ -10,6 +10,8 @@ entity Control_unit is
         Int_bra_tar : out std_logic_vector(13 downto 0);
         ISR : out std_logic; -- interupt in servis registr 
         Inst : in std_logic_vector (31 downto 0);
+        PC_EN : out std_logic;
+        Reg_WE : out std_logic;
         Control_signal : out std_logic_vector (12 downto 0)
         --immControl(12:10) [R(111), I(110), S(101), B(100), U(011), J(010)],
         --ALUControl(9:7)  [+(111), -(110), &(101), |(100), <(011), sll(001), srl(000)],
@@ -24,6 +26,9 @@ architecture RTL of Control_unit is
     signal Funct7: std_logic_vector(6 downto 0);
     signal IMR : std_logic_vector(7 downto 0);
     signal Internal_ISR : std_logic;
+    type State_t is (FETCH, EXECUTE, MEM_WAIT);
+    signal State : State_t;
+    
     
     --IMR(0) = UART
     --IMR(1) = GPIO
@@ -41,6 +46,8 @@ begin
     Opcode <= Inst(6 downto 0);
     Funct3 <= Inst(14 downto 12);
     Funct7 <= Inst(31 downto 25);
+
+
     Istr_handler: process (Opcode, Funct3, Funct7)
     begin
     case Opcode is
@@ -91,5 +98,34 @@ begin
         end if;
     end process Interrupt_handler;
     ISR <= Internal_ISR;
+    process(clk) is
+    begin
+        if rising_edge(clk) then
+            if rst = '1' then
+                State <= FETCH;
+            else
+                case State is
+                    when FETCH =>
+                        State <= EXECUTE;
+
+                    when EXECUTE =>
+                        if Opcode = "0000011" or Opcode = "0100011" then
+                            State <= MEM_WAIT;
+                        else
+                            State <= FETCH;
+                        end if;
+
+                    when MEM_WAIT =>
+                        State <= FETCH;
+                end case;
+            end if;
+        end if;
+    end process;
+    PC_EN  <= '1' when (State = EXECUTE and Opcode /= "0000011" and Opcode /= "0100011")
+                or   State = MEM_WAIT
+            else '0';
+    Reg_WE <= '1' when (State = EXECUTE and Opcode /= "0000011" and Opcode /= "0100011")
+                or   State = MEM_WAIT
+            else '0';
 end RTL;
 
