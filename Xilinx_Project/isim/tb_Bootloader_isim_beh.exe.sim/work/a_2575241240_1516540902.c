@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/Imm_decode.vhd";
+static const char *ng0 = "/home/ise/Shared_dir/vhd/Imm_decode.vhd";
 
 
 
@@ -60,27 +60,27 @@ static void work_a_2575241240_1516540902_p_0(char *t0)
 LAB0:    xsi_set_current_line(18, ng0);
     t1 = (t0 + 1192U);
     t2 = *((char **)t1);
-    t1 = (t0 + 4595);
+    t1 = (t0 + 4571);
     t4 = xsi_mem_cmp(t1, t2, 3U);
     if (t4 == 1)
         goto LAB3;
 
-LAB9:    t5 = (t0 + 4598);
+LAB9:    t5 = (t0 + 4574);
     t7 = xsi_mem_cmp(t5, t2, 3U);
     if (t7 == 1)
         goto LAB4;
 
-LAB10:    t8 = (t0 + 4601);
+LAB10:    t8 = (t0 + 4577);
     t10 = xsi_mem_cmp(t8, t2, 3U);
     if (t10 == 1)
         goto LAB5;
 
-LAB11:    t11 = (t0 + 4604);
+LAB11:    t11 = (t0 + 4580);
     t13 = xsi_mem_cmp(t11, t2, 3U);
     if (t13 == 1)
         goto LAB6;
 
-LAB12:    t14 = (t0 + 4607);
+LAB12:    t14 = (t0 + 4583);
     t16 = xsi_mem_cmp(t14, t2, 3U);
     if (t16 == 1)
         goto LAB7;

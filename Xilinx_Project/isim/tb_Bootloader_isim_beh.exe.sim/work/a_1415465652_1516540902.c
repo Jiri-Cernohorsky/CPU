@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/CPU.vhd";
+static const char *ng0 = "/home/ise/Shared_dir/vhd/CPU.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -773,7 +773,7 @@ LAB2:    t28 = (t0 + 14224);
     *((int *)t28) = 1;
 
 LAB1:    return;
-LAB3:    t1 = (t0 + 22283);
+LAB3:    t1 = (t0 + 21979);
     t8 = (t0 + 15136);
     t9 = (t8 + 56U);
     t10 = *((char **)t9);
@@ -824,7 +824,7 @@ LAB0:    xsi_set_current_line(310, ng0);
 
 LAB3:    t2 = (t0 + 2312U);
     t3 = *((char **)t2);
-    t2 = (t0 + 21312U);
+    t2 = (t0 + 21008U);
     t4 = (t0 + 4872U);
     t5 = *((char **)t4);
     t6 = (31 - 13);
@@ -877,7 +877,7 @@ LAB0:    xsi_set_current_line(312, ng0);
 
 LAB3:    t2 = (t0 + 2312U);
     t3 = *((char **)t2);
-    t2 = (t0 + 21312U);
+    t2 = (t0 + 21008U);
     t4 = ieee_p_1242562249_sub_800139796931496790_1035706684(IEEE_P_1242562249, t1, t3, t2, 4);
     t5 = (t0 + 15264);
     t6 = (t5 + 56U);

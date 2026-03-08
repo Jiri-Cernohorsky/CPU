@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd";
+static const char *ng0 = "/home/ise/Shared_dir/vhd/periferie/IO_controler.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_2763492388968962707_503743352(char *, char *, unsigned int , unsigned int );
@@ -81,27 +81,27 @@ LAB2:    xsi_set_current_line(156, ng0);
 LAB7:    xsi_set_current_line(163, ng0);
     t1 = (t0 + 1512U);
     t3 = *((char **)t1);
-    t1 = (t0 + 13003);
+    t1 = (t0 + 12851);
     t13 = xsi_mem_cmp(t1, t3, 32U);
     if (t13 == 1)
         goto LAB9;
 
-LAB15:    t7 = (t0 + 13035);
+LAB15:    t7 = (t0 + 12883);
     t14 = xsi_mem_cmp(t7, t3, 32U);
     if (t14 == 1)
         goto LAB10;
 
-LAB16:    t9 = (t0 + 13067);
+LAB16:    t9 = (t0 + 12915);
     t15 = xsi_mem_cmp(t9, t3, 32U);
     if (t15 == 1)
         goto LAB11;
 
-LAB17:    t11 = (t0 + 13099);
+LAB17:    t11 = (t0 + 12947);
     t16 = xsi_mem_cmp(t11, t3, 32U);
     if (t16 == 1)
         goto LAB12;
 
-LAB18:    t17 = (t0 + 13131);
+LAB18:    t17 = (t0 + 12979);
     t19 = xsi_mem_cmp(t17, t3, 32U);
     if (t19 == 1)
         goto LAB13;
@@ -527,7 +527,7 @@ static void work_a_0964983405_1516540902_p_1(char *t0)
 LAB0:    xsi_set_current_line(179, ng0);
     t1 = (t0 + 1512U);
     t2 = *((char **)t1);
-    t1 = (t0 + 13163);
+    t1 = (t0 + 13011);
     t4 = 1;
     if (32U == 32U)
         goto LAB5;
@@ -539,7 +539,7 @@ LAB7:    if (t4 != 0)
 
 LAB4:    t25 = (t0 + 1512U);
     t26 = *((char **)t25);
-    t25 = (t0 + 13219);
+    t25 = (t0 + 13067);
     t28 = 1;
     if (32U == 32U)
         goto LAB15;
@@ -551,7 +551,7 @@ LAB17:    if (t28 != 0)
 
 LAB14:    t58 = (t0 + 1512U);
     t59 = *((char **)t58);
-    t58 = (t0 + 13282);
+    t58 = (t0 + 13130);
     t61 = 1;
     if (32U == 32U)
         goto LAB25;
@@ -563,7 +563,7 @@ LAB27:    if (t61 != 0)
 
 LAB24:    t91 = (t0 + 1512U);
     t92 = *((char **)t91);
-    t91 = (t0 + 13340);
+    t91 = (t0 + 13188);
     t94 = 1;
     if (32U == 32U)
         goto LAB35;
@@ -575,7 +575,7 @@ LAB37:    if (t94 != 0)
 
 LAB34:    t124 = (t0 + 1512U);
     t125 = *((char **)t124);
-    t124 = (t0 + 13401);
+    t124 = (t0 + 13249);
     t127 = 1;
     if (32U == 32U)
         goto LAB45;
@@ -587,7 +587,7 @@ LAB47:    if (t127 != 0)
 
 LAB44:    t148 = (t0 + 1512U);
     t149 = *((char **)t148);
-    t148 = (t0 + 13441);
+    t148 = (t0 + 13289);
     t151 = 1;
     if (32U == 32U)
         goto LAB55;
@@ -599,7 +599,7 @@ LAB57:    if (t151 != 0)
 
 LAB54:    t161 = (t0 + 1512U);
     t162 = *((char **)t161);
-    t161 = (t0 + 13473);
+    t161 = (t0 + 13321);
     t164 = 1;
     if (32U == 32U)
         goto LAB63;
@@ -611,7 +611,7 @@ LAB65:    if (t164 != 0)
 
 LAB62:    t175 = (t0 + 1512U);
     t176 = *((char **)t175);
-    t175 = (t0 + 13505);
+    t175 = (t0 + 13353);
     t178 = ((IEEE_P_2592010699) + 4000);
     t179 = xsi_vhdl_greaterEqual(t178, t176, 32U, t175, 32U);
     if (t179 == 1)
@@ -624,7 +624,7 @@ LAB73:    if (t174 != 0)
 
 LAB70:    t203 = (t0 + 1512U);
     t204 = *((char **)t203);
-    t203 = (t0 + 13593);
+    t203 = (t0 + 13441);
     t206 = ((IEEE_P_2592010699) + 4000);
     t207 = xsi_vhdl_greaterEqual(t206, t204, 32U, t203, 32U);
     if (t207 == 1)
@@ -636,7 +636,7 @@ LAB80:    if (t202 != 0)
         goto LAB76;
 
 LAB77:
-LAB83:    t230 = (t0 + 13681);
+LAB83:    t230 = (t0 + 13529);
     t232 = (t0 + 8120);
     t233 = (t232 + 56U);
     t234 = *((char **)t233);
@@ -649,7 +649,7 @@ LAB2:    t237 = (t0 + 7672);
     *((int *)t237) = 1;
 
 LAB1:    return;
-LAB3:    t8 = (t0 + 13195);
+LAB3:    t8 = (t0 + 13043);
     t10 = (t0 + 5032U);
     t11 = *((char **)t10);
     t13 = ((IEEE_P_2592010699) + 4000);
@@ -665,7 +665,7 @@ LAB3:    t8 = (t0 + 13195);
     t18 = (t18 + 1);
     t16 = (t15 + 12U);
     *((unsigned int *)t16) = t18;
-    t16 = (t0 + 12784U);
+    t16 = (t0 + 12632U);
     t10 = xsi_base_array_concat(t10, t12, t13, (char)97, t8, t14, (char)97, t11, t16, (char)101);
     t18 = (24U + 8U);
     t19 = (32U != t18);
@@ -699,8 +699,8 @@ LAB10:    t5 = (t5 + 1);
 LAB11:    xsi_size_not_matching(32U, t18, 0);
     goto LAB12;
 
-LAB13:    t32 = (t0 + 13251);
-    t34 = (t0 + 13279);
+LAB13:    t32 = (t0 + 13099);
+    t34 = (t0 + 13127);
     t38 = ((IEEE_P_2592010699) + 4000);
     t40 = (t39 + 0U);
     t41 = (t40 + 0U);
@@ -765,8 +765,8 @@ LAB20:    t29 = (t29 + 1);
 LAB21:    xsi_size_not_matching(32U, t51, 0);
     goto LAB22;
 
-LAB23:    t65 = (t0 + 13314);
-    t67 = (t0 + 13338);
+LAB23:    t65 = (t0 + 13162);
+    t67 = (t0 + 13186);
     t71 = ((IEEE_P_2592010699) + 4000);
     t73 = (t72 + 0U);
     t74 = (t73 + 0U);
@@ -796,7 +796,7 @@ LAB23:    t65 = (t0 + 13314);
     t78 = (t0 + 4392U);
     t80 = *((char **)t78);
     t82 = ((IEEE_P_2592010699) + 4000);
-    t83 = (t0 + 12720U);
+    t83 = (t0 + 12568U);
     t78 = xsi_base_array_concat(t78, t81, t82, (char)97, t69, t70, (char)97, t80, t83, (char)101);
     t76 = (24U + 2U);
     t84 = (t76 + 6U);
@@ -831,8 +831,8 @@ LAB30:    t62 = (t62 + 1);
 LAB31:    xsi_size_not_matching(32U, t84, 0);
     goto LAB32;
 
-LAB33:    t98 = (t0 + 13372);
-    t100 = (t0 + 13400);
+LAB33:    t98 = (t0 + 13220);
+    t100 = (t0 + 13248);
     t104 = ((IEEE_P_2592010699) + 4000);
     t106 = (t105 + 0U);
     t107 = (t106 + 0U);
@@ -862,7 +862,7 @@ LAB33:    t98 = (t0 + 13372);
     t111 = (t0 + 4232U);
     t113 = *((char **)t111);
     t115 = ((IEEE_P_2592010699) + 4000);
-    t116 = (t0 + 12704U);
+    t116 = (t0 + 12552U);
     t111 = xsi_base_array_concat(t111, t114, t115, (char)97, t102, t103, (char)97, t113, t116, (char)101);
     t109 = (28U + 1U);
     t117 = (t109 + 3U);
@@ -897,7 +897,7 @@ LAB40:    t95 = (t95 + 1);
 LAB41:    xsi_size_not_matching(32U, t117, 0);
     goto LAB42;
 
-LAB43:    t131 = (t0 + 13433);
+LAB43:    t131 = (t0 + 13281);
     t133 = (t0 + 4552U);
     t134 = *((char **)t133);
     t136 = ((IEEE_P_2592010699) + 4000);
@@ -913,7 +913,7 @@ LAB43:    t131 = (t0 + 13433);
     t141 = (t141 + 1);
     t139 = (t138 + 12U);
     *((unsigned int *)t139) = t141;
-    t139 = (t0 + 12736U);
+    t139 = (t0 + 12584U);
     t133 = xsi_base_array_concat(t133, t135, t136, (char)97, t131, t137, (char)97, t134, t139, (char)101);
     t141 = (8U + 24U);
     t142 = (32U != t141);
@@ -999,7 +999,7 @@ LAB67:    t166 = (t162 + t165);
 LAB68:    t165 = (t165 + 1);
     goto LAB66;
 
-LAB69:    t185 = (t0 + 13569);
+LAB69:    t185 = (t0 + 13417);
     t187 = (t0 + 3432U);
     t188 = *((char **)t187);
     t190 = ((IEEE_P_2592010699) + 4000);
@@ -1015,7 +1015,7 @@ LAB69:    t185 = (t0 + 13569);
     t195 = (t195 + 1);
     t193 = (t192 + 12U);
     *((unsigned int *)t193) = t195;
-    t193 = (t0 + 12672U);
+    t193 = (t0 + 12520U);
     t187 = xsi_base_array_concat(t187, t189, t190, (char)97, t185, t191, (char)97, t188, t193, (char)101);
     t195 = (24U + 8U);
     t196 = (32U != t195);
@@ -1033,7 +1033,7 @@ LAB75:    t197 = (t0 + 8120);
 
 LAB71:    t180 = (t0 + 1512U);
     t181 = *((char **)t180);
-    t180 = (t0 + 13537);
+    t180 = (t0 + 13385);
     t183 = ((IEEE_P_2592010699) + 4000);
     t184 = xsi_vhdl_lessthanEqual(t183, t181, 32U, t180, 32U);
     t174 = t184;
@@ -1042,7 +1042,7 @@ LAB71:    t180 = (t0 + 1512U);
 LAB74:    xsi_size_not_matching(32U, t195, 0);
     goto LAB75;
 
-LAB76:    t213 = (t0 + 13657);
+LAB76:    t213 = (t0 + 13505);
     t215 = (t0 + 3912U);
     t216 = *((char **)t215);
     t218 = ((IEEE_P_2592010699) + 4000);
@@ -1058,7 +1058,7 @@ LAB76:    t213 = (t0 + 13657);
     t223 = (t223 + 1);
     t221 = (t220 + 12U);
     *((unsigned int *)t221) = t223;
-    t221 = (t0 + 12688U);
+    t221 = (t0 + 12536U);
     t215 = xsi_base_array_concat(t215, t217, t218, (char)97, t213, t219, (char)97, t216, t221, (char)101);
     t223 = (24U + 8U);
     t224 = (32U != t223);
@@ -1076,7 +1076,7 @@ LAB82:    t225 = (t0 + 8120);
 
 LAB78:    t208 = (t0 + 1512U);
     t209 = *((char **)t208);
-    t208 = (t0 + 13625);
+    t208 = (t0 + 13473);
     t211 = ((IEEE_P_2592010699) + 4000);
     t212 = xsi_vhdl_lessthanEqual(t211, t209, 32U, t208, 32U);
     t202 = t212;

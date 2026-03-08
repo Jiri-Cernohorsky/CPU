@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd";
+static const char *ng0 = "/home/ise/Shared_dir/vhd/periferie/SPI_flash.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -245,7 +245,7 @@ LAB5:    xsi_set_current_line(72, ng0);
     *((unsigned char *)t8) = (unsigned char)2;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(77, ng0);
-    t1 = (t0 + 12014);
+    t1 = (t0 + 11902);
     t4 = (t0 + 7304);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -270,7 +270,7 @@ LAB5:    xsi_set_current_line(72, ng0);
     *((unsigned char *)t8) = (unsigned char)2;
     xsi_driver_first_trans_fast_port(t1);
     xsi_set_current_line(80, ng0);
-    t1 = (t0 + 12046);
+    t1 = (t0 + 11934);
     t4 = (t0 + 7496);
     t7 = (t4 + 56U);
     t8 = *((char **)t7);
@@ -685,7 +685,7 @@ LAB19:    xsi_set_current_line(87, ng0);
     t3 = *((char **)t1);
     t1 = (t0 + 1672U);
     t4 = *((char **)t1);
-    t1 = (t0 + 11712U);
+    t1 = (t0 + 11600U);
     t12 = ieee_p_1242562249_sub_17802405650254020620_1035706684(IEEE_P_1242562249, t4, t1);
     t13 = (t12 - 0);
     t14 = (t13 * 1);
@@ -793,7 +793,7 @@ LAB27:    xsi_set_current_line(94, ng0);
 LAB30:    xsi_set_current_line(98, ng0);
     t1 = (t0 + 1672U);
     t4 = *((char **)t1);
-    t1 = (t0 + 12078);
+    t1 = (t0 + 11966);
     t5 = 1;
     if (3U == 3U)
         goto LAB36;
@@ -805,7 +805,7 @@ LAB38:    if (t5 != 0)
 
 LAB35:    t1 = (t0 + 1672U);
     t3 = *((char **)t1);
-    t1 = (t0 + 12081);
+    t1 = (t0 + 11969);
     t2 = 1;
     if (3U == 3U)
         goto LAB44;
@@ -844,7 +844,7 @@ LAB52:    t12 = (t14 - 0);
     t19 = (1U * t17);
     memset(t7, (unsigned char)2, t19);
     t9 = ((IEEE_P_2592010699) + 4000);
-    t10 = (t0 + 11680U);
+    t10 = (t0 + 11568U);
     t11 = (t26 + 0U);
     t25 = (t11 + 0U);
     *((int *)t25) = 0;
@@ -961,7 +961,7 @@ LAB57:    xsi_set_current_line(114, ng0);
 LAB60:    xsi_set_current_line(118, ng0);
     t1 = (t0 + 1672U);
     t4 = *((char **)t1);
-    t1 = (t0 + 12084);
+    t1 = (t0 + 11972);
     t5 = 1;
     if (3U == 3U)
         goto LAB66;
@@ -973,7 +973,7 @@ LAB68:    if (t5 != 0)
 
 LAB65:    t1 = (t0 + 1672U);
     t3 = *((char **)t1);
-    t1 = (t0 + 12087);
+    t1 = (t0 + 11975);
     t2 = 1;
     if (3U == 3U)
         goto LAB74;
@@ -985,7 +985,7 @@ LAB76:    if (t2 != 0)
 
 LAB73:    t1 = (t0 + 1672U);
     t3 = *((char **)t1);
-    t1 = (t0 + 12090);
+    t1 = (t0 + 11978);
     t2 = 1;
     if (3U == 3U)
         goto LAB82;
@@ -1152,7 +1152,7 @@ LAB93:    xsi_set_current_line(142, ng0);
     xsi_set_current_line(144, ng0);
     t1 = (t0 + 1672U);
     t3 = *((char **)t1);
-    t1 = (t0 + 12093);
+    t1 = (t0 + 11981);
     t2 = 1;
     if (3U == 3U)
         goto LAB99;

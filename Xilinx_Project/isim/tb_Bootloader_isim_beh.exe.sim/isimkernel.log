@@ -2,27 +2,9 @@ Command line:
    tb_Bootloader_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  47217
+     -socket  35308
 
-Fri Mar  6 12:36:29 2026
+Sat Mar  7 11:35:55 2026
 
 
- Elaboration Time: 0.08 sec
-
- Current Memory Usage: 221.385 Meg
-
- Total Signals          : 481
- Total Nets             : 2730
- Total Signal Drivers   : 171
- Total Blocks           : 56
- Total Primitive Blocks : 49
- Total Processes        : 115
- Total Traceable Variables  : 1477
- Total Scalar Nets and Variables : 322843
-
- Total Simulation Time: 0.1 sec
-
- Current Memory Usage: 298.983 Meg
-
-Fri Mar  6 12:36:36 2026
-
+ Elaboration Time: 0.41 sec

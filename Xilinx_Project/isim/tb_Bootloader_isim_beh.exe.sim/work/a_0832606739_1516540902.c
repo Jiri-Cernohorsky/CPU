@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/ALU.vhd";
+static const char *ng0 = "/home/ise/Shared_dir/vhd/ALU.vhd";
 extern char *IEEE_P_1242562249;
 extern char *IEEE_P_2592010699;
 
@@ -83,37 +83,37 @@ static void work_a_0832606739_1516540902_p_0(char *t0)
 LAB0:    xsi_set_current_line(19, ng0);
     t1 = (t0 + 1352U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5971);
+    t1 = (t0 + 5931);
     t4 = xsi_mem_cmp(t1, t2, 3U);
     if (t4 == 1)
         goto LAB3;
 
-LAB11:    t5 = (t0 + 5974);
+LAB11:    t5 = (t0 + 5934);
     t7 = xsi_mem_cmp(t5, t2, 3U);
     if (t7 == 1)
         goto LAB4;
 
-LAB12:    t8 = (t0 + 5977);
+LAB12:    t8 = (t0 + 5937);
     t10 = xsi_mem_cmp(t8, t2, 3U);
     if (t10 == 1)
         goto LAB5;
 
-LAB13:    t11 = (t0 + 5980);
+LAB13:    t11 = (t0 + 5940);
     t13 = xsi_mem_cmp(t11, t2, 3U);
     if (t13 == 1)
         goto LAB6;
 
-LAB14:    t14 = (t0 + 5983);
+LAB14:    t14 = (t0 + 5943);
     t16 = xsi_mem_cmp(t14, t2, 3U);
     if (t16 == 1)
         goto LAB7;
 
-LAB15:    t17 = (t0 + 5986);
+LAB15:    t17 = (t0 + 5946);
     t19 = xsi_mem_cmp(t17, t2, 3U);
     if (t19 == 1)
         goto LAB8;
 
-LAB16:    t20 = (t0 + 5989);
+LAB16:    t20 = (t0 + 5949);
     t22 = xsi_mem_cmp(t20, t2, 3U);
     if (t22 == 1)
         goto LAB9;
@@ -128,10 +128,10 @@ LAB1:    return;
 LAB3:    xsi_set_current_line(20, ng0);
     t24 = (t0 + 1032U);
     t25 = *((char **)t24);
-    t24 = (t0 + 5784U);
+    t24 = (t0 + 5744U);
     t26 = (t0 + 1192U);
     t27 = *((char **)t26);
-    t26 = (t0 + 5800U);
+    t26 = (t0 + 5760U);
     t28 = ieee_p_1242562249_sub_3525738511873186323_1035706684(IEEE_P_1242562249, t23, t25, t24, t27, t26);
     t29 = (t0 + 3912);
     t30 = (t29 + 56U);
@@ -145,10 +145,10 @@ LAB3:    xsi_set_current_line(20, ng0);
 LAB4:    xsi_set_current_line(21, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
-    t3 = (t0 + 5800U);
+    t3 = (t0 + 5760U);
     t6 = ieee_p_1242562249_sub_3525738511873258197_1035706684(IEEE_P_1242562249, t23, t2, t1, t5, t3);
     t8 = (t0 + 3912);
     t9 = (t8 + 56U);
@@ -162,10 +162,10 @@ LAB4:    xsi_set_current_line(21, ng0);
 LAB5:    xsi_set_current_line(22, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
-    t3 = (t0 + 5800U);
+    t3 = (t0 + 5760U);
     t6 = ieee_p_2592010699_sub_16439989832805790689_503743352(IEEE_P_2592010699, t23, t2, t1, t5, t3);
     t8 = (t23 + 12U);
     t34 = *((unsigned int *)t8);
@@ -186,10 +186,10 @@ LAB20:    t9 = (t0 + 3912);
 LAB6:    xsi_set_current_line(23, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
-    t3 = (t0 + 5800U);
+    t3 = (t0 + 5760U);
     t6 = ieee_p_2592010699_sub_16439767405979520975_503743352(IEEE_P_2592010699, t23, t2, t1, t5, t3);
     t8 = (t23 + 12U);
     t34 = *((unsigned int *)t8);
@@ -210,10 +210,10 @@ LAB22:    t9 = (t0 + 3912);
 LAB7:    xsi_set_current_line(25, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
-    t3 = (t0 + 5800U);
+    t3 = (t0 + 5760U);
     t36 = ieee_p_1242562249_sub_3044623114557194624_1035706684(IEEE_P_1242562249, t2, t1, t5, t3);
     if (t36 != 0)
         goto LAB23;
@@ -236,7 +236,7 @@ LAB24:    goto LAB2;
 LAB8:    xsi_set_current_line(30, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
     t34 = (31 - 4);
@@ -269,7 +269,7 @@ LAB8:    xsi_set_current_line(30, ng0);
 LAB9:    xsi_set_current_line(31, ng0);
     t1 = (t0 + 1032U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5784U);
+    t1 = (t0 + 5744U);
     t3 = (t0 + 1192U);
     t5 = *((char **)t3);
     t34 = (31 - 4);
