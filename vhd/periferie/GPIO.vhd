@@ -74,11 +74,11 @@ begin
                 --zápis dat
                 if WE_GPIO = '1' then
                     case Address is
-                        when x"80000004"=> Data_reg_TX <= Bus_data_i;
-                        when x"80000008"=> Dir_reg <= Bus_data_i;
-                        when x"8000000C"=> Int_En_reg <= Bus_data_i;
+                        when x"80000008"=> Data_reg_TX <= Bus_data_i;
+                        when x"80000018"=> Dir_reg <= Bus_data_i;
+                        when x"80000010"=> Int_En_reg <= Bus_data_i;
                         -- napíšeš 1 pro smazání prej W1C princip říkali internety
-                        when x"80000010"=> Int_State_reg <= Int_State_reg and not Bus_data_i;
+                        when x"80000014"=> Int_State_reg <= Int_State_reg and not Bus_data_i;
                         when others => null;
                     end case;  
                 end if;
@@ -99,10 +99,10 @@ begin
     process(Address, Data_reg_RX, Dir_reg, Int_En_reg, Int_State_reg)
     begin
         case Address is
-            when x"80000004" => Bus_data_o <= Data_reg_RX;
-            when x"80000008" => Bus_data_o <= Dir_reg;
-            when x"8000000C" => Bus_data_o <= Int_En_reg;
-            when x"80000010" => Bus_data_o <= Int_State_reg;
+            when x"8000000C" => Bus_data_o <= Data_reg_RX;
+            when x"80000018" => Bus_data_o <= Dir_reg;
+            when x"80000010" => Bus_data_o <= Int_En_reg;
+            when x"80000014" => Bus_data_o <= Int_State_reg;
             when others => Bus_data_o <= (others => '0');
         end case;
     end process;

@@ -185,7 +185,7 @@ begin
                                         SPI_data_i          when Bus_address = x"80000210" else
                                         SPI_data_o          when Bus_address = x"80000214" else
                                         
-                  x"000000" &           GPIO_o              when Bus_address >= x"80000004" and Bus_address <= x"80000010" else -- GPIO_o je moc malí proto to x"000000"
+                  x"000000" &           GPIO_o              when Bus_address >= x"80000008" and Bus_address <= x"80000018" else -- GPIO_o je moc malí proto to x"000000"
                   x"000000" &           UART_o              when Bus_address >= x"80000104" and Bus_address <= x"80000110" else x"00000000";
                  
     Interrupt_handler : process(GPIO_irq, UART_irq) is
