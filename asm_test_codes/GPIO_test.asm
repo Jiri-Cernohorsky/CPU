@@ -1,5 +1,5 @@
 #obsluha přerušení
-org 0x0
+org 0x190
 sw x1, 0(x0)
 sw x2, 4(zero)
 sw x3, 8(zero)

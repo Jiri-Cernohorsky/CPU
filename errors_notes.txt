@@ -15,15 +15,11 @@ IO_controler
     W_IMR_internal <= Bus_data_i(7 downto 0) when Bus_address = x"80000000" and WE = '1' else W_IMR_internal;
     neměl WE = '1' protože jsem kokot
 
-interrapt prodleva jeden takt než se projeví změna PC možnost přečtení špatné addresy potřeba vyřešit
-
-BRAM je synchroní takže vvýsledek dá až na fallinf edge musel jsme posunout její hodiny o půl takru abych četl data včas
-
-datasheet flashky
-https://datasheet.octopart.com/M25P16-VME6G-STMicroelectronics-datasheet-7623188.pdf
 
 nezkace zpet 
 
 
 omezeni page program jen 256bajtu pak novej PP 
     neresim to vubec proste to musi posilat arduino dost mali 
+
+když uart načte 0 tak to nemá program jak poznat řešení musí načítat ještě na jednu adresu 1 jako že hotovo a tohle musím sledovat ne data co posílá ty musím načítat z jiné adresy
