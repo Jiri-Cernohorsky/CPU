@@ -26,8 +26,8 @@ architecture behavior of tb_Bootloader is
 
     type SEND_DATA_UART_t is array (0 to 25) of std_logic_vector(7 downto 0);
     constant c_SEND_DATA_UART : SEND_DATA_UART_t := (
-        x"03", x"00", x"00", x"00",   -- erase + adresa
-        x"02", x"00", x"00", x"00",    -- program + adresa flash
+        x"03", x"00", x"00", x"04",   -- erase + adresa
+        x"02", x"00", x"00", x"04",    -- program + adresa flash
         x"00", x"02",                  -- program počet slov
         x"00", x"10", x"80", x"93",   -- program data
         x"40", x"11", x"01", x"33",   -- program data
@@ -165,13 +165,6 @@ begin
             report "ERASE addr byte " & integer'image(i) & ": 0x" & integer'image(to_integer(unsigned(v_byte)));
             if v_byte = x"00" then report "adresa spravna"; else report "adresa spatna"; end if;
         end loop;
-
-
-        -- STATUS READ po ERASE — příkaz + 2 bajty odpovědi (busy, pak idle)
-        wait until falling_edge(SPI_o(2));
-        read_byte_MOSI(SPI_o, v_byte);
-        report "STATUS cmd (post-erase): 0x" & integer'image(to_integer(unsigned(v_byte)));
-        if v_byte = x"05" then report "STATUS cmd OK"; else report "STATUS cmd FAIL"; end if;
 
         -- Posíláme 2 bajty statusu: 0x01 (busy), 0x00 (idle)
         for i in 0 to 1 loop

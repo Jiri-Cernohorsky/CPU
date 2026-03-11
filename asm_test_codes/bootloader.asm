@@ -33,13 +33,16 @@ sw x29, 112(zero)
 sw x30, 116(zero)
 sw x31, 120(zero)
 
+addi x2, x0, 2 # x2 = x0 + 2
+addi x1, x0, 1 # x1 = x0 + 1
 and x10, x10, x0   # x10 = x10 AND 0
 addi x10, x0, 0x200    # x10 = 0x00000200
 addi x11, x0, 22
 sll  x10, x10, x11      # x10 = 0x80000000
 addi x10, x10, 0x104   # x10 = 0x80000104
 lw x21, 4(x10) # načtení UART dat
-sw x21, 200(x0) # uložení UART dat
+sw x1, 200(x0) 
+sw x21, 204(x0) # uložení UART dat
 addi x2, x0, 2 # x2 = x0 + 2
 sw x2, 16(x10) # vypnutí přerušení
 
@@ -88,9 +91,10 @@ sw x1, 0(x10) # maska interruptu globální zapnout UART
 sw x2, 272(x10) # interrupt enable UART_RX
 
 UART_LOOP: #defoult wait loop
-lw x21, 200(x0) # načtení UART dat
+lw x21, 200(x0) # cekani na uart
 beq x21, x0, UART_LOOP # if x21 == x0 then UART_LOOP
 sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+lw x21 204(x0) # načtení UART dat
 sw x21, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
 sw x1, 268(x10) # signal start pro UART
 
@@ -107,6 +111,7 @@ ERASE: # smazat data flash na adrese od arduina
         lw x25, 200(x0) # adresa pro mazání
         beq x25, x0, ADDRESS_ERASE # if x22 == x0 then ADDRESS_ERASE
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
@@ -178,6 +183,7 @@ START: #spustit program z flash
         lw x25, 200(x0) # adresa odkud čtu v FLASH
         beq x25, x0, ADDRESS_FLASH # if x22 == x0 then ADDRESS_FLASH
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
@@ -194,6 +200,7 @@ START: #spustit program z flash
         lw x25, 200(x0) # adresa kam zapisuju v RAM
         beq x25, x0, ADDRESS_RAM # if x22 == x0 then ADDRESS_RAM
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x23, x23, x25 # x23 = x23 + x25
@@ -210,6 +217,7 @@ START: #spustit program z flash
         lw x25, 200(x0) # počet slov k přečtení
         beq x25, x0, WORD_COUNT # if x22 == x0 then WORD_COUNT
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x29, x29, x25 # x29 = x29 + x25
@@ -274,6 +282,7 @@ PROGRAM: #načítat program z arduina
         lw x25, 200(x0) # adresa pro programování
         beq x25, x0, ADDRESS_PROGRAM # if x22 == x0 then ADDRESS_PROGRAM
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
@@ -291,6 +300,7 @@ PROGRAM: #načítat program z arduina
         lw x25, 200(x0) # počet slov k přečtení
         beq x25, x0, WORD_COUNT1 # if x22 == x0 then WORD_COUNT1
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x25 204(x0) # načtení UART dat
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x29, x29, x25 # x29 = x29 + x25
@@ -330,6 +340,7 @@ PROGRAM: #načítat program z arduina
         lw x22, 200(x0) # načtení dat z UART
         beq x22, x0, DATA # if x22 == x0 then DATA
         sw zero, 200(x0) #ulozeni 0 do načítací UART adresy
+        lw x22 204(x0) # načtení UART dat
         sw x22, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
 
