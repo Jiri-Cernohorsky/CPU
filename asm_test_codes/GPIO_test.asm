@@ -32,26 +32,20 @@ sw x29, 112(zero)
 sw x30, 116(zero)
 sw x31, 120(zero)
 addi x10, x0, 0x200    # x10 = 0x00000200
-addi x11, x0, 18
+addi x11, x0, 22
 sll  x10, x10, x11      # x10 = 0x80000000
-lw t1, 8(s1)
+lw t1, 0xC(x10)
 addi x1, zero, 1 # x1 = zero + 1
 addi x2, zero, 2 # x2 = zero + 2
-slt x4, t1, x2
-beq x4, x0, SKIP # if x4 == x2 then SKIP
+beq t1, x1, ELSE # if t1 == x1 then ELSE
 add t1, t1, x2 # t1 = t1 + x2
-sw t1, 8(s1)
-SKIP:
-lw t0, 4(s1)
-slt x4, t0, x1     # x4 = 1 pokud t0 < x1, jinak 0
-beq x4, x1, ELSE2 # if x4 == x2 then ELSE2
-add t0, t0, x2 # t0 = t0 + x2 
-jal zero, KONEC
-ELSE2:
-sub t0, t0, x2 # t0 = t0 - x2
-KONEC:
-sw t0, 4(s1)
-sw x1, 16(s1)
+jal zero, ENDIF  # jump to zero, ENDIF and save position to ra
+ELSE:
+sub t1, t1, x2 # t1 = t1 - x2
+ENDIF:
+sw t1, 0x8(x10)
+sw x1, 0x14(x10)
+
 lw x1, 0(x0)
 lw x2, 4(zero)
 lw x3, 8(zero)
@@ -86,31 +80,13 @@ lw x31, 120(zero)
 mret
 
 org 0x320
-addi s1, x0, 0x400
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-add s1, s1, s1
-addi x1, x1, 1
-sw x1, 0(s1)
-sw x1, 0xC(s1)
+addi x10, x0, 0x200    # x10 = 0x00000200
+addi x11, x0, 18
+sll  x10, x10, x11      # x10 = 0x80000000
+addi x1, x1, 1 # x1 = x1 + 1
+addi x2, x2, 2  # x2 = x2 + 2
+sw x2, 0x18(x10)
+sw x1, 0x10(x10)
 loop:
 addi t1, t1, 1  #kontrola jestli se vrací do registů původní hodnoty
 jal zero, loop
