@@ -164,7 +164,7 @@ begin
                     -- write adresy                      nazev               délka signálu               
                     --system
                     when x"80000000" => if WE = '1' then W_IMR_internal     <= Bus_data_i(7 downto 0) ; end if;
-                    when x"80000004" => if WE = '1' then Start_program_reg  <= Bus_data_i(1)          ; end if;
+                    when x"80000004" => if WE = '1' then Start_program_reg  <= Bus_data_i(0)          ; end if;
                     --SPI
                     when x"80000204" => if WE = '1' then SPI_control_i      <= Bus_data_i(5 downto 0) ; end if;
                     when x"8000020C" => if WE = '1' then SPI_address        <= Bus_data_i(23 downto 0); end if;

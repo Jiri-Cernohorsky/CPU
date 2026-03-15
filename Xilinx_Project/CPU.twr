@@ -15,7 +15,6 @@ Environment Variable      Effect
 NONE                      No environment variables were set
 --------------------------------------------------------------------------------
 
-INFO:Timing:2698 - No timing constraints found, doing default enumeration.
 INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
 INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
    option. All paths that are not constrained will be reported in the 
@@ -33,66 +32,660 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
    SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
    Error.
 
+================================================================================
+Timing constraint: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2148978 paths analyzed, 4963 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.928ns.
+--------------------------------------------------------------------------------
+
+Paths for end point registr32x4_inst/Reg_17_5 (SLICE_X47Y65.CE), 951 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.072ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          registr32x4_inst/Reg_17_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.868ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.060ns (0.081 - 0.141)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to registr32x4_inst/Reg_17_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOA28    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X3Y50.G4       net (fanout=1)        1.994   Instr_mem/Data_o_reg_6<28>
+    SLICE_X3Y50.F5       Tif5                  0.875   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_540
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_5
+    -------------------------------------------------  ---------------------------
+    Total                                     19.868ns (10.359ns logic, 9.509ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_7.A (RAM)
+  Destination:          registr32x4_inst/Reg_17_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.877ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.047ns (0.081 - 0.128)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_7.A to registr32x4_inst/Reg_17_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y6.DOA12    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_7
+                                                       Instr_mem/RAMB16_S36_inst_7.A
+    SLICE_X3Y52.F2       net (fanout=1)        1.759   Instr_mem/Data_o_reg_7<12>
+    SLICE_X3Y52.F5       Tif5                  0.875   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_43
+                                                       Instr_mem/Mmux_Data_o_3_f5_2
+    SLICE_X3Y52.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f53
+    SLICE_X3Y52.Y        Tif6y                 0.521   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_2_f6_2
+    SLICE_X1Y34.F4       net (fanout=3)        0.956   instr_mem_data_o<12>
+    SLICE_X1Y34.X        Tilo                  0.704   Inst<12>
+                                                       Inst<12>1
+    SLICE_X0Y35.G2       net (fanout=7)        0.470   Inst<12>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_5
+    -------------------------------------------------  ---------------------------
+    Total                                     19.877ns (10.304ns logic, 9.573ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.131ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               IO_controler_inst/Start_program_reg (FF)
+  Destination:          registr32x4_inst/Reg_17_5 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.852ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.017ns (0.081 - 0.098)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: IO_controler_inst/Start_program_reg to registr32x4_inst/Reg_17_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y47.YQ      Tcko                  0.587   IO_controler_inst/Start_program_reg
+                                                       IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.F2       net (fanout=188)      1.618   IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.X        Tilo                  0.704   Instr_mem_address<12>1_1
+                                                       Instr_mem_address<12>1_3
+    SLICE_X3Y50.BX       net (fanout=10)       2.167   Instr_mem_address<12>1_1
+    SLICE_X3Y50.F5       Tbxf5                 0.589   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_5
+    -------------------------------------------------  ---------------------------
+    Total                                     19.852ns (8.552ns logic, 11.300ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point registr32x4_inst/Reg_17_4 (SLICE_X47Y65.CE), 951 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.072ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          registr32x4_inst/Reg_17_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.868ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.060ns (0.081 - 0.141)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to registr32x4_inst/Reg_17_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOA28    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X3Y50.G4       net (fanout=1)        1.994   Instr_mem/Data_o_reg_6<28>
+    SLICE_X3Y50.F5       Tif5                  0.875   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_540
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.868ns (10.359ns logic, 9.509ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_7.A (RAM)
+  Destination:          registr32x4_inst/Reg_17_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.877ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.047ns (0.081 - 0.128)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_7.A to registr32x4_inst/Reg_17_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y6.DOA12    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_7
+                                                       Instr_mem/RAMB16_S36_inst_7.A
+    SLICE_X3Y52.F2       net (fanout=1)        1.759   Instr_mem/Data_o_reg_7<12>
+    SLICE_X3Y52.F5       Tif5                  0.875   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_43
+                                                       Instr_mem/Mmux_Data_o_3_f5_2
+    SLICE_X3Y52.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f53
+    SLICE_X3Y52.Y        Tif6y                 0.521   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_2_f6_2
+    SLICE_X1Y34.F4       net (fanout=3)        0.956   instr_mem_data_o<12>
+    SLICE_X1Y34.X        Tilo                  0.704   Inst<12>
+                                                       Inst<12>1
+    SLICE_X0Y35.G2       net (fanout=7)        0.470   Inst<12>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.877ns (10.304ns logic, 9.573ns route)
+                                                       (51.8% logic, 48.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.131ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               IO_controler_inst/Start_program_reg (FF)
+  Destination:          registr32x4_inst/Reg_17_4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.852ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.017ns (0.081 - 0.098)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: IO_controler_inst/Start_program_reg to registr32x4_inst/Reg_17_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y47.YQ      Tcko                  0.587   IO_controler_inst/Start_program_reg
+                                                       IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.F2       net (fanout=188)      1.618   IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.X        Tilo                  0.704   Instr_mem_address<12>1_1
+                                                       Instr_mem_address<12>1_3
+    SLICE_X3Y50.BX       net (fanout=10)       2.167   Instr_mem_address<12>1_1
+    SLICE_X3Y50.F5       Tbxf5                 0.589   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X40Y36.G3      net (fanout=8)        0.765   reg_we_gated
+    SLICE_X40Y36.Y       Tilo                  0.759   registr32x4_inst/Reg_23_not0001
+                                                       registr32x4_inst/Reg_17_not000111
+    SLICE_X42Y36.F4      net (fanout=4)        0.404   registr32x4_inst/N9
+    SLICE_X42Y36.X       Tilo                  0.759   registr32x4_inst/Reg_17_not0001
+                                                       registr32x4_inst/Reg_17_not00012
+    SLICE_X47Y65.CE      net (fanout=16)       3.215   registr32x4_inst/Reg_17_not0001
+    SLICE_X47Y65.CLK     Tceck                 0.555   registr32x4_inst/Reg_17_5
+                                                       registr32x4_inst/Reg_17_4
+    -------------------------------------------------  ---------------------------
+    Total                                     19.852ns (8.552ns logic, 11.300ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point registr32x4_inst/Reg_27_13 (SLICE_X50Y21.CE), 951 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.160ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_6.A (RAM)
+  Destination:          registr32x4_inst/Reg_27_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.797ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.043ns (0.098 - 0.141)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_6.A to registr32x4_inst/Reg_27_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y9.DOA28    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_6
+                                                       Instr_mem/RAMB16_S36_inst_6.A
+    SLICE_X3Y50.G4       net (fanout=1)        1.994   Instr_mem/Data_o_reg_6<28>
+    SLICE_X3Y50.F5       Tif5                  0.875   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_540
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X36Y37.G3      net (fanout=8)        0.392   reg_we_gated
+    SLICE_X36Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_31_not0001
+                                                       registr32x4_inst/Reg_25_not000111
+    SLICE_X38Y37.G3      net (fanout=4)        0.808   registr32x4_inst/N8
+    SLICE_X38Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_25_not0001
+                                                       registr32x4_inst/Reg_27_not00011
+    SLICE_X50Y21.CE      net (fanout=16)       3.113   registr32x4_inst/Reg_27_not0001
+    SLICE_X50Y21.CLK     Tceck                 0.555   registr32x4_inst/Reg_27_13
+                                                       registr32x4_inst/Reg_27_13
+    -------------------------------------------------  ---------------------------
+    Total                                     19.797ns (10.359ns logic, 9.438ns route)
+                                                       (52.3% logic, 47.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.164ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Instr_mem/RAMB16_S36_inst_7.A (RAM)
+  Destination:          registr32x4_inst/Reg_27_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.806ns (Levels of Logic = 9)
+  Clock Path Skew:      -0.030ns (0.098 - 0.128)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: Instr_mem/RAMB16_S36_inst_7.A to registr32x4_inst/Reg_27_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y6.DOA12    Tbcko                 2.812   Instr_mem/RAMB16_S36_inst_7
+                                                       Instr_mem/RAMB16_S36_inst_7.A
+    SLICE_X3Y52.F2       net (fanout=1)        1.759   Instr_mem/Data_o_reg_7<12>
+    SLICE_X3Y52.F5       Tif5                  0.875   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_43
+                                                       Instr_mem/Mmux_Data_o_3_f5_2
+    SLICE_X3Y52.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f53
+    SLICE_X3Y52.Y        Tif6y                 0.521   instr_mem_data_o<12>
+                                                       Instr_mem/Mmux_Data_o_2_f6_2
+    SLICE_X1Y34.F4       net (fanout=3)        0.956   instr_mem_data_o<12>
+    SLICE_X1Y34.X        Tilo                  0.704   Inst<12>
+                                                       Inst<12>1
+    SLICE_X0Y35.G2       net (fanout=7)        0.470   Inst<12>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X36Y37.G3      net (fanout=8)        0.392   reg_we_gated
+    SLICE_X36Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_31_not0001
+                                                       registr32x4_inst/Reg_25_not000111
+    SLICE_X38Y37.G3      net (fanout=4)        0.808   registr32x4_inst/N8
+    SLICE_X38Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_25_not0001
+                                                       registr32x4_inst/Reg_27_not00011
+    SLICE_X50Y21.CE      net (fanout=16)       3.113   registr32x4_inst/Reg_27_not0001
+    SLICE_X50Y21.CLK     Tceck                 0.555   registr32x4_inst/Reg_27_13
+                                                       registr32x4_inst/Reg_27_13
+    -------------------------------------------------  ---------------------------
+    Total                                     19.806ns (10.304ns logic, 9.502ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.219ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               IO_controler_inst/Start_program_reg (FF)
+  Destination:          registr32x4_inst/Reg_27_13 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.781ns (Levels of Logic = 10)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: IO_controler_inst/Start_program_reg to registr32x4_inst/Reg_27_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y47.YQ      Tcko                  0.587   IO_controler_inst/Start_program_reg
+                                                       IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.F2       net (fanout=188)      1.618   IO_controler_inst/Start_program_reg
+    SLICE_X1Y40.X        Tilo                  0.704   Instr_mem_address<12>1_1
+                                                       Instr_mem_address<12>1_3
+    SLICE_X3Y50.BX       net (fanout=10)       2.167   Instr_mem_address<12>1_1
+    SLICE_X3Y50.F5       Tbxf5                 0.589   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_3_f5_19
+    SLICE_X3Y50.FXINA    net (fanout=1)        0.000   Instr_mem/Mmux_Data_o_3_f520
+    SLICE_X3Y50.Y        Tif6y                 0.521   instr_mem_data_o<28>
+                                                       Instr_mem/Mmux_Data_o_2_f6_19
+    SLICE_X2Y36.G3       net (fanout=1)        0.645   instr_mem_data_o<28>
+    SLICE_X2Y36.Y        Tilo                  0.759   N791
+                                                       Inst<28>1
+    SLICE_X0Y35.G1       net (fanout=6)        0.482   Inst<28>
+    SLICE_X0Y35.X        Tif5x                 1.152   N450
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1_F
+                                                       Control_unit_inst/Control_signal_12_and0010_SW1
+    SLICE_X13Y33.G3      net (fanout=2)        0.804   N450
+    SLICE_X13Y33.Y       Tilo                  0.704   Imm_decode_inst/Imm_11_mux000023
+                                                       Control_unit_inst/Control_signal<3>22
+    SLICE_X13Y32.G4      net (fanout=12)       0.128   Control_unit_inst/N18
+    SLICE_X13Y32.Y       Tilo                  0.704   Imm_op<0>
+                                                       Control_unit_inst/Control_signal<3>24
+    SLICE_X36Y34.G3      net (fanout=13)       1.072   Control_signal<11>
+    SLICE_X36Y34.Y       Tilo                  0.759   PC_inst/PC_reg_not0001
+                                                       reg_we_gated1
+    SLICE_X36Y37.G3      net (fanout=8)        0.392   reg_we_gated
+    SLICE_X36Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_31_not0001
+                                                       registr32x4_inst/Reg_25_not000111
+    SLICE_X38Y37.G3      net (fanout=4)        0.808   registr32x4_inst/N8
+    SLICE_X38Y37.Y       Tilo                  0.759   registr32x4_inst/Reg_25_not0001
+                                                       registr32x4_inst/Reg_27_not00011
+    SLICE_X50Y21.CE      net (fanout=16)       3.113   registr32x4_inst/Reg_27_not0001
+    SLICE_X50Y21.CLK     Tceck                 0.555   registr32x4_inst/Reg_27_13
+                                                       registr32x4_inst/Reg_27_13
+    -------------------------------------------------  ---------------------------
+    Total                                     19.781ns (8.552ns logic, 11.229ns route)
+                                                       (43.2% logic, 56.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+
+Paths for end point IO_controler_inst/SPI_flash_inst/Data_o_3 (SLICE_X43Y70.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.985ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               IO_controler_inst/SPI_flash_inst/Shift_reg_3 (FF)
+  Destination:          IO_controler_inst/SPI_flash_inst/Data_o_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.986ns (Levels of Logic = 0)
+  Clock Path Skew:      0.001ns (0.006 - 0.005)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: IO_controler_inst/SPI_flash_inst/Shift_reg_3 to IO_controler_inst/SPI_flash_inst/Data_o_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y72.XQ      Tcko                  0.474   IO_controler_inst/SPI_flash_inst/Shift_reg<3>
+                                                       IO_controler_inst/SPI_flash_inst/Shift_reg_3
+    SLICE_X43Y70.BX      net (fanout=3)        0.419   IO_controler_inst/SPI_flash_inst/Shift_reg<3>
+    SLICE_X43Y70.CLK     Tckdi       (-Th)    -0.093   IO_controler_inst/SPI_flash_inst/Data_o<3>
+                                                       IO_controler_inst/SPI_flash_inst/Data_o_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.986ns (0.567ns logic, 0.419ns route)
+                                                       (57.5% logic, 42.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point IO_controler_inst/SPI_flash_inst/Data_o_27 (SLICE_X37Y27.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.987ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               IO_controler_inst/SPI_flash_inst/Shift_reg_27 (FF)
+  Destination:          IO_controler_inst/SPI_flash_inst/Data_o_27 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.990ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.040 - 0.037)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: IO_controler_inst/SPI_flash_inst/Shift_reg_27 to IO_controler_inst/SPI_flash_inst/Data_o_27
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y26.XQ      Tcko                  0.474   IO_controler_inst/SPI_flash_inst/Shift_reg<27>
+                                                       IO_controler_inst/SPI_flash_inst/Shift_reg_27
+    SLICE_X37Y27.BX      net (fanout=3)        0.423   IO_controler_inst/SPI_flash_inst/Shift_reg<27>
+    SLICE_X37Y27.CLK     Tckdi       (-Th)    -0.093   IO_controler_inst/SPI_flash_inst/Data_o<27>
+                                                       IO_controler_inst/SPI_flash_inst/Data_o_27
+    -------------------------------------------------  ---------------------------
+    Total                                      0.990ns (0.567ns logic, 0.423ns route)
+                                                       (57.3% logic, 42.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point IO_controler_inst/SPI_flash_inst/Data_o_31 (SLICE_X35Y38.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.993ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               IO_controler_inst/SPI_flash_inst/Shift_reg_31 (FF)
+  Destination:          IO_controler_inst/SPI_flash_inst/Data_o_31 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.995ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.014 - 0.012)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: IO_controler_inst/SPI_flash_inst/Shift_reg_31 to IO_controler_inst/SPI_flash_inst/Data_o_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y36.XQ      Tcko                  0.474   IO_controler_inst/SPI_flash_inst/Shift_reg<31>
+                                                       IO_controler_inst/SPI_flash_inst/Shift_reg_31
+    SLICE_X35Y38.BX      net (fanout=3)        0.428   IO_controler_inst/SPI_flash_inst/Shift_reg<31>
+    SLICE_X35Y38.CLK     Tckdi       (-Th)    -0.093   IO_controler_inst/SPI_flash_inst/Data_o<31>
+                                                       IO_controler_inst/SPI_flash_inst/Data_o_31
+    -------------------------------------------------  ---------------------------
+    Total                                      0.995ns (0.567ns logic, 0.428ns route)
+                                                       (57.0% logic, 43.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 40%;
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Bootloader_inst/RAMB16_S36_inst_1/CLKA
+  Logical resource: Bootloader_inst/RAMB16_S36_inst_1.A/CLKA
+  Location pin: RAMB16_X0Y1.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Instr_mem/RAMB16_S36_inst_1/CLKA
+  Logical resource: Instr_mem/RAMB16_S36_inst_1.A/CLKA
+  Location pin: RAMB16_X0Y8.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 16.030ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.588ns (Tbpwh)
+  Physical resource: Instr_mem/RAMB16_S36_inst_2/CLKA
+  Logical resource: Instr_mem/RAMB16_S36_inst_2.A/CLKA
+  Location pin: RAMB16_X0Y3.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
 
 
 Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Setup/Hold to clock clk
----------------+------------+------------+------------------+--------+
-               |Max Setup to|Max Hold to |                  | Clock  |
-Source         | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
----------------+------------+------------+------------------+--------+
-GPIO_pins_io<0>|    0.563(R)|    0.776(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<1>|   -0.154(R)|    1.349(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<2>|    0.034(R)|    1.199(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<3>|    0.528(R)|    0.804(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<4>|   -0.321(R)|    1.480(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<5>|   -0.094(R)|    1.298(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<6>|    0.210(R)|    1.057(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<7>|    0.438(R)|    0.874(R)|clk_BUFGP         |   0.000|
-SPI_i          |    2.309(R)|   -0.570(R)|clk_BUFGP         |   0.000|
-UART_RX        |    0.606(R)|    0.731(R)|clk_BUFGP         |   0.000|
-async_rst      |   -0.241(R)|    1.743(R)|clk_BUFGP         |   0.000|
----------------+------------+------------+------------------+--------+
-
-Clock clk to Pad
----------------+------------+------------------+--------+
-               | clk (edge) |                  | Clock  |
-Destination    |   to PAD   |Internal Clock(s) | Phase  |
----------------+------------+------------------+--------+
-GPIO_pins_io<0>|    8.415(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<1>|    8.503(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<2>|    9.661(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<3>|   10.145(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<4>|   10.368(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<5>|    9.816(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<6>|   12.141(R)|clk_BUFGP         |   0.000|
-GPIO_pins_io<7>|   12.168(R)|clk_BUFGP         |   0.000|
-SPI_o<0>       |    8.254(R)|clk_BUFGP         |   0.000|
-SPI_o<1>       |    7.987(R)|clk_BUFGP         |   0.000|
-SPI_o<2>       |    8.645(R)|clk_BUFGP         |   0.000|
-UART_TX        |    7.855(R)|clk_BUFGP         |   0.000|
----------------+------------+------------------+--------+
-
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   26.058|   13.157|   13.826|         |
+clk            |   19.928|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Feb 26 13:42:28 2026 
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2148978 paths, 0 nets, and 9612 connections
+
+Design statistics:
+   Minimum period:  19.928ns{1}   (Maximum frequency:  50.181MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Mar 15 13:24:53 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 399 MB
+Peak Memory Usage: 393 MB
 
 
 

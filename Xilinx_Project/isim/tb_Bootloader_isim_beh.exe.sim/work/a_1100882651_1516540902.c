@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/Shared_dir/vhd/registr32x4.vhd";
+static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/registr32x4.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -121,7 +121,7 @@ LAB10:    xsi_set_current_line(30, ng0);
     t14 = *((char **)t13);
     t13 = (t0 + 1672U);
     t15 = *((char **)t13);
-    t13 = (t0 + 6992U);
+    t13 = (t0 + 7048U);
     t17 = ieee_p_1242562249_sub_17802405650254020620_1035706684(IEEE_P_1242562249, t15, t13);
     t18 = (t17 - 31);
     t11 = (t18 * -1);
@@ -138,7 +138,7 @@ LAB10:    xsi_set_current_line(30, ng0);
 
 LAB13:    t1 = (t0 + 1672U);
     t4 = *((char **)t1);
-    t1 = (t0 + 8170);
+    t1 = (t0 + 8226);
     t10 = 1;
     if (5U == 5U)
         goto LAB16;
@@ -189,7 +189,7 @@ LAB3:    t1 = (t0 + 2472U);
     t2 = *((char **)t1);
     t1 = (t0 + 1352U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6960U);
+    t1 = (t0 + 7016U);
     t4 = ieee_p_1242562249_sub_17802405650254020620_1035706684(IEEE_P_1242562249, t3, t1);
     t5 = (t4 - 31);
     t6 = (t5 * -1);
@@ -237,7 +237,7 @@ LAB3:    t1 = (t0 + 2472U);
     t2 = *((char **)t1);
     t1 = (t0 + 1512U);
     t3 = *((char **)t1);
-    t1 = (t0 + 6976U);
+    t1 = (t0 + 7032U);
     t4 = ieee_p_1242562249_sub_17802405650254020620_1035706684(IEEE_P_1242562249, t3, t1);
     t5 = (t4 - 31);
     t6 = (t5 * -1);

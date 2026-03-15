@@ -40,5 +40,5 @@ def generate_vhdl_init(bin_filename, output_filename="vhdl_init.txt"):
     
 if __name__ == "__main__":
     # Název vstupního souboru. Pokud se jmenuje jinak, upravte ho zde:
-    input_file = "C:/Shared_dir/asm_test_codes/bootloader.bin"
+    input_file = "C:/Xilinx/shared_dir/CPU/asm_test_codes/bootloader.bin"
     generate_vhdl_init(input_file)

@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ise/Shared_dir/Xilinx_Project/tb_Bootloader_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/Shared_dir/Xilinx_Project/tb_Bootloader_isim_beh.wdb 
+Running: /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/shared_dir/CPU/Xilinx_Project/tb_Bootloader_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -18,226 +18,6 @@ at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning
 at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
 Finished circuit initialization process.
 at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 1ms
-at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
-at 1984993327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
-at 1984993327 ps: Note: didnt return (/tb_bootloader/).
-# run 1ms
-# run 1ms
-at 3968993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
-at 3968993327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
-at 3968993327 ps: Note: didnt return (/tb_bootloader/).
-ISim P.20131013 (signature 0xfbc00daa)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-ISim P.20131013 (signature 0xfbc00daa)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 0.99ms
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-# run 40ns
-ISim P.20131013 (signature 0xfbc00daa)
-----------------------------------------------------------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
-
-
-----------------------------------------------------------------------
-This is a Full version of ISim.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
-Finished circuit initialization process.
-at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-# run 1ms
-# run 1ms
-at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
-at 1984993327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
-at 1984993327 ps: Note: didnt return (/tb_bootloader/).
-# run 1ms
-# run 1ms
-at 3968993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
-at 3968993327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
-at 3968993327 ps: Note: didnt return (/tb_bootloader/).
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -270,17 +50,9 @@ at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
 at 5952713327 ps: Note: did return (/tb_bootloader/).
 # run 1ms
 # run 1ms
-at 7936573327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
-at 7936573327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
 at 7936573327 ps: Note: did return (/tb_bootloader/).
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
-# run 1ms
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -312,3 +84,2853 @@ at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
 at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
 at 5952713327 ps: Note: did return (/tb_bootloader/).
 # run 1ms
+# run 1ms
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 1ms
+at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 3968853327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 6948490 ns(3): Note: WE cmd: 0x96 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE FAIL (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd: 0x27 (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd FAIL (/tb_bootloader/).
+# run 1ms
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936573327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 1ms
+at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 3968853327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+# run 1ms
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936573327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 7ms
+at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: did return (/tb_bootloader/).
+at 3968853327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: did return (/tb_bootloader/).
+at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: did return (/tb_bootloader/).
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951690 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6951690 ns(3): Note: adresa spatna (/tb_bootloader/).
+# run 1ms
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936573327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: did return (/tb_bootloader/).
+at 3968853327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: did return (/tb_bootloader/).
+at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: did return (/tb_bootloader/).
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951690 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6951690 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936573327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984993327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984993327 ps: Note: did return (/tb_bootloader/).
+at 3968853327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968853327 ps: Note: did return (/tb_bootloader/).
+at 5952713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952713327 ps: Note: did return (/tb_bootloader/).
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950090 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951690 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6951690 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936573327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936573327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936573327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6949930 ns(3): Note: ERASE cmd: 0x6 (/tb_bootloader/).
+at 6949930 ns(3): Note: ERASE cmd FAIL (/tb_bootloader/).
+at 6951370 ns(3): Note: ERASE addr byte 0: 0x6 (/tb_bootloader/).
+at 6951370 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6952810 ns(3): Note: ERASE addr byte 1: 0x6 (/tb_bootloader/).
+at 6952810 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6954250 ns(3): Note: ERASE addr byte 2: 0x6 (/tb_bootloader/).
+at 6954250 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6964570 ns(2): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6976090 ns(2): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 6978730 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 6978730 ns(3): Note: WE OK (/tb_bootloader/).
+at 6980170 ns(3): Note: PROGRAM cmd: 0x6 (/tb_bootloader/).
+at 6980170 ns(3): Note: PROGRAM cmd FAIL (/tb_bootloader/).
+at 6981610 ns(3): Note: PROGRAM addr byte 0: 0x6 (/tb_bootloader/).
+at 6981610 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6983050 ns(3): Note: PROGRAM addr byte 1: 0x6 (/tb_bootloader/).
+at 6983050 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6984490 ns(3): Note: PROGRAM addr byte 2: 0x6 (/tb_bootloader/).
+at 6984490 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6985930 ns(3): Note: PROGRAM data byte 0: 0x6 (/tb_bootloader/).
+at 6987370 ns(3): Note: PROGRAM data byte 1: 0x6 (/tb_bootloader/).
+at 6988810 ns(3): Note: PROGRAM data byte 2: 0x6 (/tb_bootloader/).
+at 6990250 ns(3): Note: STATUS cmd (post-program): 0x6 (/tb_bootloader/).
+at 6990250 ns(3): Note: STATUS cmd FAIL (/tb_bootloader/).
+at 7000570 ns(2): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 7012090 ns(2): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 7023610 ns(2): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7026250 ns(3): Note: START READ cmd: 0x6 (/tb_bootloader/).
+at 7026250 ns(3): Note: READ cmd FAIL (expected 0x03) (/tb_bootloader/).
+at 7027690 ns(3): Note: START addr byte 0: 0x6 (/tb_bootloader/).
+at 7027690 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7029130 ns(3): Note: START addr byte 1: 0x6 (/tb_bootloader/).
+at 7029130 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7030570 ns(3): Note: START addr byte 2: 0x6 (/tb_bootloader/).
+at 7030570 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7040890 ns(2): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 7052410 ns(2): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 7063930 ns(2): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 7075450 ns(2): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 7086970 ns(2): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 7098490 ns(2): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 7110010 ns(2): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 7121530 ns(2): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 7121530 ns(2): Note: SPI simulace dokoncena. (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936513327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6955370 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6955370 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936513327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 1ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 6948490 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948490 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6955370 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6955370 ns(3): Note: adresa spatna (/tb_bootloader/).
+# run 1ms
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936513327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6955530 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936513327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6955530 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 7936513327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6955530 ns(3): Note: ERASE addr byte 0: 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6951290 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6953850 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6951290 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6953850 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 8ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6951290 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6953850 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 18851770 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851770 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853370 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853370 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854650 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18854650 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 18855930 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18855930 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 18857210 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 18857210 ns(3): Note: adresa spatna (/tb_bootloader/).
+# run 1ms
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 21823793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823793327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 20ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+# run 20ms
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 27ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 28ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+# run 20ms
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598213327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598213327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598213327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598213327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598213327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598213327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50595370 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: adresa spravna (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50597930 ns(3): Note: adresa spatna (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 1ms
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: did return (/tb_bootloader/).
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6960010 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+# run 1ms
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6960010 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+Stopped at time : 42294790 ns : File "/home/ise/shared_dir/CPU/vhd/periferie/UART.vhd" Line 72
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+# run 1ms
+at 51581993327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+# run 1ms
+at 51581993327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694693327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694693327 ps: Note: did return (/tb_bootloader/).
+at 39678693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678693327 ps: Note: did return (/tb_bootloader/).
+at 41662553327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662553327 ps: Note: did return (/tb_bootloader/).
+at 43646413327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646413327 ps: Note: did return (/tb_bootloader/).
+at 45630413327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630413327 ps: Note: did return (/tb_bootloader/).
+at 47614273327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614273327 ps: Note: did return (/tb_bootloader/).
+at 49598133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598133327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+# run 1ms
+at 51581993327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51581993327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958730 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6960010 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920393327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920393327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920393327 ps: Note: did return (/tb_bootloader/).
+at 11904253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904253327 ps: Note: did return (/tb_bootloader/).
+at 13888113327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888113327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888113327 ps: Note: did return (/tb_bootloader/).
+at 15871973327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871973327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871973327 ps: Note: did return (/tb_bootloader/).
+at 17855973327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855973327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855973327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839833327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839833327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839833327 ps: Note: did return (/tb_bootloader/).
+at 21823693327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823693327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823693327 ps: Note: did return (/tb_bootloader/).
+at 23807553327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807553327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807553327 ps: Note: did return (/tb_bootloader/).
+at 25791413327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791413327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791413327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 26792410 ns(3): Note: PROGRAM data byte 4: 0x0 (/tb_bootloader/).
+at 26793690 ns(3): Note: PROGRAM data byte 5: 0x16 (/tb_bootloader/).
+at 26794970 ns(3): Note: PROGRAM data byte 6: 0x128 (/tb_bootloader/).
+at 26796250 ns(3): Note: PROGRAM data byte 7: 0x147 (/tb_bootloader/).
+at 27775273327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775273327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775273327 ps: Note: did return (/tb_bootloader/).
+at 29759153327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759153327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759153327 ps: Note: did return (/tb_bootloader/).
+at 31743013327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743013327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743013327 ps: Note: did return (/tb_bootloader/).
+at 33726873327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726873327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726873327 ps: Note: did return (/tb_bootloader/).
+at 34728090 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728090 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729370 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731210 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732490 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734330 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735610 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710733327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710733327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710733327 ps: Note: did return (/tb_bootloader/).
+at 37694733327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694733327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694733327 ps: Note: did return (/tb_bootloader/).
+at 39678733327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678733327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678733327 ps: Note: did return (/tb_bootloader/).
+at 41662593327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662593327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662593327 ps: Note: did return (/tb_bootloader/).
+at 43646453327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646453327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646453327 ps: Note: did return (/tb_bootloader/).
+at 45630453327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630453327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630453327 ps: Note: did return (/tb_bootloader/).
+at 47614313327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614313327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614313327 ps: Note: did return (/tb_bootloader/).
+at 49598173327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598173327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598173327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594090 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594090 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595370 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596650 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50597930 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599210 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600490 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601770 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603050 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+# run 1ms
+at 51582033327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582033327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51582033327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 50ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694813327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: did return (/tb_bootloader/).
+at 39678813327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: did return (/tb_bootloader/).
+at 41662673327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: did return (/tb_bootloader/).
+at 43646533327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: did return (/tb_bootloader/).
+at 45630533327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: did return (/tb_bootloader/).
+at 47614393327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: did return (/tb_bootloader/).
+at 49598253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: did return (/tb_bootloader/).
+# run 1ms
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604650 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50605930 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607210 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608490 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608490 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+# run 1ms
+at 51582113327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 51582113327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694813327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: did return (/tb_bootloader/).
+at 39678813327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: did return (/tb_bootloader/).
+at 41662673327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: did return (/tb_bootloader/).
+at 43646533327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: did return (/tb_bootloader/).
+at 45630533327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: did return (/tb_bootloader/).
+at 47614393327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: did return (/tb_bootloader/).
+at 49598253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: did return (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604650 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50605930 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607210 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608490 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608490 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+at 51582113327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 51582113327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694813327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: did return (/tb_bootloader/).
+at 39678813327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: did return (/tb_bootloader/).
+at 41662673327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: did return (/tb_bootloader/).
+at 43646533327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: did return (/tb_bootloader/).
+at 45630533327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: did return (/tb_bootloader/).
+at 47614393327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: did return (/tb_bootloader/).
+at 49598253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: did return (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604810 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50606090 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607370 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608650 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608650 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+at 51582113327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 51582113327 ps: Note: didnt return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694813327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: did return (/tb_bootloader/).
+at 39678813327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: did return (/tb_bootloader/).
+at 41662673327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: did return (/tb_bootloader/).
+at 43646533327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: did return (/tb_bootloader/).
+at 45630533327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 45630533327 ps: Note: did return (/tb_bootloader/).
+at 47614393327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 47614393327 ps: Note: did return (/tb_bootloader/).
+at 49598253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: did return (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604810 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50606090 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607370 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608650 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608650 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+at 51582113327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 1984933327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 1984933327 ps: Note: did return (/tb_bootloader/).
+at 3968793327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 3968793327 ps: Note: did return (/tb_bootloader/).
+at 5952653327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 5952653327 ps: Note: did return (/tb_bootloader/).
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 7936513327 ps: Note: did return (/tb_bootloader/).
+at 9920413327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 9920413327 ps: Note: did return (/tb_bootloader/).
+at 11904273327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 11904273327 ps: Note: did return (/tb_bootloader/).
+at 13888133327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 13888133327 ps: Note: did return (/tb_bootloader/).
+at 15871993327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 15871993327 ps: Note: did return (/tb_bootloader/).
+at 17855993327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 17855993327 ps: Note: did return (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 19839853327 ps: Note: did return (/tb_bootloader/).
+at 21823713327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 21823713327 ps: Note: did return (/tb_bootloader/).
+at 23807573327 ps: Note: Data_i_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: Data_o_UART: 16 (/tb_bootloader/).
+at 23807573327 ps: Note: did return (/tb_bootloader/).
+at 25791433327 ps: Note: Data_i_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: Data_o_UART: 128 (/tb_bootloader/).
+at 25791433327 ps: Note: did return (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_i_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: Data_o_UART: 147 (/tb_bootloader/).
+at 27775293327 ps: Note: did return (/tb_bootloader/).
+at 29759233327 ps: Note: Data_i_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: Data_o_UART: 64 (/tb_bootloader/).
+at 29759233327 ps: Note: did return (/tb_bootloader/).
+at 31743093327 ps: Note: Data_i_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: Data_o_UART: 17 (/tb_bootloader/).
+at 31743093327 ps: Note: did return (/tb_bootloader/).
+at 33726953327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 33726953327 ps: Note: did return (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_i_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: Data_o_UART: 51 (/tb_bootloader/).
+at 35710813327 ps: Note: did return (/tb_bootloader/).
+at 37694813327 ps: Note: Data_i_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: Data_o_UART: 1 (/tb_bootloader/).
+at 37694813327 ps: Note: did return (/tb_bootloader/).
+at 39678813327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 39678813327 ps: Note: did return (/tb_bootloader/).
+at 41662673327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 41662673327 ps: Note: did return (/tb_bootloader/).
+at 43646533327 ps: Note: Data_i_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: Data_o_UART: 4 (/tb_bootloader/).
+at 43646533327 ps: Note: did return (/tb_bootloader/).
+at 45630533327 ps: Note: Data_i_UART: 3 (/tb_bootloader/).
+at 45630533327 ps: Note: Data_o_UART: 3 (/tb_bootloader/).
+at 45630533327 ps: Note: did return (/tb_bootloader/).
+at 47614393327 ps: Note: Data_i_UART: 32 (/tb_bootloader/).
+at 47614393327 ps: Note: Data_o_UART: 32 (/tb_bootloader/).
+at 47614393327 ps: Note: did return (/tb_bootloader/).
+at 49598253327 ps: Note: Data_i_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: Data_o_UART: 0 (/tb_bootloader/).
+at 49598253327 ps: Note: did return (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604810 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50606090 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607370 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608650 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608650 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+at 51582113327 ps: Note: Data_i_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: Data_o_UART: 2 (/tb_bootloader/).
+at 51582113327 ps: Note: did return (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 6948410 ns(3): Note: WE cmd: 0x6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 0x216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0x0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0x0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 0x4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 0x5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 0x2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0x0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0x0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 0x4 (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0x0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 0x16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 0x128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 0x147 (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 0x64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 0x17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 0x1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 0x51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 0x1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 0x5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0x0 (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 0x3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0x0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0x0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 0x4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0x0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 0x16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 0x128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 0x147 (/tb_bootloader/).
+at 50604810 ns(3): Note: Sent program byte 4: 0x64 (/tb_bootloader/).
+at 50606090 ns(3): Note: Sent program byte 5: 0x17 (/tb_bootloader/).
+at 50607370 ns(3): Note: Sent program byte 6: 0x1 (/tb_bootloader/).
+at 50608650 ns(3): Note: Sent program byte 7: 0x51 (/tb_bootloader/).
+at 50608650 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/registr32x4_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/GPIO_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+at 0 ps, Instance /tb_bootloader/CPU_inst/IO_controler_inst/UART_inst/ : Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+Finished circuit initialization process.
+at 0 ps, Instance /tb_bootloader/CPU_inst/ALU_inst/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+# run 52ms
+at 6948410 ns(3): Note: WE cmd: 6 (/tb_bootloader/).
+at 6948410 ns(3): Note: WE OK (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd: 216 (/tb_bootloader/).
+at 6950010 ns(3): Note: ERASE cmd OK (/tb_bootloader/).
+at 6951290 ns(3): Note: ERASE addr byte 0: 0 (/tb_bootloader/).
+at 6952570 ns(3): Note: ERASE addr byte 1: 0 (/tb_bootloader/).
+at 6953850 ns(3): Note: ERASE addr byte 2: 4 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd (erase): 5 (/tb_bootloader/).
+at 6955530 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6956810 ns(3): Note: Sent MISO status byte: 1 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd (erase): 5 (/tb_bootloader/).
+at 6958650 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 6959930 ns(3): Note: Sent MISO status byte: 0 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE cmd (pre-program): 0x6 (/tb_bootloader/).
+at 18851690 ns(3): Note: WE OK (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd: 2 (/tb_bootloader/).
+at 18853290 ns(3): Note: PROGRAM cmd OK (/tb_bootloader/).
+at 18854570 ns(3): Note: PROGRAM addr byte 0: 0 (/tb_bootloader/).
+at 18855850 ns(3): Note: PROGRAM addr byte 1: 0 (/tb_bootloader/).
+at 18857130 ns(3): Note: PROGRAM addr byte 2: 4 (/tb_bootloader/).
+at 26787210 ns(3): Note: PROGRAM data byte 0: 0 (/tb_bootloader/).
+at 26788490 ns(3): Note: PROGRAM data byte 1: 16 (/tb_bootloader/).
+at 26789770 ns(3): Note: PROGRAM data byte 2: 128 (/tb_bootloader/).
+at 26791050 ns(3): Note: PROGRAM data byte 3: 147 (/tb_bootloader/).
+at 34722730 ns(3): Note: PROGRAM data byte 4: 64 (/tb_bootloader/).
+at 34724010 ns(3): Note: PROGRAM data byte 5: 17 (/tb_bootloader/).
+at 34725290 ns(3): Note: PROGRAM data byte 6: 1 (/tb_bootloader/).
+at 34726570 ns(3): Note: PROGRAM data byte 7: 51 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd (post-program): 5 (/tb_bootloader/).
+at 34728170 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34729450 ns(3): Note: Sent MISO status byte: 1 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd (post-program): 5 (/tb_bootloader/).
+at 34731290 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34732570 ns(3): Note: Sent MISO status byte: 1 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd (post-program): 5 (/tb_bootloader/).
+at 34734410 ns(3): Note: STATUS cmd OK (/tb_bootloader/).
+at 34735690 ns(3): Note: Sent MISO status byte: 0 (/tb_bootloader/).
+at 50594170 ns(3): Note: START READ cmd: 3 (/tb_bootloader/).
+at 50594170 ns(3): Note: READ cmd OK (/tb_bootloader/).
+at 50595450 ns(3): Note: START addr byte 0: 0 (/tb_bootloader/).
+at 50596730 ns(3): Note: START addr byte 1: 0 (/tb_bootloader/).
+at 50598010 ns(3): Note: START addr byte 2: 4 (/tb_bootloader/).
+at 50599290 ns(3): Note: Sent program byte 0: 0 (/tb_bootloader/).
+at 50600570 ns(3): Note: Sent program byte 1: 16 (/tb_bootloader/).
+at 50601850 ns(3): Note: Sent program byte 2: 128 (/tb_bootloader/).
+at 50603130 ns(3): Note: Sent program byte 3: 147 (/tb_bootloader/).
+at 50604810 ns(3): Note: Sent program byte 4: 64 (/tb_bootloader/).
+at 50606090 ns(3): Note: Sent program byte 5: 17 (/tb_bootloader/).
+at 50607370 ns(3): Note: Sent program byte 6: 1 (/tb_bootloader/).
+at 50608650 ns(3): Note: Sent program byte 7: 51 (/tb_bootloader/).
+at 50608650 ns(3): Note: SPI simulace dokoncena. (/tb_bootloader/).
+# exit 0

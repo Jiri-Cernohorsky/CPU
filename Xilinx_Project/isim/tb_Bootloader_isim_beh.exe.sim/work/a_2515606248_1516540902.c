@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/ise/Shared_dir/vhd/periferie/IO_WE_Controler.vhd";
+static const char *ng0 = "/home/ise/shared_dir/CPU/vhd/periferie/IO_WE_Controler.vhd";
 extern char *IEEE_P_2592010699;
 
 
@@ -80,7 +80,7 @@ LAB1:    return;
 LAB2:    xsi_set_current_line(22, ng0);
     t1 = (t0 + 1192U);
     t3 = *((char **)t1);
-    t1 = (t0 + 4873);
+    t1 = (t0 + 4905);
     t5 = ((IEEE_P_2592010699) + 4000);
     t9 = xsi_vhdl_greaterEqual(t5, t3, 32U, t1, 32U);
     if (t9 == 1)
@@ -93,7 +93,7 @@ LAB10:    if (t8 != 0)
 
 LAB7:    t1 = (t0 + 1192U);
     t2 = *((char **)t1);
-    t1 = (t0 + 4937);
+    t1 = (t0 + 4969);
     t4 = ((IEEE_P_2592010699) + 4000);
     t7 = xsi_vhdl_greaterEqual(t4, t2, 32U, t1, 32U);
     if (t7 == 1)
@@ -119,7 +119,7 @@ LAB5:    xsi_set_current_line(23, ng0);
 
 LAB8:    t10 = (t0 + 1192U);
     t11 = *((char **)t10);
-    t10 = (t0 + 4905);
+    t10 = (t0 + 4937);
     t13 = ((IEEE_P_2592010699) + 4000);
     t14 = xsi_vhdl_lessthanEqual(t13, t11, 32U, t10, 32U);
     t8 = t14;
@@ -137,7 +137,7 @@ LAB11:    xsi_set_current_line(25, ng0);
 
 LAB13:    t5 = (t0 + 1192U);
     t10 = *((char **)t5);
-    t5 = (t0 + 4969);
+    t5 = (t0 + 5001);
     t12 = ((IEEE_P_2592010699) + 4000);
     t8 = xsi_vhdl_lessthanEqual(t12, t10, 32U, t5, 32U);
     t6 = t8;

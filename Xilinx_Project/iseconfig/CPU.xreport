@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-03-10T18:14:01</DateModified>
+  <DateModified>2026-03-15T13:54:06</DateModified>
   <ModuleName>CPU</ModuleName>
   <SummaryTimeStamp>2026-02-24T21:45:13</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/Shared_dir/Xilinx_Project/iseconfig/CPU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/Shared_dir/Xilinx_Project/</ImplementationReportsDirectory>
-  <DateInitialized>2026-02-24T21:45:15</DateInitialized>
+  <SavedFilePath>/home/ise/shared_dir/CPU/Xilinx_Project/iseconfig/CPU.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/shared_dir/CPU/Xilinx_Project/</ImplementationReportsDirectory>
+  <DateInitialized>2026-03-15T13:23:04</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

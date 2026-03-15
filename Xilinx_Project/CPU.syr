@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: CPU.prj
@@ -112,36 +112,33 @@ Architecture rtl of Entity synchronizer is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/periferie/IO_WE_Controler.vhd" in Library work.
 Architecture rtl of Entity io_we_controler is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd" in Library work.
-Architecture rtl of Entity gpio is up to date.
+Entity <gpio> compiled.
+Entity <gpio> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/periferie/UART.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/periferie/UART.vhd" is newer than current system time.
 Architecture rtl of Entity uart is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd" in Library work.
-Architecture rtl of Entity spi_flash is up to date.
+Entity <spi_flash> compiled.
+Entity <spi_flash> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/PC.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/PC.vhd" is newer than current system time.
 Architecture rtl of Entity pc is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/Control_unit.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/Control_unit.vhd" is newer than current system time.
 Architecture rtl of Entity control_unit is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/registr32x4.vhd" in Library work.
 Architecture rtl of Entity registr32x4 is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/Imm_decode.vhd" in Library work.
 Architecture rtl of Entity imm_decode is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/ALU.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/ALU.vhd" is newer than current system time.
 Architecture rtl of Entity alu is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd" is newer than current system time.
 Architecture rtl of Entity ram2048x32 is up to date.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/bootloader.vhd" in Library work.
-Architecture rtl of Entity bootloader is up to date.
+Entity <bootloader> compiled.
+Entity <bootloader> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd" in Library work.
-Architecture rtl of Entity io_controler is up to date.
+Entity <io_controler> compiled.
+Entity <io_controler> (Architecture <rtl>) compiled.
 Compiling vhdl file "/home/ise/shared_dir/CPU/vhd/CPU.vhd" in Library work.
-WARNING:HDLParsers:3530 - Time stamp of file "/home/ise/shared_dir/CPU/vhd/CPU.vhd" is newer than current system time.
-Entity <cpu> compiled.
-Entity <cpu> (Architecture <rtl>) compiled.
+Architecture rtl of Entity cpu is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -813,44 +810,44 @@ Analyzing Entity <Bootloader> in library <work> (Architecture <rtl>).
     Set user-defined property "INIT_00 =  00802E2300702C2300602A230050282300402623003024230020222300102023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_01 =  03002E2302F02C2302E02A2302D0282302C0262302B0242302A0222302902023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_02 =  05802E2305702C2305602A230550282305402623053024230520222305102023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_03 =  0005753307F02C2307E02A2307D0282307C0262307B0242307A0222307902023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_04 =  00252823002001130D50242300452A831045051300B515330160059320000513" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_05 =  01C0240301802383014023030100228300C02203008021830040210300002083" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_06 =  03C0280303802783034027030300268302C02603028025830240250302002483" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_07 =  05C02C0305802B8305402B0305002A8304C02A03048029830440290304002883" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_08 =  3020007307802F8307402F0307002E8306C02E0306802D8306402D0306002C83" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_09 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_03 =  0020011307F02C2307E02A2307D0282307C0262307B0242307A0222307902023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_04 =  0C10242300452A831045051300B5153301600593200005130005753300100093" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_05 =  0100228300C0220300802183004021030000208300252823002001130D502623" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_06 =  0300268302C0260302802583024025030200248301C024030180238301402303" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_07 =  05002A8304C02A0304802983044029030400288303C028030380278303402703" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_08 =  07002E8306C02E0306802D8306402D0306002C8305C02C0305802B8305402B03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_09 =  00000000000000000000000000000000000000003020007307802F8307402F03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_0C =  0010009300B51533016005932000051300000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_0D =  10152623115522230C002423FE0A8EE30C802A83102528230015202300200113" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_0E =  0C002423FE0C8EE30C802C8300000B1300300D1300800D931E2A86630C1A8A63" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_0F =  21652623FDDFF7EF000D0463401D0D3301BB1B33019B0B331015262311952223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_10 =  2005222300400B93000000330000003300000033000000332145222300800A13" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_11 =  0000003300000033000000332145222300B00A13FF9FF7EF017B046320852B03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_12 =  2145222300C00A13FF9FF7EF017B046320852B03200522230000003300000033" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_13 =  017B046320852B03200522230000003300000033000000330000003300000033" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_14 =  00000B1300300D1300800D9325C007EFFC1B06E3001B7B330D652B03FF9FF7EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_15 =  401D0D3301BB1B33019B0B3310152623119522230C002423FE0C8EE30C802C83" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_16 =  0C002423FE0C8EE30C802C8300000B9300200D1321652623FDDFF7EF000D0463" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_17 =  00200D13FDDFF7EF000D0463401D0D3301BB9BB3019B8BB31015262311952223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_18 =  01BE9EB3019E8EB310152623119522230C002423FE0C8EE30C802C8300000E93" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_19 =  00000E1301EB8BB301FF1F3301E00F9300100F13FDDFF7EF000D0463401D0D33" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1A =  01900A1321452C83FF9FF7EF001C046320852C032145222300900A1300400D13" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1B =  004B8B9301CBA023FD1FF7EF000D0463401D0D3301BE1E33019E0E3321452223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1C =  FF9FF7EF017B046320852B032005222300400B93FB5FF7EF000E8463401E8EB3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1D =  0C802C8300000B1300300D1300800D93E01FF7EF001522231015262311552223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1E =  000D0463401D0D3301BB1B33019B0B3310152623119522230C002423FE0C8EE3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_1F =  119522230C002423FE0C8EE30C802C8300000E9300200D1321652623FDDFF7EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_20 =  2145222300800A13FDDFF7EF000D0463401D0D3301BE9EB3019E8EB310152623" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_21 =  017B046320852B032005222300400B9300000033000000330000003300000033" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_22 =  00400D1300000C93401E8EB3040E88632145222300A00A1300200B93FF9FF7EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_23 =  401D0D3301BC9CB3016C8CB310152623116522230C002423FE0B0EE30C802B03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_24 =  FF9FF7EFFB7B08E320852B032145222301A00A1321952823FDDFF7EF000D0463" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_25 =  000000332145222300C00A13FF9FF7EF017B046320852B032005222300400B93" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_26 =  FF9FF7EF017B046320852B032005222300000033000000330000003300000033" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_27 =  0000000000000000CB9FF7EF1015262311552223FC1B06E3001B7B330D652B03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
-    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_0D =  0C002423FE0A8EE30C802A83102528230015202340D007330090069300200113" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_0E =  00000B1300300D1300800D931E2A82630C1A8C6310152623115522230CC02A83" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_0F =  401D0D33019B0B3310152623119522230CC02C830C002423FE0C8EE30C802C83" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_10 =  00000033000000332145222300800A1321652623FD9FF7EF01BB1B33000D0663" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_11 =  00B00A13FF9FF7EF017B046320852B032145222300400B9300EA7A3300000033" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_12 =  20852B032145222300EA7A330000003300000033000000330000003321452223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_13 =  000000330000003300000033000000332145222300C00A13FF9FF7EF017B0463" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_14 =  FC1B06E3001B7B3321452B03FF9FF7EF017B046320852B032145222300EA7A33" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_15 =  0CC02C830C002423FE0C8EE30C802C8300000B1300300D1300800D93260007EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_16 =  21652623FD9FF7EF01BB1B33000D0663401D0D33019B0B331015262311952223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_17 =  10152623119522230CC02C830C002423FE0C8EE30C802C8300000B9300200D13" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_18 =  0C802C8300000E9300200D13FD9FF7EF01BB9BB3000D0663401D0D33019B8BB3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_19 =  000D0663401D0D33019E8EB310152623119522230CC02C830C002423FE0C8EE3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1A =  00900A1300000E1301EB8BB301FF1F3301E00F9300100F13FD9FF7EF01BE9EB3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1B =  019E0E332145222301900A1321452C83FF9FF7EF001C046320852C0321452223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1C =  2145222300EA7A3300400B93FC9FF7EF000E8463401E8EB3004B8B9301CBA023" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1D =  00000B1300300D1300800D93E05FF7EF00152223FF9FF7EF017B046320852B03" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1E =  401D0D33019B0B3310152623119522230CC02C830C002423FE0C8EE30C802C83" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_1F =  FE0C8EE30C802C8300000E9300200D1321652623FD9FF7EF01BB1B33000D0663" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_20 =  01BE9EB3000D0663401D0D33019E8EB310152623119522230CC02C830C002423" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_21 =  00400B9300EA7A330000003300000033000000332145222300800A13FD9FF7EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_22 =  040E8A632145222300A00A1300200B93FF9FF7EF017B046320852B0321452223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_23 =  116522230CC02B030C002423FE0B0EE30C802B0300400D1300000C93401E8EB3" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_24 =  02A00A1321952823FD9FF7EF01BC9CB3000D0663401D0D33016C8CB310152623" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_25 =  20852B032145222300EA7A3300400B93FF9FF7EFFB7B06E320852B0321452223" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_26 =  000000330000003300000033000000332145222300C00A13FF9FF7EF017B0463" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_27 =  FC1B06E3001B7B3321452B03FF9FF7EF017B046320852B032145222300EA7A33" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
+    Set user-defined property "INIT_28 =  00000000000000000000000000000000000000000000000000000000CB5FF7EF" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
     Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <RAMB16_S36_inst_1> in unit <Bootloader>.
@@ -895,7 +892,7 @@ Analyzing Entity <UART> in library <work> (Architecture <rtl>).
 Entity <UART> analyzed. Unit <UART> generated.
 
 Analyzing Entity <SPI_flash> in library <work> (Architecture <rtl>).
-WARNING:Xst:790 - "/home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd" line 88: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd" line 94: Index value(s) does not match array range, simulation mismatch.
 Entity <SPI_flash> analyzed. Unit <SPI_flash> generated.
 
 
@@ -1052,9 +1049,9 @@ Synthesizing Unit <SPI_flash>.
     Found finite state machine <FSM_3> for signal <State>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
-    | Transitions        | 25                                             |
-    | Inputs             | 8                                              |
-    | Outputs            | 10                                             |
+    | Transitions        | 26                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 9                                              |
     | Clock              | clk                       (rising_edge)        |
     | Clock enable       | spi_tick                  (positive)           |
     | Reset              | rst                       (positive)           |
@@ -1064,15 +1061,19 @@ Synthesizing Unit <SPI_flash>.
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5x8-bit ROM for signal <$mux0000> created at line 88.
+    Found 5x8-bit ROM for signal <$mux0000> created at line 94.
     Found 1-bit register for signal <SPI_cs_n>.
     Found 32-bit register for signal <Data_o>.
     Found 1-bit register for signal <CMD_done>.
     Found 1-bit register for signal <Read_done>.
     Found 1-bit register for signal <Write_start>.
     Found 5-bit register for signal <Bit_cnt>.
-    Found 5-bit subtractor for signal <Bit_cnt$share0000> created at line 84.
+    Found 5-bit subtractor for signal <Bit_cnt$share0000> created at line 90.
     Found 2-bit up counter for signal <clk_div_cnt>.
+    Found 2-bit register for signal <done_cnt>.
+    Found 2-bit adder for signal <done_cnt$addsub0000>.
+    Found 2-bit comparator less for signal <done_cnt$cmp_lt0000> created at line 80.
+    Found 1-bit register for signal <read_cnt<0>>.
     Found 1-bit register for signal <sclk_reg>.
     Found 32-bit register for signal <Shift_reg>.
     Found 1-bit register for signal <spi_tick>.
@@ -1080,8 +1081,9 @@ Synthesizing Unit <SPI_flash>.
 	inferred   1 Finite State Machine(s).
 	inferred   1 ROM(s).
 	inferred   1 Counter(s).
-	inferred  75 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
+	inferred  78 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
 Unit <SPI_flash> synthesized.
 
 
@@ -1174,19 +1176,20 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  5x8-bit ROM                                           : 1
-# Adders/Subtractors                                   : 8
+# Adders/Subtractors                                   : 9
  13-bit adder                                          : 2
  14-bit adder                                          : 2
+ 2-bit adder                                           : 1
  3-bit adder                                           : 2
  32-bit addsub                                         : 1
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  2-bit up counter                                      : 1
-# Registers                                            : 120
- 1-bit register                                        : 68
+# Registers                                            : 122
+ 1-bit register                                        : 69
  13-bit register                                       : 2
  14-bit register                                       : 3
- 2-bit register                                        : 1
+ 2-bit register                                        : 2
  24-bit register                                       : 1
  3-bit register                                        : 2
  32-bit register                                       : 33
@@ -1195,8 +1198,9 @@ Macro Statistics
  8-bit register                                        : 8
 # Latches                                              : 1
  32-bit latch                                          : 1
-# Comparators                                          : 14
+# Comparators                                          : 15
  13-bit comparator less                                : 3
+ 2-bit comparator less                                 : 1
  3-bit comparator less                                 : 2
  32-bit comparator greatequal                          : 4
  32-bit comparator less                                : 1
@@ -1275,20 +1279,22 @@ Macro Statistics
 # FSMs                                                 : 4
 # ROMs                                                 : 1
  5x8-bit ROM                                           : 1
-# Adders/Subtractors                                   : 8
+# Adders/Subtractors                                   : 9
  13-bit adder                                          : 2
  14-bit adder                                          : 2
+ 2-bit adder                                           : 1
  3-bit adder                                           : 2
  32-bit addsub                                         : 1
  5-bit subtractor                                      : 1
 # Counters                                             : 1
  2-bit up counter                                      : 1
-# Registers                                            : 1294
- Flip-Flops                                            : 1294
+# Registers                                            : 1297
+ Flip-Flops                                            : 1297
 # Latches                                              : 1
  32-bit latch                                          : 1
-# Comparators                                          : 14
+# Comparators                                          : 15
  13-bit comparator less                                : 3
+ 2-bit comparator less                                 : 1
  3-bit comparator less                                 : 2
  32-bit comparator greatequal                          : 4
  32-bit comparator less                                : 1
@@ -1340,3 +1346,295 @@ Optimizing unit <ALU> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 41.
+Latch ALU_inst/ALU_result_11 has been replicated 1 time(s)
+Latch ALU_inst/ALU_result_12 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <CPU> :
+	Found 2-bit shift register for signal <rst>.
+Unit <CPU> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1303
+ Flip-Flops                                            : 1303
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU.ngr
+Top Level Output File Name         : CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 4661
+#      GND                         : 1
+#      INV                         : 27
+#      LUT1                        : 67
+#      LUT2                        : 106
+#      LUT2_D                      : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 1666
+#      LUT3_D                      : 56
+#      LUT3_L                      : 15
+#      LUT4                        : 943
+#      LUT4_D                      : 47
+#      LUT4_L                      : 73
+#      MUXCY                       : 245
+#      MUXF5                       : 814
+#      MUXF6                       : 320
+#      MUXF7                       : 128
+#      MUXF8                       : 64
+#      VCC                         : 1
+#      XORCY                       : 84
+# FlipFlops/Latches                : 1338
+#      FD                          : 10
+#      FDCE                        : 1
+#      FDE                         : 3
+#      FDR                         : 60
+#      FDRE                        : 1211
+#      FDRS                        : 2
+#      FDRSE                       : 11
+#      FDS                         : 1
+#      FDSE                        : 5
+#      LD                          : 34
+# RAMS                             : 17
+#      RAMB16_S36                  : 17
+# Shift Registers                  : 1
+#      SRL16                       : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 3
+#      IOBUF                       : 8
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1980  out of   4656    42%  
+ Number of Slice Flip Flops:           1338  out of   9312    14%  
+ Number of 4 input LUTs:               3005  out of   9312    32%  
+    Number used as logic:              3004
+    Number used as Shift registers:       1
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+ Number of BRAMs:                        17  out of     20    85%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------+--------------------------------+-------+
+Clock Signal                                                | Clock buffer(FF name)          | Load  |
+------------------------------------------------------------+--------------------------------+-------+
+clk                                                         | BUFGP                          | 1322  |
+ALU_inst/ALU_result_not00011(ALU_inst/ALU_result_not00011:O)| BUFG(*)(ALU_inst/ALU_result_31)| 34    |
+------------------------------------------------------------+--------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------------------------+-------------------------------------+-------+
+Control Signal                                                                         | Buffer(FF name)                     | Load  |
+---------------------------------------------------------------------------------------+-------------------------------------+-------+
+Control_unit_inst/Internal_ISR_cmp_eq0000(Control_unit_inst/Internal_ISR_cmp_eq00003:O)| NONE(Control_unit_inst/Internal_ISR)| 1     |
+---------------------------------------------------------------------------------------+-------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 21.077ns (Maximum Frequency: 47.446MHz)
+   Minimum input arrival time before clock: 3.953ns
+   Maximum output required time after clock: 5.574ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 18.631ns (frequency: 53.674MHz)
+  Total number of paths / destination ports: 2148979 / 4453
+-------------------------------------------------------------------------
+Delay:               18.631ns (Levels of Logic = 24)
+  Source:            IO_controler_inst/Start_program_reg (FF)
+  Destination:       PC_inst/PC_reg_12 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: IO_controler_inst/Start_program_reg to PC_inst/PC_reg_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q           188   0.591   1.390  IO_controler_inst/Start_program_reg (IO_controler_inst/Start_program_reg)
+     LUT3:I1->O           40   0.704   1.300  Instr_mem_address<11>1_1 (Instr_mem_address<11>1)
+     LUT3:I2->O            1   0.704   0.000  Instr_mem/Mmux_Data_o_427 (Instr_mem/Mmux_Data_o_427)
+     MUXF5:I1->O           1   0.321   0.000  Instr_mem/Mmux_Data_o_3_f5_26 (Instr_mem/Mmux_Data_o_3_f527)
+     MUXF6:I1->O           5   0.521   0.808  Instr_mem/Mmux_Data_o_2_f6_26 (instr_mem_data_o<5>)
+     LUT2_L:I0->LO         1   0.704   0.104  Control_unit_inst/Control_signal_12_cmp_eq000211_SW1 (N475)
+     LUT4:I3->O            9   0.704   0.824  Control_unit_inst/Control_signal_12_cmp_eq000211 (Control_unit_inst/N19)
+     LUT4_D:I3->O         13   0.704   1.018  Control_unit_inst/Control_signal_12_or0000 (Control_unit_inst/Control_signal_12_or0000)
+     LUT4:I2->O            6   0.704   0.673  Imm_decode_inst/Imm_11_mux000023 (Imm_decode_inst/Imm_11_mux000023)
+     LUT4:I3->O           50   0.704   1.347  Imm_decode_inst/Imm_1_mux00001 (Imm_op<1>)
+     LUT2:I1->O            1   0.704   0.000  Madd_PC_plus_imm_lut<1> (Madd_PC_plus_imm_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  Madd_PC_plus_imm_cy<1> (Madd_PC_plus_imm_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<2> (Madd_PC_plus_imm_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<3> (Madd_PC_plus_imm_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<4> (Madd_PC_plus_imm_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<5> (Madd_PC_plus_imm_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<6> (Madd_PC_plus_imm_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<7> (Madd_PC_plus_imm_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<8> (Madd_PC_plus_imm_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<9> (Madd_PC_plus_imm_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<10> (Madd_PC_plus_imm_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_PC_plus_imm_cy<11> (Madd_PC_plus_imm_cy<11>)
+     XORCY:CI->O           1   0.804   0.424  Madd_PC_plus_imm_xor<12> (PC_plus_imm<12>)
+     LUT4_L:I3->LO         1   0.704   0.104  PC_i<12> (PC_i<12>)
+     LUT4:I3->O            1   0.704   0.000  PC_inst/PC_reg_mux0000<12>1 (PC_inst/PC_reg_mux0000<12>)
+     FDRE:D                    0.308          PC_inst/PC_reg_12
+    ----------------------------------------
+    Total                     18.631ns (10.639ns logic, 7.992ns route)
+                                       (57.1% logic, 42.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ALU_inst/ALU_result_not00011'
+  Clock period: 21.077ns (frequency: 47.446MHz)
+  Total number of paths / destination ports: 2981482 / 34
+-------------------------------------------------------------------------
+Delay:               21.077ns (Levels of Logic = 17)
+  Source:            ALU_inst/ALU_result_11_1 (LATCH)
+  Destination:       ALU_inst/ALU_result_25 (LATCH)
+  Source Clock:      ALU_inst/ALU_result_not00011 falling
+  Destination Clock: ALU_inst/ALU_result_not00011 falling
+
+  Data Path: ALU_inst/ALU_result_11_1 to ALU_inst/ALU_result_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.676   0.482  ALU_inst/ALU_result_11_1 (ALU_inst/ALU_result_11_1)
+     LUT3:I2->O           40   0.704   1.300  Instr_mem_address<11>1_1 (Instr_mem_address<11>1)
+     LUT3:I2->O            1   0.704   0.000  Instr_mem/Mmux_Data_o_427 (Instr_mem/Mmux_Data_o_427)
+     MUXF5:I1->O           1   0.321   0.000  Instr_mem/Mmux_Data_o_3_f5_26 (Instr_mem/Mmux_Data_o_3_f527)
+     MUXF6:I1->O           5   0.521   0.808  Instr_mem/Mmux_Data_o_2_f6_26 (instr_mem_data_o<5>)
+     LUT2_L:I0->LO         1   0.704   0.104  Control_unit_inst/Control_signal_12_cmp_eq000211_SW1 (N475)
+     LUT4:I3->O            9   0.704   0.824  Control_unit_inst/Control_signal_12_cmp_eq000211 (Control_unit_inst/N19)
+     LUT4_D:I3->O         13   0.704   1.018  Control_unit_inst/Control_signal_12_or0000 (Control_unit_inst/Control_signal_12_or0000)
+     LUT4:I2->O            6   0.704   0.673  Imm_decode_inst/Imm_11_mux000023 (Imm_decode_inst/Imm_11_mux000023)
+     LUT4:I3->O           50   0.704   1.303  Imm_decode_inst/Imm_1_mux00001 (Imm_op<1>)
+     LUT3_D:I2->O         13   0.704   1.018  Scr_B<1>1_1 (Scr_B<1>1)
+     LUT3:I2->O            3   0.704   0.566  ALU_inst/ALU_result_mux0001<12>131 (ALU_inst/ALU_result_mux0001<12>_bdd23)
+     LUT3:I2->O            1   0.704   0.000  ALU_inst/ALU_result_mux0001<21>7_G (N923)
+     MUXF5:I1->O           2   0.321   0.482  ALU_inst/ALU_result_mux0001<21>7 (ALU_inst/ALU_result_mux0001<21>_bdd8)
+     LUT4:I2->O            1   0.704   0.420  ALU_inst/ALU_result_mux0001<25>135 (ALU_inst/ALU_result_mux0001<25>135)
+     MUXF5:S->O            1   0.739   0.424  ALU_inst/ALU_result_mux0001<25>175_SW1 (N430)
+     LUT4:I3->O            1   0.704   0.000  ALU_inst/ALU_result_mux0001<25>1123_G (N1059)
+     MUXF5:I1->O           1   0.321   0.000  ALU_inst/ALU_result_mux0001<25>1123 (ALU_inst/ALU_result_mux0001<25>)
+     LD:D                      0.308          ALU_inst/ALU_result_25
+    ----------------------------------------
+    Total                     21.077ns (11.655ns logic, 9.422ns route)
+                                       (55.3% logic, 44.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.953ns (Levels of Logic = 3)
+  Source:            SPI_i (PAD)
+  Destination:       IO_controler_inst/SPI_flash_inst/Shift_reg_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: SPI_i to IO_controler_inst/SPI_flash_inst/Shift_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  SPI_i_IBUF (SPI_i_IBUF)
+     LUT3:I0->O            1   0.704   0.424  IO_controler_inst/SPI_flash_inst/Shift_reg_0_mux00006 (IO_controler_inst/SPI_flash_inst/Shift_reg_0_mux00006)
+     LUT4:I3->O            1   0.704   0.000  IO_controler_inst/SPI_flash_inst/Shift_reg_0_mux000042 (IO_controler_inst/SPI_flash_inst/Shift_reg_0_mux0000)
+     FDRE:D                    0.308          IO_controler_inst/SPI_flash_inst/Shift_reg_0
+    ----------------------------------------
+    Total                      3.953ns (2.934ns logic, 1.019ns route)
+                                       (74.2% logic, 25.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 20 / 12
+-------------------------------------------------------------------------
+Offset:              5.574ns (Levels of Logic = 2)
+  Source:            IO_controler_inst/GPIO_inst/Dir_reg_7 (FF)
+  Destination:       GPIO_pins_io<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: IO_controler_inst/GPIO_inst/Dir_reg_7 to GPIO_pins_io<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.591   0.587  IO_controler_inst/GPIO_inst/Dir_reg_7 (IO_controler_inst/GPIO_inst/Dir_reg_7)
+     INV:I->O              1   0.704   0.420  IO_controler_inst/GPIO_inst/Dir_reg<7>_inv1_INV_0 (IO_controler_inst/GPIO_inst/Dir_reg<7>_inv)
+     IOBUF:T->IO               3.272          GPIO_pins_io_7_IOBUF (GPIO_pins_io<7>)
+    ----------------------------------------
+    Total                      5.574ns (4.567ns logic, 1.007ns route)
+                                       (81.9% logic, 18.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 32.16 secs
+ 
+--> 
+
+
+Total memory usage is 696692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

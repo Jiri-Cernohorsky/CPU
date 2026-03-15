@@ -87,6 +87,8 @@ addi x11, x0, 22
 sll  x10, x10, x11      # x10 = 0x80000000
 addi x1, x0, 1 
 addi x2, x0, 2
+addi x13, x0, 9 # x13 = x0 + 9
+sub x14, x0, x13 # x14 = x0 - 9
 sw x1, 0(x10) # maska interruptu globální zapnout UART
 sw x2, 272(x10) # interrupt enable UART_RX
 
@@ -115,9 +117,9 @@ ERASE: # smazat data flash na adrese od arduina
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
-        sll x22, x22, x27 # x22 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, ADDRESS_ERASE_END # if x26 == x0 then ADDRESS_ERASE_END
+        sll x22, x22, x27 # x22 << x27
         jal x15, ADDRESS_ERASE  # jump to ADDRESS_ERASE
     ADDRESS_ERASE_END:
     sw x22, 524(x10) # zápis do SPI_address
@@ -128,9 +130,9 @@ ERASE: # smazat data flash na adrese od arduina
     add zero, zero, zero # nop
     add zero, zero, zero # nop
     add zero, zero, zero # nop
-    add zero, zero, zero # nop
+    and x20, x20, x14
     addi x23, x0, 4 # CMD_done
-    sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+    sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
     WE_CMD_SEND:
         lw x22, 520(x10) # SPI_control_o
         beq x22, x23, WE_CMD_SEND_END # if x22 == x23 then WE_CMD_SEND_END
@@ -144,8 +146,8 @@ ERASE: # smazat data flash na adrese od arduina
     add zero, zero, zero # nop
     add zero, zero, zero # nop
     add zero, zero, zero # nop
-    add zero, zero, zero # nop
-    sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+    and x20, x20, x14
+    sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
     ERASE_CMD_SEND:
         lw x22, 520(x10) # SPI_control_o
         beq x22, x23, ERASE_CMD_SEND_END # if x22 == x23 then ERASE_CMD_SEND
@@ -160,14 +162,14 @@ ERASE: # smazat data flash na adrese od arduina
     add zero, zero, zero # nop
     add zero, zero, zero # nop
     add zero, zero, zero # nop
-    add zero, zero, zero # nop
-    sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+    and x20, x20, x14
+    sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
     STATUS_CMD_SEND:
         lw x22, 520(x10) # SPI_control_o
         beq x22, x23, STATUS_CMD_SEND_END # if x22 == x23 then STATUS_CMD_SEND_END
         jal x15, STATUS_CMD_SEND
     STATUS_CMD_SEND_END:
-    lw x22 , 214(x10) #SPI_data_o
+    lw x22 , 532(x10) #SPI_data_o
     and x22, x22, x1 # izolace prvního bitu
     beq x22, , x1, STATUS_WAIT # if x22 == x1 then STATUS_WAIT
     jal x15, END  # jump to END
@@ -187,9 +189,9 @@ START: #spustit program z flash
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
-        sll x22, x22, x27 # x22 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, ADDRESS_FLASH_END # if x26 == x0 then ADDRESS_FLASH_END
+        sll x22, x22, x27 # x22 << x27
         jal x15, ADDRESS_FLASH  # jump to ADDRESS_FLASH
     ADDRESS_FLASH_END:
     sw x22, 524(x10) # zápis do SPI_address
@@ -204,9 +206,9 @@ START: #spustit program z flash
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x23, x23, x25 # x23 = x23 + x25
-        sll x23, x23, x27 # x23 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, ADDRESS_RAM_END # if x26 == x0 then ADDRESS_RAM_END
+        sll x23, x23, x27 # x23 << x27
         jal x15, ADDRESS_RAM  # jump to ADDRESS_RAM
     ADDRESS_RAM_END:
 
@@ -221,9 +223,9 @@ START: #spustit program z flash
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x29, x29, x25 # x29 = x29 + x25
-        sll x29, x29, x27 # x29 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, WORD_COUNT_END # if x26 == x0 then WORD_COUNT_END
+        sll x29, x29, x27 # x29 << x27
         jal x15, WORD_COUNT  # jump to WORD_COUNT
     WORD_COUNT_END:
 
@@ -234,23 +236,17 @@ START: #spustit program z flash
     add x23, x23, x30  # x23 = x23 + x30
     WORD_LOOP:
         addi x28, x0, 0 # slovo
-        addi x26, x0, 4 # počet bajtu
-        READ_LOOP:
-            addi x20, x0, 9 # 001001 Read_ready = 0 EN_comm = 1, CMD_sel = 001 read
+        addi x20, x0, 9 # 001001 Read_ready = 0 EN_comm = 1, CMD_sel = 001 read
+        sw x20, 516(x10) # SPI_control_i
+        WAIT_FOR_DATA: 
+            lw x24, 520(x10) # SPI_control_o
+            beq x24, x1, WAIT_FOR_DATA_END
+            jal x15, WAIT_FOR_DATA  # jump to WAIT_FOR_DATA       
+        WAIT_FOR_DATA_END:
+            lw x25, 532(x10) # SPI_data_o
+            addi x20, x0, 25 # 011001 Read_ready = 1 EN_comm = 1, CMD_sel = 001 read
             sw x20, 516(x10) # SPI_control_i
-            WAIT_FOR_DATA: 
-                lw x24, 520(x10) # SPI_control_o
-                beq x24, x1, WAIT_FOR_DATA_END
-                jal x15, WAIT_FOR_DATA  # jump to WAIT_FOR_DATA
-            WAIT_FOR_DATA_END:
-                lw x25, 532(x10) # SPI_data_o
-                addi x20, x0, 25 # 011001 Read_ready = 1 EN_comm = 1, CMD_sel = 001 read
-                sw x20, 516(x10) # SPI_control_i
-                add x28, x28, x25  # x28 = x28 + x25
-                sll x28, x28, x27 # x28 << x27
-                sub x26, x26, x1 # x26 = x26 - x1
-                beq x26, x0, WORD_READ  # if x26 == x0 then WORD_READ
-                jal x15, READ_LOOP  # jump to READ_LOOP
+            add x28, x28, x25  # x28 = x28 + x25
         WORD_READ:
             sw x28, 0(x23) # zápis do instr_mem
             addi x23, x23, 4 # x23 = x23 + 4
@@ -259,14 +255,13 @@ START: #spustit program z flash
             jal x15, WORD_LOOP  # jump to WORD_LOOP
     END_READ:
         addi x23, x0, 4 # CMD_done
-        sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+        and x20, x20, x14
+        sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
         READ_CMD_SEND:
             lw x22, 520(x10) # SPI_control_o
             beq x22, x23, READ_CMD_SEND_END # if x22 == x23 then READ_CMD_SEND_END
-            jal x15, READ_CMD_SEND  
+            jal x15, READ_CMD_SEND                                
         READ_CMD_SEND_END:
-        sw x21, 260(x10) # poslat flag done UARTu
-        sw x1, 268(x10) # signal start pro UART
         sw x1, 4(x10) # Start_program = 1
         jal x15, UART_LOOP
 
@@ -286,9 +281,9 @@ PROGRAM: #načítat program z arduina
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x22, x22, x25 # x22 = x22 + x25
-        sll x22, x22, x27 # x22 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, ADDRESS_PROGRAM_END # if x26 == x0 then ADDRESS_PROGRAM_END
+        sll x22, x22, x27 # x22 << x27
         jal x15, ADDRESS_PROGRAM  # jump to ADDRESS_PROGRAM
     ADDRESS_PROGRAM_END:
     sw x22, 524(x10) # zápis do SPI_address
@@ -304,9 +299,9 @@ PROGRAM: #načítat program z arduina
         sw x25, 260(x10) # poslat to stejné zpět UARTu pro kontrolu
         sw x1, 268(x10) # signal start pro UART
         add x29, x29, x25 # x29 = x29 + x25
-        sll x29, x29, x27 # x29 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, WORD_COUNT_END1 # if x26 == x0 then WORD_COUNT_END1
+        sll x29, x29, x27 # x29 << x27
         jal x15, WORD_COUNT1  # jump to WORD_COUNT1
     WORD_COUNT_END1:
 
@@ -316,9 +311,9 @@ PROGRAM: #načítat program z arduina
     add zero, zero, zero # nop
     add zero, zero, zero # nop
     add zero, zero, zero # nop
-    add zero, zero, zero # nop
+    and x20, x20, x14
     addi x23, x0, 4 # CMD_done
-    sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+    sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
     WE_CMD_SEND1:
         lw x22, 520(x10) # SPI_control_o
         beq x22, x23, WE_CMD_SEND_END1 # if x22 == x23 then WE_CMD_SEND_END1
@@ -345,13 +340,13 @@ PROGRAM: #načítat program z arduina
         sw x1, 268(x10) # signal start pro UART
 
         add x25, x25, x22 # x25 = x25 + x22
-        sll x25, x25, x27 # x25 << x27
         sub x26, x26, x1 # x26 = x26 - x1
         beq x26, x0, CONTINUE
+        sll x25, x25, x27 # x25 << x27
             jal x15, DATA  # jump to DATA
         CONTINUE:
             sw x25,  528(x10) # SPI_data_in
-            addi x20, x0, 26 # 011010 Write_ready = 1 EN_comm = 1, CMD_sel = 010
+            addi x20, x0, 42 # 101010 Write_ready = 1 EN_comm = 1, CMD_sel = 010
             sw x20, 516(x10) # SPI_control_i
             WRITEN:
                 lw x22, 520(x10) # SPI_control_o
@@ -359,7 +354,8 @@ PROGRAM: #načítat program z arduina
                 jal x15, WRITEN 
     END_WRITE:
         addi x23, x0, 4 # CMD_done
-        sw x0, 516(x10) # SPI_control_i (vypnuti EN_com)
+        and x20, x20, x14
+        sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
         CMD_DONE:
             lw x22, 520(x10) # SPI_control_o
             beq x22, x23, CMD_DONE_END # if x22 == x23 then ERASE_CMD_SEND
@@ -375,18 +371,16 @@ PROGRAM: #načítat program z arduina
     add zero, zero, zero # nop
     add zero, zero, zero # nop
     add zero, zero, zero # nop
-    add zero, zero, zero # nop
-    sw zero, 516(x10) # SPI_control_i (vypnuti EN_com)
+    and x20, x20, x14
+    sw x20, 516(x10) # SPI_control_i (vypnuti EN_com)
     STATUS_CMD_SEND1:
         lw x22, 520(x10) # SPI_control_o
         beq x22, x23, STATUS_CMD_SEND_END1 # if x22 == x23 then STATUS_CMD_SEND_END1
         jal x15, STATUS_CMD_SEND1
     STATUS_CMD_SEND_END1:
-    lw x22 , 214(x10) #SPI_data_o
+    lw x22 , 532(x10) #SPI_data_o
     and x22, x22, x1 # izolace prvního bitu
     beq x22, , x1, STATUS_WAIT1 # if x22 == x1 then STATUS_WAIT1
 
 END:
-    sw x21, 260(x10) # poslat flag done UARTu
-    sw x1, 268(x10) # signal start pro UART
     jal x15, UART_LOOP

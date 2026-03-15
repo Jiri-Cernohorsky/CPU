@@ -22,85 +22,85 @@ EN work/tb_CPU 0 FL /home/ise/shared_dir/CPU/tb/tb_CPU.vhd PB ieee/std_logic_116
 AR work/tb_CPU/behavior 0 \
       FL /home/ise/shared_dir/CPU/tb/tb_CPU.vhd EN work/tb_CPU 0 CP work/CPU
 FL /home/ise/shared_dir/CPU/vhd/ALU.vhd 2026/03/05.21:43:23 P.20131013
-EN work/ALU 1772720479 FL /home/ise/shared_dir/CPU/vhd/ALU.vhd \
+EN work/ALU 1773581015 FL /home/ise/shared_dir/CPU/vhd/ALU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/ALU/RTL 1772720480 \
-      FL /home/ise/shared_dir/CPU/vhd/ALU.vhd EN work/ALU 1772720479
-FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd 2026/03/04.16:22:06 P.20131013
-EN work/Bootloader 1772720483 FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd \
+AR work/ALU/RTL 1773581016 \
+      FL /home/ise/shared_dir/CPU/vhd/ALU.vhd EN work/ALU 1773581015
+FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd 2026/03/15.11:47:23 P.20131013
+EN work/Bootloader 1773581019 FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd \
       LB UNISIM PH unisim/VCOMPONENTS 1381692182 PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/Bootloader/RTL 1772720484 \
-      FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd EN work/Bootloader 1772720483 \
+AR work/Bootloader/RTL 1773581020 \
+      FL /home/ise/shared_dir/CPU/vhd/bootloader.vhd EN work/Bootloader 1773581019 \
       CP RAMB16_S36
 FL /home/ise/shared_dir/CPU/vhd/Control_unit.vhd 2026/03/05.21:31:27 P.20131013
-EN work/Control_unit 1772720473 FL /home/ise/shared_dir/CPU/vhd/Control_unit.vhd \
+EN work/Control_unit 1773581009 FL /home/ise/shared_dir/CPU/vhd/Control_unit.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/Control_unit/RTL 1772720474 \
-      FL /home/ise/shared_dir/CPU/vhd/Control_unit.vhd EN work/Control_unit 1772720473
+AR work/Control_unit/RTL 1773581010 \
+      FL /home/ise/shared_dir/CPU/vhd/Control_unit.vhd EN work/Control_unit 1773581009
 FL /home/ise/shared_dir/CPU/vhd/CPU.vhd 2026/03/05.23:40:27 P.20131013
-EN work/CPU 1772720487 FL /home/ise/shared_dir/CPU/vhd/CPU.vhd \
+EN work/CPU 1773581023 FL /home/ise/shared_dir/CPU/vhd/CPU.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/CPU/RTL 1772720488 \
-      FL /home/ise/shared_dir/CPU/vhd/CPU.vhd EN work/CPU 1772720487 CP PC \
+AR work/CPU/RTL 1773581024 \
+      FL /home/ise/shared_dir/CPU/vhd/CPU.vhd EN work/CPU 1773581023 CP PC \
       CP Control_unit CP registr32x4 CP Imm_decode CP ALU CP RAM2048x32 CP Bootloader \
       CP IO_controler
 FL /home/ise/shared_dir/CPU/vhd/Imm_decode.vhd 2026/01/05.22:56:58 P.20131013
-EN work/Imm_decode 1772720477 FL /home/ise/shared_dir/CPU/vhd/Imm_decode.vhd \
+EN work/Imm_decode 1773581013 FL /home/ise/shared_dir/CPU/vhd/Imm_decode.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Imm_decode/RTL 1772720478 \
-      FL /home/ise/shared_dir/CPU/vhd/Imm_decode.vhd EN work/Imm_decode 1772720477
+AR work/Imm_decode/RTL 1773581014 \
+      FL /home/ise/shared_dir/CPU/vhd/Imm_decode.vhd EN work/Imm_decode 1773581013
 FL /home/ise/shared_dir/CPU/vhd/PC.vhd 2026/03/05.20:42:05 P.20131013
-EN work/PC 1772720471 FL /home/ise/shared_dir/CPU/vhd/PC.vhd \
+EN work/PC 1773581007 FL /home/ise/shared_dir/CPU/vhd/PC.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/PC/RTL 1772720472 \
-      FL /home/ise/shared_dir/CPU/vhd/PC.vhd EN work/PC 1772720471
-FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd 2026/02/16.17:08:11 P.20131013
-EN work/GPIO 1772720465 FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd \
+AR work/PC/RTL 1773581008 \
+      FL /home/ise/shared_dir/CPU/vhd/PC.vhd EN work/PC 1773581007
+FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd 2026/03/08.23:08:00 P.20131013
+EN work/GPIO 1773581001 FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/GPIO/RTL 1772720466 \
-      FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd EN work/GPIO 1772720465 \
+AR work/GPIO/RTL 1773581002 \
+      FL /home/ise/shared_dir/CPU/vhd/periferie/GPIO.vhd EN work/GPIO 1773581001 \
       CP Synchronizer
-FL /home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd 2026/03/04.16:58:26 P.20131013
-EN work/IO_controler 1772720485 \
+FL /home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd 2026/03/15.11:43:48 P.20131013
+EN work/IO_controler 1773581021 \
       FL /home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/IO_controler/RTL 1772720486 \
+AR work/IO_controler/RTL 1773581022 \
       FL /home/ise/shared_dir/CPU/vhd/periferie/IO_controler.vhd \
-      EN work/IO_controler 1772720485 CP IO_WE_controler CP GPIO CP UART \
+      EN work/IO_controler 1773581021 CP IO_WE_controler CP GPIO CP UART \
       CP SPI_flash
 FL /home/ise/shared_dir/CPU/vhd/periferie/IO_WE_Controler.vhd 2026/03/04.16:41:50 P.20131013
-EN work/IO_WE_controler 1772720463 \
+EN work/IO_WE_controler 1773580999 \
       FL /home/ise/shared_dir/CPU/vhd/periferie/IO_WE_Controler.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/IO_WE_controler/RTL 1772720464 \
+AR work/IO_WE_controler/RTL 1773581000 \
       FL /home/ise/shared_dir/CPU/vhd/periferie/IO_WE_Controler.vhd \
-      EN work/IO_WE_controler 1772720463
-FL /home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd 2026/03/03.21:36:15 P.20131013
-EN work/SPI_flash 1772720469 \
+      EN work/IO_WE_controler 1773580999
+FL /home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd 2026/03/15.11:09:36 P.20131013
+EN work/SPI_flash 1773581005 \
       FL /home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/SPI_flash/RTL 1772720470 \
-      FL /home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd EN work/SPI_flash 1772720469
+AR work/SPI_flash/RTL 1773581006 \
+      FL /home/ise/shared_dir/CPU/vhd/periferie/SPI_flash.vhd EN work/SPI_flash 1773581005
 FL /home/ise/shared_dir/CPU/vhd/periferie/UART.vhd 2026/03/05.23:00:59 P.20131013
-EN work/UART 1772720467 FL /home/ise/shared_dir/CPU/vhd/periferie/UART.vhd \
+EN work/UART 1773581003 FL /home/ise/shared_dir/CPU/vhd/periferie/UART.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/UART/RTL 1772720468 \
-      FL /home/ise/shared_dir/CPU/vhd/periferie/UART.vhd EN work/UART 1772720467
+AR work/UART/RTL 1773581004 \
+      FL /home/ise/shared_dir/CPU/vhd/periferie/UART.vhd EN work/UART 1773581003
 FL /home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd 2026/03/05.18:34:02 P.20131013
-EN work/RAM2048x32 1772720481 FL /home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd \
+EN work/RAM2048x32 1773581017 FL /home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd \
       LB UNISIM PH unisim/VCOMPONENTS 1381692182 PB ieee/std_logic_1164 1381692176 \
       PB ieee/NUMERIC_STD 1381692181
-AR work/RAM2048x32/RTL 1772720482 \
-      FL /home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd EN work/RAM2048x32 1772720481 \
+AR work/RAM2048x32/RTL 1773581018 \
+      FL /home/ise/shared_dir/CPU/vhd/RAM2048x36.vhd EN work/RAM2048x32 1773581017 \
       CP RAMB16_S36
 FL /home/ise/shared_dir/CPU/vhd/registr32x4.vhd 2026/01/05.23:28:06 P.20131013
-EN work/registr32x4 1772720475 FL /home/ise/shared_dir/CPU/vhd/registr32x4.vhd \
+EN work/registr32x4 1773581011 FL /home/ise/shared_dir/CPU/vhd/registr32x4.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/registr32x4/RTL 1772720476 \
-      FL /home/ise/shared_dir/CPU/vhd/registr32x4.vhd EN work/registr32x4 1772720475
+AR work/registr32x4/RTL 1773581012 \
+      FL /home/ise/shared_dir/CPU/vhd/registr32x4.vhd EN work/registr32x4 1773581011
 FL /home/ise/shared_dir/CPU/vhd/synchronizer.vhd 2026/01/05.23:41:43 P.20131013
-EN work/Synchronizer 1772720461 FL /home/ise/shared_dir/CPU/vhd/synchronizer.vhd \
+EN work/Synchronizer 1773580997 FL /home/ise/shared_dir/CPU/vhd/synchronizer.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/Synchronizer/RTL 1772720462 \
-      FL /home/ise/shared_dir/CPU/vhd/synchronizer.vhd EN work/Synchronizer 1772720461
+AR work/Synchronizer/RTL 1773580998 \
+      FL /home/ise/shared_dir/CPU/vhd/synchronizer.vhd EN work/Synchronizer 1773580997

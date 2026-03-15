@@ -33,8 +33,9 @@ architecture RTL of SPI_flash is
     signal Shift_reg : std_logic_vector(31 downto 0);
     signal Bit_cnt   : integer range 0 to 31 := 0; -- jedna instrukce
     
-    
     signal clk_div_cnt : integer range 0 to 3 := 0; --dělič hodin
+    signal done_cnt : integer range 0 to 3 := 0;
+    signal read_cnt : integer range 0 to 1 := 0;
     signal spi_tick    : std_logic := '0';
     signal sclk_reg     : std_logic := '0';
 
@@ -50,17 +51,12 @@ begin
     SPI_clk_gen : process (clk) is
     begin
         if rising_edge(clk) then
-            if State = IDLE then
+            if clk_div_cnt = 3 then
                 clk_div_cnt <= 0;
-                spi_tick <= '0';
+                spi_tick <= '1';
             else
-                if clk_div_cnt = 3 then
-                    clk_div_cnt <= 0;
-                    spi_tick <= '1';
-                else
-                    clk_div_cnt <= clk_div_cnt + 1;
-                    spi_tick <= '0';
-                end if;
+                clk_div_cnt <= clk_div_cnt + 1;
+                spi_tick <= '0';
             end if;
         end if;
     end process SPI_clk_gen;
@@ -79,8 +75,18 @@ begin
                 Write_start <= '0';
                 Shift_reg <= x"00000000";
             elsif spi_tick = '1' then
-                Read_done <= '0';
+                
                 Write_start <= '0';
+                if done_cnt < 3 then
+                    done_cnt  <= done_cnt + 1;
+                else          
+                CMD_done <= '0';
+                end if;
+                if read_cnt < 1 then
+                    read_cnt  <= read_cnt + 1;
+                else          
+                Read_done <= '0';
+                end if;
                 case State is
                     when IDLE =>
                         if EN_comm = '1' then
@@ -141,6 +147,7 @@ begin
                             if Bit_cnt = 0 then
                                 Data_o <= shift_reg;
                                 Read_done <= '1';
+                                read_cnt  <= 0;
                                 if CMD_sel = "100" then
                                     State  <= CLEANUP;
                                 else
@@ -154,6 +161,7 @@ begin
                     when READ_WAIT  => 
                             if EN_comm = '1' then
                                 if Ready_to_read = '1' then
+                                    State <= READ_LOOP;
                                     bit_cnt <= 31;
                                 end if;
                             else
@@ -184,6 +192,7 @@ begin
                     when CLEANUP =>
                         spi_cs_n <= '1';
                         CMD_done <= '1';
+                        done_cnt  <= 0;
                         state <= IDLE;
                 end case;
             end if;
